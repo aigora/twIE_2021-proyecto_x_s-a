@@ -15,4 +15,4 @@ Nuestra intención con este proyecto es la creación de una plataforma de juegos
 
 # Nueva Reunión:
 
-Mañana (03/03/2021) depués de clases por la tarde a las 4:15, si os viene bien, volveremos a hablar sobre el Proyecto_X
+Mañana (04/03/2021) depués de clases por la tarde a las 4:15, si os viene bien, volveremos a hablar sobre el Proyecto_X
