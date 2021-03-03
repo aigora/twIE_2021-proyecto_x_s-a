@@ -1,11 +1,18 @@
-# [Título del trabajo]
+# Salón de juegos
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+En este proyecto realizaremos un salón de juegos de distinta índole, desde una ruleta de casino hasta un modo de scaperoom.
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+Alejandro Montero Porras @Alejandro-Montero-Porras.
+Marco Antonio Pinto Tapia @Marco-Antonio-Tapia
+Marco Gaspar Martín @ Marpiki11
 
 ## Objetivos del trabajo
 
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
+Nuestra intención con este proyecto es la creación de una plataforma de juegos con la que pasar el rato. Esta plataforma quiere contentar a un público variado y reunir a gente distinta con gustos diferentes. Para ello, programaremos distintos minijuegos con los que pasar un buen rato. Por el momento nuestra intención es hacer una ruleta, un scaperoom y un blacjack, aunque esperamos elaborar alguno más.
+
+
+# Nueva Reunión:
+
+Mañana (03/03/2021) depués de clases por la tarde a las 4:15, si os viene bien, volveremos a hablar sobre el Proyecto_X
