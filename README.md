@@ -11,8 +11,3 @@ Marco Gaspar Martín @ Marpiki11
 ## Objetivos del trabajo
 
 Nuestra intención con este proyecto es la creación de una plataforma de juegos con la que pasar el rato. Esta plataforma quiere contentar a un público variado y reunir a gente distinta con gustos diferentes. Para ello, programaremos distintos minijuegos con los que pasar un buen rato. Por el momento nuestra intención es hacer una ruleta, un scaperoom y un blacjack, aunque esperamos elaborar alguno más.
-
-
-# Nueva Reunión:
-
-Mañana (04/03/2021) depués de clases por la tarde a las 4:15, si os viene bien, volveremos a hablar sobre el Proyecto_X
