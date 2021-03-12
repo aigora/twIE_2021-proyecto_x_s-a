@@ -4,8 +4,8 @@ En este proyecto realizaremos un salón de juegos de distinta índole, desde una
 
 ## Integrantes del equipo
 
-Alejandro Montero Porras @Alejandro-Montero-Porras.
-Marco Antonio Pinto Tapia @Marco-Antonio-Tapia
+Alejandro Montero Porras @Alejandro-Montero-Porras.\n
+Marco Antonio Pinto Tapia @Marco-Antonio-Tapia\n
 Marco Gaspar Martín @ Marpiki11
 
 ## Objetivos del trabajo
