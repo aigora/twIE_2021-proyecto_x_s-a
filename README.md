@@ -4,11 +4,11 @@ En este proyecto realizaremos un salón de juegos de distinta índole, desde una
 
 ## Integrantes del equipo
 
-Alejandro Montero Porras @Alejandro-Montero-Porras
+Alejandro Montero Porras [@Alejandro-Montero-Porras](https://github.com/Alejandro-Montero-Porras)
 
 Marco Antonio Pinto Tapia [@Marco-Antonio-Tapia](https://github.com/Marco-Antonio-Pinto)
 
-Marco Gaspar Martín @ Marpiki11
+Marco Gaspar Martín [@Marpiki11](https://github.com/Marpiki11)
 
 ## Objetivos del trabajo
 
