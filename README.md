@@ -6,7 +6,7 @@ En este proyecto realizaremos un salón de juegos de distinta índole, desde una
 
 Alejandro Montero Porras @Alejandro-Montero-Porras
 
-Marco Antonio Pinto Tapia @Marco-Antonio-Tapia
+Marco Antonio Pinto Tapia [@Marco-Antonio-Tapia](https://github.com/Marco-Antonio-Pinto)
 
 Marco Gaspar Martín @ Marpiki11
 
