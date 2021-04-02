@@ -11,7 +11,7 @@ void Menu_EscapeRoom();
 void Despedida();
 
 ///Programa
-void main()
+int main()
 {
     int decision_1, decision_2;
     Bienvenida();
@@ -22,37 +22,26 @@ void main()
         Menu_Opciones();
         printf("Introduzca el número de la opción que desee:");
         scanf("%d", &decision_1);
-        Continuar();
+        system("cls");
         switch(decision_1)
         {
             case 1:
+                do
+                {
                 Menu_BlackJack();
                 printf("Introduzca el número de la opción que desee:");
                 scanf("%d", &decision_2);
-                Continuar();
+                system("cls");
                 switch(decision_2)
                     {
                     case 1:
-                        Menu_BlackJack();
-                        printf("Introduzca el número de la opción que desee:");
-                        scanf("%d", &decision_2);
-                        Continuar();
                         break;
                     case 2:
-                        Menu_BlackJack();
-                        printf("Introduzca el número de la opción que desee:");
-                        scanf("%d", &decision_2);
-                        Continuar();
                         break;
                     case 3:
-                        Menu_BlackJack();
-                        printf("Introduzca el número de la opción que desee:");
-                        scanf("%d", &decision_2);
-                        Continuar();
                         break;
                     case 4:
-                        Menu_Opciones();
-                        break;
+                        continue;
                     case 5:
                         printf("\nGracias por confiar en nosotros\n");
                         Continuar();
@@ -62,22 +51,22 @@ void main()
                     default:
                         printf("Opcion incorrecta, vuelva a introducir una opcion.\n");
                         Continuar();
-                        Menu_BlackJack();
                         break;
                     }
-                Continuar();
+                    system("cls");
+                }while(1 > 0);
                 break;
             case 2:
+                do
+                {
                 Menu_EscapeRoom();
                 printf("Introduzca el número de la opción que desee:");
                 scanf("%d", &decision_2);
                 switch(decision_2)
                     {
                     case 1:
-                        Menu_EscapeRoom();
                         break;
                     case 2:
-                        Menu_Opciones();
                         break;
                     case 3:
                         printf("\nGracias por confiar en nosotros\n");
@@ -90,7 +79,7 @@ void main()
                         Continuar();
                         break;
                     }
-                Continuar();
+                system("cls");
                 break;
             case 3:
                 printf("\nGracias por confiar en nosotros\n");
@@ -100,10 +89,12 @@ void main()
                 break;
             default:
                 printf("Opcion incorrecta, vuelva a introducir una opcion.\n");
-                Continuar();
+                system ("pause");
+                system("cls");
                 break;
+            }while(1>0);
         }
-    }while (decision_1 != 1000000);
+    }while (1 > 0);
      return 0;
 }
 
