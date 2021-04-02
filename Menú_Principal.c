@@ -98,9 +98,6 @@ int main()
      return 0;
 }
 
-
-
-
 ///Funciones
 void Bienvenida()
 {
@@ -152,5 +149,3 @@ void Despedida()
 	system("cls");
 	printf("\n Hasta la próxima.\n");
 }
-
-
