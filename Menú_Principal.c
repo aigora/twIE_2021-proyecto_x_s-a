@@ -22,7 +22,6 @@ void main()
         Menu_Opciones();
         printf("Introduzca el número de la opción que desee:");
         scanf("%d", &decision_1);
-        Continuar();
         switch(decision_1)
         {
             case 1:
