@@ -13,7 +13,7 @@ void Despedida();
 ///Programa
 int main()
 {
-    int decision_1, decision_2;
+    int decision_1, decision_2, i, j;
     Bienvenida();
     system("pause");
     system("cls");
@@ -26,60 +26,64 @@ int main()
         switch(decision_1)
         {
             case 1:
-                do
+                for(i = 0, j = 0; i != 1; i = j)
                 {
-                Menu_BlackJack();
-                printf("Introduzca el número de la opción que desee:");
-                scanf("%d", &decision_2);
-                system("cls");
-                switch(decision_2)
-                    {
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        continue;
-                    case 5:
-                        printf("\nGracias por confiar en nosotros\n");
-                        Continuar();
-                        Despedida();
-                        return 0;
-                        break;
-                    default:
-                        printf("Opcion incorrecta, vuelva a introducir una opcion.\n");
-                        Continuar();
-                        break;
-                    }
+                    Menu_BlackJack();
+                    printf("Introduzca el número de la opción que desee:");
+                    scanf("%d", &decision_2);
                     system("cls");
-                }while(1 > 0);
+                    switch(decision_2)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            j = 1;
+                            continue;
+                        case 5:
+                            printf("\nGracias por confiar en nosotros\n");
+                            Continuar();
+                            Despedida();
+                            return 0;
+                            break;
+                        default:
+                            printf("Opcion incorrecta, vuelva a introducir una opcion.\n");
+                            Continuar();
+                            break;
+                    }
+                system("cls");
+                }
                 break;
             case 2:
-                do
+                for (i = 0, j = 0; i != 1; i = j)
                 {
-                Menu_EscapeRoom();
-                printf("Introduzca el número de la opción que desee:");
-                scanf("%d", &decision_2);
-                switch(decision_2)
+                    Menu_EscapeRoom();
+                    printf("Introduzca el número de la opción que desee:");
+                    scanf("%d", &decision_2);
+                    system("cls");
+                    switch(decision_2)
                     {
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        printf("\nGracias por confiar en nosotros\n");
-                        Continuar();
-                        Despedida();
-                        return 0;
-                        break;
-                    default:
-                        printf("Opcion incorrecta, vuelva a introducir una opcion.\n");
-                        Continuar();
-                        break;
+                        case 1:
+                            break;
+                        case 2:
+                            j = 1;
+                            break;
+                        case 3:
+                            printf("\nGracias por confiar en nosotros\n");
+                            Continuar();
+                            Despedida();
+                            return 0;
+                            break;
+                        default:
+                            printf("Opcion incorrecta, vuelva a introducir una opcion.\n");
+                            Continuar();
+                            break;
                     }
-                system("cls");
+                    system("cls");
+                }
                 break;
             case 3:
                 printf("\nGracias por confiar en nosotros\n");
@@ -92,10 +96,9 @@ int main()
                 system ("pause");
                 system("cls");
                 break;
-            }while(1>0);
         }
     }while (1 > 0);
-     return 0;
+return 0;
 }
 
 ///Funciones
