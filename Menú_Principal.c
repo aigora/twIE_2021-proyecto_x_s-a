@@ -1,3 +1,4 @@
+///Presentación de las librerías
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,8 +16,7 @@ int main()
 {
     int decision_1, decision_2, i, j;
     Bienvenida();
-    system("pause");
-    system("cls");
+    Continuar();
     do
     {
         Menu_Opciones();
@@ -97,7 +97,7 @@ int main()
                 system("cls");
                 break;
         }
-    }while (1 > 0);
+    }while (1);
 return 0;
 }
 
