@@ -56,65 +56,57 @@ int main ()
                         int decision3;
                         printf("*Te adentras por los largos pasillos de la nave, teniendo más cuidado de por dónde vas, ahora que sabes que la nave es un campo de minas. Tu objetivo sigue siendo el mismo, así que ahora te dispones a buscar los chips localizadores. No sabes muy bien el dónde estás, en uno de los pasillos encuentras un mapa del interior de la nave y te lo guardas. ¿A qué lugar quieres ir ahora?*\n");
                         Continuar();
-                        printf("DECISIÓN 1: Buscar por la izquierda.\n");
-                        printf("DECISIÓN 2: Buscar por la derecha.\n");
+                        printf("DECISIÓN 1: Buscar en la sala de mandos.\n");
+                        printf("DECISIÓN 2: Buscar en la sala de navegación principal.\n");
                         printf("Pulse cualquier otro numero para volver a leer.\n");
                         scanf("%i", &decision3);
                         switch (decision3)
                         {
                         case 1:
                             k=1;
-                            printf("-Empezaré por la izquierda, siendo zurdo eso tendría que darme suerte.\n");
+                            int decision4;
+                            printf("*Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podría ser útil, puesto que dentro seguro que tiene un chip localizador. Ni bien entras en la sala, el radar es lo primero que buscas. Al no encontrarlo a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones a desmontarlo con ayuda de las herramientas, y tras desmontar la pantalla del radar, ahí lo ves, el chip localizador, lo arrancas y lo analizas, por lo que se ve, está en buen estado, así que la guardas en la mochila. De repente mientras veías que más cosas había en la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.*\n");
                             Continuar();
-                            printf("*Comienzas a buscar por la parte izquierda del almacén por algún tipo de razón supersticiosa*\n");
+                            printf("*Te sientes muy débil; por lo que la mejor opción va a ser descansar un rato para recuperar las fuerzas. Como no hay sillones ni ningún lugar donde hecharte, te sientas en el suelo apoyado contra la pared y te quedas dormido.*\n");
                             Continuar();
-                            printf("-Aquí parece haber muchas cajas, espero tener suerte.\n");
+                            printf("-Creo que lo mejor será buscar en el sala de mandos, allí hay un pequeño radar que me puede ser útil.\n");
                             Continuar();
-                            printf("*Estás un buen rato buscando hasta que encuentras la antena parabólica, no es tan grande como esperabas, pero servirá*\n");
+                            printf("*Te diriges al puesto de mandos por un pasillo seguro*\n");
                             Continuar();
-                            printf("-Una cosa menos, solo faltan dos.\n");
+                            printf("-Bien, ahora solo tengo que arrancar el chip localizador del panel de control.\n");
                             Continuar();
-                            printf("*Sigues buscando*\n");
+                            printf("*Rompes la pantalla protectora del panel y consigues arrancar el chip sin ningún problema*\n");
                             Continuar();
-                            printf("-Parece que aquí no hay nada más.\n");
+                            printf("-Cada vez queda menos para que esta pesadilla acabe.\n");
                             Continuar();
-                            printf("*Empiezas a buscar por la derecha*\n");
+                            printf("*Sientes un fuerte dolor en la cabeza y empiezas a sangrar por la nariz*\n");
                             Continuar();
-                            printf("*Abres la primera caja y encuentras el micrófono*\n");
+                            printf("-*****, que dolor... Espero que no me cause problemas. Creo que descansaré un rato hasta recuperar fuerzas.\n");
                             Continuar();
-                            printf("-Parece que he vuelto a tener suerte.\n");
+                            printf("*Te sientas en una pared del habitáculo y descansas durante unos cuantos minutos hasta que te vuelves a encontrar mejor*\n");
                             Continuar();
-                            printf("*Después de un rato buscando encuentras el chip y comienzas a salir del almacén*\n");
+                            printf("-Creo que tengo las suficientes fuerzas como para proseguir en mi búsqueda. Lo siguiente era… Una antena. En la sala de comunicaciones tiene que haber algún tipo de antena parabólica.\n");
                             Continuar();
-                            printf("-Ya tengo todo lo que buscaba y lo he conseguido bastante rápido, parece que he tenido suerte.\n");
+                            printf("*Emprendes tu camino hacia la sala de comunicaciones, pero tienes un dilema, el pasillo es estrecho y hay riesgo de que el traje espacial se quede enganchado*\n");
                             Continuar();
-                            printf("*Mientas buscabas se ha hecho de noche*\n");
-                            Continuar();
+                            printf("DECISIÓN 1: Intentas pasar.\n");
+                            printf("DECISIÓN 2: Buscas otro camino por el sistema de ventilación.\n");
+                            printf("Pulse cualquier otro numero para volver a leer.\n");
+                            scanf("%i", &decision4);
+                            switch (decision4)
+                            {
+
+                            }
                             break;
                         case 2:
                             k=1;
-                            printf("-Empezaré a buscar por la derecha.\n");
+                            printf("*Entras en la sala de navegación principal, con la esperanza de encontrar algo de utilidad. Cuando ya estás llegando te das cuenta de que la sala está al lado del depósito de combustible, y que a medida que te acercas, el suelo está cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber si dentro de la sala principal hay algo útil te puede más.\n");
                             Continuar();
-                            printf("*Comienzas la búsqueda de los materiales por la parte derecha del almacén*\n");
+                            printf("*Una vez dentro de la sala principal, encuentras un GPS el cual dentro tiene un chip localizador, el GPS está averiado, así que, si lo abres para no afectaras en nada el funcionamiento de la nave, por lo que decides, extraer el chip.*\n");
                             Continuar();
-                            printf("-Parece que es mi día de suerte, en la primera caja que abro encuentro el micrófono, esto me ahorrará tiempo.\n");
-                            Continuar();
-                            printf("*Sigues buscando y encuentras el chip*\n");
-                            Continuar();
-                            printf("-¡Genial! Ahora solo me falta la antena parabólica.\n");
-                            Continuar();
-                            printf("*Detrás de unas cajas encuentras una gran antena, ya tienes todos los materiales y sigue siendo de día*\n");
-                            Continuar();
-                            printf("-Perfecto, ya solo me queda montar el radio transmisor.\n");
-                            Continuar();
-                            printf("*Te diriges al exterior del almacén para montar el transmisor cuando a lo lejos ves una figura acercándose a ti, entras en pánico y disparas con tu arma*\n");
-                            Continuar();
-                            printf("-No sé qué sería eso, pero creo que me he salvado. Voy a ver que era.\n");
-                            Continuar();
-                            printf("*Te acercas al cadáver del ser al que acabas de disparar y es un humano. No sabes que hacer, tu cerebro colapsa y caes al suelo. Despiertas dentro de un calabozo. Nunca llegaste a abandonar la Tierra, tu nave se estrelló después de un fallo mecánico y por culpa del golpe no recuerdas nada posterior al lanzamiento. Pasarás el resto de tus días en la cárcel*\n");
+                            printf("*Utilizas las herramientas, pero en el proceso de desarmado, encuentras una tapa, la cual no puedes abrir con las herramientas, así que decides hacer fuerza para romper la tapa. Terminas rompiéndola y se ve un hueco y al fondo  de él, el chip localizador, tratas de usar las herramientas, pero no entran, son muy grandes para caber dentro del hueco, así que, metes tu mano y tiras con todas tus fuerzas del él, hasta que lo extraes, todo parece estar bien hasta que saltan unas chispas, que prenden el combustible bajo tus pies. Ardes por completo*\n");
                             Continuar();
                             printf("GAME OVER\n");
-                            Continuar();
                             break;
 
                         }
