@@ -64,6 +64,9 @@ int main ()
                         {
                         case 1:
                             k=1;
+                            int l, m;
+                for(l = 0, m = 0; l != 1; l = m)
+                {
                             int decision4;
                             printf("*Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podría ser útil, puesto que dentro seguro que tiene un chip localizador. Ni bien entras en la sala, el radar es lo primero que buscas. Al no encontrarlo a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones a desmontarlo con ayuda de las herramientas, y tras desmontar la pantalla del radar, ahí lo ves, el chip localizador, lo arrancas y lo analizas, por lo que se ve, está en buen estado, así que la guardas en la mochila. De repente mientras veías que más cosas había en la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.*\n");
                             Continuar();
@@ -95,8 +98,48 @@ int main ()
                             scanf("%i", &decision4);
                             switch (decision4)
                             {
+                                case 1:
+                                    m=1;
+                                    printf("-Si no me he muerto hasta el momento creo que podré pasar por esto.\n");
+                                    Continuar();
+                                    printf("*Te agachas y gateas por el suelo hasta llegar al final del pasillo*\n");
+                                    Continuar();
+                                    printf("-Buff… Eso ha estado cerca, por un momento creí que no pasaría, era más estrecho de lo que esperaba.\n");
+                                    Continuar();
+                                    printf("*Miras a tu alrededor y encuentras la antena y el micrófono que también necesitabas*\n");
+                                    Continuar();
+                                    printf("-Perfecto, ya tengo todo lo que quería, ya puedo salir de este trozo de chatarra.\n");
+                                    Continuar();
+                                    printf("*Sales de la nave por donde has venido*\n");
+                                    Continuar();
+                                    printf("-Ahora solo necesito montar el transmisor.\n");
+                                    Continuar();
+                                    printf("*Empiezas a montar el transmisor y lo construyes sin ningún problema, se nota que estudiaste en la UPM*\n");
+                                    Continuar();
+                                    printf("-Ahora solo tengo que enviar la señal de mi posición…\n");
+                                    Continuar();
+                                    printf("*En este momento tienes dudas, no sabes si enviar la señal de rescate o quedarte en el planeta misterioso*\n");
+                                    Continuar();
+                                    break;
 
+                                case 2:
+                                    m=1;
+                                    printf("-Lo mejor será ir por los conductos de ventilación superior.\n");
+                                    Continuar();
+                                    printf("*Arrancas la rejilla de ventilación y te metes dentro del conducto gateando*\n");
+                                    Continuar();
+                                    printf("-Vale, ahora solo tengo que seguir así hasta llegaaaa… \n");
+                                    Continuar();
+                                    printf("*Pesas demasiado como para que la estructura de ventilación dañada aguante tu peso. El golpe es tan fuerte que te rompes las piernas en la caída y la pequeña conmoción producida por el accidente de la nave se agrava produciendo tu muerte*\n");
+                                    Continuar();
+                                    printf("GAME OVER\n");
+                                    break;
+
+                                 default:
+                printf("Ha decidido repetir.\n");
+                break;
                             }
+                }
                             break;
                         case 2:
                             k=1;
