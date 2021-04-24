@@ -22,10 +22,10 @@ DECISIÓN 1: Buscar en la sala de mandos.
 *Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podría ser útil, puesto que dentro seguro que tiene un chip localizador. Ni bien entras en la sala, el radar es lo primero que buscas. Al no encontrarlo a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones a desmontarlo con ayuda de las herramientas, y tras desmontar la pantalla del radar, ahí lo ves, el chip localizador, lo arrancas y lo analizas, por lo que se ve, está en buen estado, así que la guardas en la mochila. De repente mientras veías que más cosas había en la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.*
 *Te sientes muy débil; por lo que la mejor opción va a ser descansar un rato para recuperar las fuerzas. Como no hay sillones ni ningún lugar donde hecharte, te sientas en el suelo apoyado contra la pared y te quedas dormido.{{{{{{}}}}}}}*
 -Creo que lo mejor será buscar en el sala de mandos, allí hay un pequeño radar que me puede ser útil.
-*Te diriges al puesto de mandos un pasillo seguro*
+*Te diriges al puesto de mandos por un pasillo seguro*
 -Bien, ahora solo tengo que arrancar el chip localizador del panel de control.
 *Rompes la pantalla protectora del panel y consigues arrancar el chip sin ningún problema*
--Cada vez queda menos para que esta pesadilla acabe
+-Cada vez queda menos para que esta pesadilla acabe.
 *Sientes un fuerte dolor en la cabeza y empiezas a sangrar por la nariz*
 -*****, que dolor... Espero que no me cause problemas. Creo que descansaré un rato hasta recuperar fuerzas.
 *Te sientas en una pared del habitáculo y descansas durante unos cuantos minutos hasta que te vuelves a encontrar mejor*
@@ -57,7 +57,7 @@ GAME OVER
 
 DECISIÓN 2: Buscar en la sala de navegación principal.
 *Entras en la sala de navegación principal, con la esperanza de encontrar algo de utilidad. Cuando ya estás llegando te das cuenta de que la sala está al lado del depósito de combustible, y que a medida que te acercas, el suelo está cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber si dentro de la sala principal hay algo útil te puede más.*
-Una vez dentro de la sala principal, encuentras un GPS el cual dentro tiene un chip localizador, el GPS está averiado, así que, si lo abres para no afectaras en nada el funcionamiento de la nave, por lo que decides, extraer el chip.*
+*Una vez dentro de la sala principal, encuentras un GPS el cual dentro tiene un chip localizador, el GPS está averiado, así que, si lo abres para no afectaras en nada el funcionamiento de la nave, por lo que decides, extraer el chip.*
 *Utilizas las herramientas, pero en el proceso de desarmado, encuentras una tapa, la cual no puedes abrir con las herramientas, así que decides hacer fuerza para romper la tapa. Terminas rompiéndola y se ve un hueco y al fondo  de él, el chip localizador, tratas de usar las herramientas, pero no entran, son muy grandes para caber dentro del hueco, así que, metes tu mano y tiras con todas tus fuerzas del él, hasta que lo extraes, todo parece estar bien hasta que saltan unas chispas, que prenden el combustible bajo tus pies. Ardes por completo*
 GAME OVER
 
