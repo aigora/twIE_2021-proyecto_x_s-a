@@ -7,7 +7,7 @@ void borrar();
 typedef struct
 {
     char nombre[50];
-    float monedero;
+    int monedero;
 }datos_ini;
 
 
@@ -34,8 +34,9 @@ int main ()
         do
         {
             printf("Elija la cantidad inicial con la que %s quiere empezar a jugar.\n",participante[i].nombre);
-            scanf("%f", &participante[i].monedero);
-        }while((participante[i].monedero <= 0));
+            scanf("%i", &participante[i].monedero);
+        }while((participante[i].monedero <=0));        //NO funciona si se introduce un número decimal negativo y entre 0 y 1
+                                                        //usar if para cambiar el valor negativo a positivo.
     }
     return 0;
 }
