@@ -1,8 +1,21 @@
-
+/// Librerías
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
+/// Estructuras
+typedef struct
+{
+    char numero;
+    char palo;
+}e_carta;
+
+typedef struct
+{
+    e_carta carta;
+}jugador;
+
+/// Programa
 int main()
 {
     char carta[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', '\0'};
@@ -10,12 +23,10 @@ int main()
     int n_c, i;
     char nc, pc;
     srand(time(NULL));
-    nc = rand()%12 ;
-    pc = rand()%4;
-
     for(i = 0; i < 2; i++)
     {
-
+        nc = rand()%12 ;
+        pc = rand()%4;
         if(carta[nc] == carta[9])
         {
             n_c = 10;
