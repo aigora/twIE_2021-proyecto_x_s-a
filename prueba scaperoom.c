@@ -49,13 +49,13 @@ int main()
                     Continuar();
                     printf("DECISION 1: Coger cables del suelo.\n");
                     printf("DECISION 2: Coger cables de la maquina.\n");
-                    printf("Pulse cualquier otro numero para volver a leer.\n");    ///Organizado hasta aquí xD.
+                    printf("Pulse cualquier otro numero para volver a leer.\n");
                     scanf("%i",&dec_1);
                     switch (dec_1)
                     {
                         case 1:
                             v1=1;
-                            system ("cls");
+                            Borrar();
                             printf("*Decides agacharte a coger los cables del suelo y examinas su estado. Pero al inspeccionarlos te das cuenta de que no\n");
                             printf(" te sirven. De repente escuchas un chirrido metalico y antes de que puedas reaccionar una gran placa metalica cae\n");
                             printf(" sobre ti matandote en el acto.*\n");
@@ -65,15 +65,24 @@ int main()
 
                         case 2:
                             v1 = 1;
+                            Borrar();
                             for(a2 = 0, v2 = 0; a2 != 1; a2 = v2)
                             {
-                                printf("*Te acercas a las máquinas rotas, y tienes que cortar el cable, así que buscas en la caja de herramientas y encuentras unos alicates con los que consigues cortarlas. Los cables están buenos, así que te los guardas en la mochila.*\n");
+                                printf("*Te acercas a las maquinas rotas, y tienes que cortar el cable, asi que buscas en la caja de \n");
+                                printf(" herramientas y encuentras unos alicates con los que consigues cortarlas. Los cables estan \n");
+                                printf(" buenos, asi que te los guardas en la mochila.*\n");
                                 Continuar();
-                                printf("*De repente, un estruendo te interrumpe, acaba de desprenderse del techo del habitáculo una gran placa metálica, justo encima de donde estaban los cables que se encontraban en el suelo. La inspeccionas, pero es de aluminio y no te sirve para reparar el casco. Con ayuda de las herramientas y unos cuantos tornillos consigues volver a colocar la placa metálica en su sitio.*\n");
+                                printf("*De repente, un estruendo te interrumpe, acaba de desprenderse del techo del habitaculo una \n");
+                                printf(" gran placa metalica, justo encima de donde estaban los cables que se encontraban en el suelo.\n");
+                                printf(" La inspeccionas, pero es de aluminio y no te sirve para reparar el casco. Con ayuda de las \n");
+                                printf(" herramientas y unos cuantos tornillos consigues volver a colocar la placa metalica en su sitio.*\n");
                                 Continuar();
-                                printf("*Como las herramientas fueron útiles, así que, sacas las herramientas de su caja y te las guardas en la mochila. Ahora tienes un: alicate universal, un juego de destornilladores, y una llave inglesa.*\n");
+                                printf("*Como las herramientas fueron utiles, así que, sacas las herramientas de su caja y te las guardas \n");
+                                printf(" en la mochila. Ahora tienes un: alicate universal, un juego de destornilladores, y una llave inglesa.*\n");
                                 Continuar();
-                                printf("*Inspeccionado en su totalidad la sala, encuentras galones de combustible en un armario, pero ahora mismo no los necesitas, y como ves que no hay nada más relevante allí. Sales del habitáculo ¿Qué decides hacer ahora?.*\n");
+                                printf("*Inspeccionado en su totalidad la sala, encuentras galones de combustible en un armario, pero ahora \n");
+                                printf(" mismo no los necesitas, y como ves que no hay nada más relevante alli. Sales del habitaculo \n");
+                                printf("¿Que decides hacer ahora?.*\n");
                                 printf("DECISIÓN 1: Seguir inspeccionando la nave.\n");
                                 printf("DECISIÓN 2: Salir de la nave.\n");
                                 printf("Pulse cualquier otro numero para volver a leer.\n");
@@ -82,9 +91,13 @@ int main()
                                 {
                                     case 1:
                                         v2=1;
+                                        Borrar();
                                         for(a3a = 0, v3a = 0; a3a != 1; a3a = v3a)
                                         {
-                                            printf("*Te adentras por los largos pasillos de la nave, teniendo más cuidado de por dónde vas, ahora que sabes que la nave es un campo de minas. Tu objetivo sigue siendo el mismo, así que ahora te dispones a buscar los chips localizadores. No sabes muy bien el dónde estás, en uno de los pasillos encuentras un mapa del interior de la nave y te lo guardas. ¿A qué lugar quieres ir ahora?*\n");
+                                            printf("*Te adentras por los largos pasillos de la nave, teniendo más cuidado de por dónde vas, ahora \n");
+                                            printf("que sabes que la nave es un campo de minas. Tu objetivo sigue siendo el mismo, así que ahora \n");
+                                            printf("te dispones a buscar los chips localizadores. No sabes muy bien el dónde estás, en uno de los \n");
+                                            printf("pasillos encuentras un mapa del interior de la nave y te lo guardas. ¿A qué lugar quieres ir ahora?*\n");
                                             Continuar();
                                             printf("DECISIÓN 1: Buscar en la sala de mandos.\n");
                                             printf("DECISIÓN 2: Buscar en la sala de navegación principal.\n");
@@ -94,31 +107,35 @@ int main()
                                             {
                                                 case 1:
                                                     v3a=1;
+                                                    Borrar();
                                                     for(a4a = 0, v4a = 0; a4a != 1; a4a = v4a)
                                                     {
-                                                        printf("*Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podría ser útil, puesto que dentro seguro que tiene un chip localizador. Ni bien entras en la sala, el radar es lo primero que buscas. Al no encontrarlo a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones a desmontarlo con ayuda de las herramientas, y tras desmontar la pantalla del radar, ahí lo ves, el chip localizador, lo arrancas y lo analizas, por lo que se ve, está en buen estado, así que la guardas en la mochila. De repente mientras veías que más cosas había en la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.*\n");
+                                                        printf("*Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podria ser util, puesto que dentro\n");
+                                                        printf(" seguro que tiene un chip localizador. Ni bien entras en la sala, el radar es lo primero que buscas. Al no\n");
+                                                        printf(" encontrarlo a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones\n");
+                                                        printf(" a desmontarlo con ayuda de las herramientas, y tras desmontar la pantalla del radar, ahi lo ves, el chip localizador,\n");
+                                                        printf(" lo arrancas y lo analizas, por lo que se ve, está en buen estado, asi que la guardas en la mochila. De repente\n");
+                                                        printf(" mientras veias que más cosas habia en la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.\n");
                                                         Continuar();
-                                                        printf("*Te sientes muy débil; por lo que la mejor opción va a ser descansar un rato para recuperar las fuerzas. Como no hay sillones ni ningún lugar donde hecharte, te sientas en el suelo apoyado contra la pared y te quedas dormido.*\n");
-                                                        Continuar();
-                                                        printf("-Creo que lo mejor será buscar en el sala de mandos, allí hay un pequeño radar que me puede ser útil.\n");
+                                                        printf("*Te sientes muy debil; por lo que la mejor opcion va a ser descansar un rato para recuperar las fuerzas. Como no hay \n");
+                                                        printf(" sillones ni ningún lugar donde hecharte, te sientas en el suelo apoyado contra la pared y te quedas dormido.*\n");
+                                                        printf("-Creo que lo mejor sera buscar en el sala de mandos, alli hay un pequeño radar que me puede ser util.\n");
                                                         Continuar();
                                                         printf("*Te diriges al puesto de mandos por un pasillo seguro*\n");
-                                                        Continuar();
                                                         printf("-Bien, ahora solo tengo que arrancar el chip localizador del panel de control.\n");
                                                         Continuar();
-                                                        printf("*Rompes la pantalla protectora del panel y consigues arrancar el chip sin ningún problema*\n");
-                                                        Continuar();
+                                                        printf("*Rompes la pantalla protectora del panel y consigues arrancar el chip sin ningun problema*\n");
                                                         printf("-Cada vez queda menos para que esta pesadilla acabe.\n");
                                                         Continuar();
                                                         printf("*Sientes un fuerte dolor en la cabeza y empiezas a sangrar por la nariz*\n");
+                                                        printf("-*****, que dolor... Espero que no me cause problemas. Creo que descansare un rato hasta recuperar fuerzas.\n");
                                                         Continuar();
-                                                        printf("-*****, que dolor... Espero que no me cause problemas. Creo que descansaré un rato hasta recuperar fuerzas.\n");
+                                                        printf("*Te sientas en una pared del habitaculo y descansas durante unos cuantos minutos hasta que te vuelves a encontrar mejor*\n");
+                                                        printf("-Creo que tengo las suficientes fuerzas como para proseguir en mi busqueda. Lo siguiente era… Una antena. En la sala de\n");
+                                                        printf(" comunicaciones tiene que haber algún tipo de antena parabolica.");
                                                         Continuar();
-                                                        printf("*Te sientas en una pared del habitáculo y descansas durante unos cuantos minutos hasta que te vuelves a encontrar mejor*\n");
-                                                        Continuar();
-                                                        printf("-Creo que tengo las suficientes fuerzas como para proseguir en mi búsqueda. Lo siguiente era… Una antena. En la sala de comunicaciones tiene que haber algún tipo de antena parabólica.\n");
-                                                        Continuar();
-                                                        printf("*Emprendes tu camino hacia la sala de comunicaciones, pero tienes un dilema, el pasillo es estrecho y hay riesgo de que el traje espacial se quede enganchado*\n");
+                                                        printf("*Emprendes tu camino hacia la sala de comunicaciones, pero tienes un dilema, el pasillo es estrecho y hay riesgo de que \n");
+                                                        printf(" el traje espacial se quede enganchado*");
                                                         Continuar();
                                                         printf("DECISIÓN 1: Intentas pasar.\n");
                                                         printf("DECISIÓN 2: Buscas otro camino por el sistema de ventilación.\n");
@@ -128,6 +145,7 @@ int main()
                                                         {
                                                             case 1:
                                                                 v4a=1;
+                                                                Borrar();
                                                                 for(a5a = 0, v5a = 0; a5a != 1; a5a = v5a)
                                                                 {
                                                                     printf("-Si no me he muerto hasta el momento creo que podré pasar por esto.\n");
@@ -158,17 +176,20 @@ int main()
                                                                     {
                                                                         case 1:
                                                                             v5a=1;
+                                                                            Borrar();
                                                                             printf("*Decides que lo más prudente es enviar la señal de socorro. Al cabo de un rato aparece un vehículo aéreo que te resulta familiar, pero estás confundido, ¿cómo han tardado tan poco en encontrarte? Los integrantes del equipo de rescate te explican la situación, emprendiste un viaje solitario en la nave cuando esta sufrió un fallo mecánico provocando que te estrellases sin salir siquiera del planeta. El golpe te causó pérdida de memoria y no recordabas nada posterior al lanzamiento. Eres llevado al hospital más cercano donde te recuperarás del accidente*\n");
                                                                             printf("HAS GANADO\n");
                                                                             return 0;
 
                                                                         case 2:
                                                                             v5a=1;
+                                                                            Borrar();
                                                                             printf("*Decides darte una oportunidad en el planeta extraterrestre y quedarte allí. Pasas las siguientes semanas recogiendo frutas, aunque estas te resultan muy familiares. Después de casi un mes realizas contacto con otros humanos, estás contrariado hasta que estos te explican que sigues en la Tierra. Inmediatamente te desmayas y te llevan al hospital más cercano. El accidente con la nave sucedió debido a un fallo mecánico y al estrellarte sufriste perdidas de memoria con las que no podías recordar nada posterior al lanzamiento de la nave. Permanecerás en el hospital hasta tu recuperación total*\n");
                                                                             printf("HAS GANADO\n");
                                                                             return 0;
 
                                                                         default:
+                                                                            Borrar();
                                                                             printf("Ha decidido repetir.\n");
                                                                             break;
                                                                     }
@@ -178,6 +199,7 @@ int main()
 
                                                             case 2:
                                                                 v4a=1;
+                                                                Borrar();
                                                                 printf("-Lo mejor será ir por los conductos de ventilación superior.\n");
                                                                 Continuar();
                                                                 printf("*Arrancas la rejilla de ventilación y te metes dentro del conducto gateando*\n");
@@ -190,6 +212,7 @@ int main()
                                                                 break;
 
                                                             default:
+                                                                Borrar();
                                                                 printf("Ha decidido repetir.\n");
                                                                 break;
                                                         }
@@ -197,6 +220,7 @@ int main()
                                                     break;
                                                 case 2:
                                                     v3a=1;
+                                                    system ("cls");
                                                     printf("*Entras en la sala de navegación principal, con la esperanza de encontrar algo de utilidad. Cuando ya estás llegando te das cuenta de que la sala está al lado del depósito de combustible, y que a medida que te acercas, el suelo está cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber si dentro de la sala principal hay algo útil te puede más.\n");
                                                     Continuar();
                                                     printf("*Una vez dentro de la sala principal, encuentras un GPS el cual dentro tiene un chip localizador, el GPS está averiado, así que, si lo abres para no afectaras en nada el funcionamiento de la nave, por lo que decides, extraer el chip.*\n");
@@ -207,6 +231,7 @@ int main()
                                                     break;
 
                                                 default:
+                                                    Borrar();
                                                     printf("Ha decidido repetir.\n");
                                                     break;
                                             }
@@ -215,6 +240,7 @@ int main()
 
                                     case 2:
                                         v2=1;
+                                        Borrar();
                                         for(a3b = 0, v3b = 0; a3b != 1; a3b = v3b)
                                         {
                                             printf("-Será mejor que salga de la nave, no quiero acabar sepultado por este montón de chatarra.\n");
@@ -241,6 +267,7 @@ int main()
                                             {
                                                 case 1:
                                                     v3b=1;
+                                                    Borrar();
                                                     for (a4b = 0, v4b = 0; a4b != 1; a4b = v4b)
                                                     {
                                                         printf("-Empezaré por la izquierda, siendo zurdo eso tendría que darme suerte.\n");
@@ -269,6 +296,7 @@ int main()
                                                         {
                                                             case 1:
                                                                 v4b=1;
+                                                                Borrar();
                                                                 printf("-Me quedaré aquí dentro, es más seguro que salir.\n");
                                                                 printf("*Te tumbas encima de un montón de cajas y duermes hasta el día siguiente*\n");
                                                                 printf("*Te despiertas y escuchas un ruido parecido al de un helicóptero, sales y compruebas que es un vehículo aéreo que acaba de aterrizar. Del interior de la nave sale una criatura. ¡Es un humano! ¿Cómo es posible? Te sientas en el suelo debido a la confusión. Este te explica que pertenece al equipo de rescate de la Agencia Espacial Europea, después del lanzamiento de tu nave esta tuvo un fallo mecánico provocando que se estrellase contra el suelo. Este accidente te ha provocado pérdidas de memoria y no recuerdas nada posterior al lanzamiento. Eres llevado al hospital más cercano para que seas atendido*\n");
@@ -277,12 +305,14 @@ int main()
 
                                                                 case 2:
                                                                 v4b=1;
+                                                                Borrar();
                                                                 printf("-Necesito salir de esta nave, no me da seguridad, no tanta como salir.\n");
                                                                 printf("*Creas una hoguera y te duermes profundamente, al cabo de un rato parte del combustible procedente del depósito llega hasta ti. El fuego de la hoguera chisporrotea provocando un incendio al caer sobre el combustible. Mueres quemado*\n");
                                                                 Game_Over();
                                                                 break;
 
                                                             default:
+                                                                Borrar();
                                                                 printf("Ha decidido repetir.\n");
                                                                 break;
                                                         }
@@ -291,6 +321,7 @@ int main()
 
                                                 case 2:
                                                     v3b=1;
+                                                    Borrar();
                                                     printf("Empezaré a buscar por la derecha.\n");
                                                     printf("*Comienzas la búsqueda de los materiales por la parte derecha del almacén*\n");
                                                     Continuar();
@@ -310,18 +341,21 @@ int main()
                                                     break;
 
                                                 default:
+                                                    Borrar();
                                                     printf("Ha decidido repetir.\n");
                                                     break;
                                             }
                                         }
                                         break;
                                     default:
+                                        Borrar();
                                         printf("Ha decidido repetir.\n");
                                         break;
                                 }
                             }
                             break;
                         default:
+                            Borrar();
                             printf("Ha decidido repetir.\n");
                             break;
                     }
@@ -329,9 +363,11 @@ int main()
                 break;
             case 2:
                 v0 = 1;
+                Borrar();
                 printf("COMING SOON...");
                 break;
             default:
+                system ("cls");
                 printf("Ha decidido repetir.\n");
                 break;
         }
