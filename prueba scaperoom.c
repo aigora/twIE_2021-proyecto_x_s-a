@@ -20,13 +20,20 @@ int main()
         printf(" un pitido molesto en el o%cdo izquierdo.*\n", 161);
         printf("*Una vez en pie, ves tu mochila cerca, pero al inspeccionarla te das cuenta de que esta vac%ca, te la pones a la y tienes\n", 161);
         printf(" espalda y caminas un poco por tus alrededores, de pronto, ves a lo lejos la nave %cQu%c vas a hacer?* \n", 168, 130);
-        printf("DECISI%cN 1: Ir a mirar el estado de la nave.\n", 162);
-        printf("DECISI%cN 2: Contemplar el paisaje.\n", 162);
+        printf("DECISI%cN 1: Contemplar el paisaje.\n", 162);
+        printf("DECISI%cN 2: Ir a mirar el estado de la nave.\n", 162);
         printf("Pulse cualquier otro n%cmero para volver a leer.\n", 163);
         scanf("%i", &dec_0);
         switch(dec_0)
         {
             case 1:
+                v0 = 1;
+                Borrar();
+                printf("Contemplas el paisaje el cual encuentras muy familiar, se parece demasiado a la tierra. Subes a lo alto de una colina\n");
+                printf("cercana pero no ves nada que llame tu atención; por lo que decides centrarte en comprobar el estado de la nave.\n");
+                printf("Necesitas encontrar respuestas.");
+                system("pause");
+            case 2:
                 v0 = 1;
                 for( a1 = 0, v1 = 0; a1 != 1; a1 = v1)
                 {
@@ -333,11 +340,6 @@ int main()
                             break;
                     }
                 }
-                break;
-            case 2:
-                v0 = 1;
-                Borrar();
-                printf("COMING SOON...");
                 break;
             default:
                 system ("cls");
