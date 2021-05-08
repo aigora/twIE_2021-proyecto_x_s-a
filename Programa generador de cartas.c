@@ -17,15 +17,15 @@
 void Borrar();
 
 /// Estructuras
-typedef struct
+typedef struct                  /** Componentes de una carta **/
 {
     char numero;
     char palo;
 }e_carta;
 
-typedef struct
+typedef struct                  /** Cosas del jugador **/
 {
-    e_carta carta[2];
+    e_carta carta[20];         /* Estructura anidada en otra */
     char nombre[100];
     int monedero;
 }jugador;
@@ -35,11 +35,12 @@ int main()
 {
     system("cls");
 
-    char carta[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', '\0'};
-    char palo[] = { 3, 4, 5, 6, '\0' };
-    int n_c, i, j;
+    char carta[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', '\0'};                 /** Números Posibles **/
+    char palo[] = { 3, 4, 5, 6, '\0' };                                                                     /** Palos Posibles **/
+    int n_c, i;
     char nc, pc;
     int num_jug, i1;
+    int x, y;
     srand(time(NULL));
 
     printf("Bienvenido a Blackjack.\n");
@@ -109,7 +110,6 @@ int main()
         }
         printf("\n");
     }
-    int x, y;
     for(x = 0; x < num_jug; x++)
     {
         printf("Las cartas de %s son:", participante[x].nombre);
