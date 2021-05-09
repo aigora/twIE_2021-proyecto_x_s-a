@@ -1,0 +1,6 @@
+El nombre del participante 1 es: Marco
+El tiene 1200 €.
+El nombre del participante 2 es: Pinto
+El tiene 624 €.
+El nombre del participante 3 es: Alex
+El tiene 465 €.
