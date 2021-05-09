@@ -4,11 +4,3 @@ El nombre del participante 2 es: m
 El tiene 4 €.
 El nombre del participante 3 es: m
 El tiene 4 €.
-El nombre del participante 4 es: m
-El tiene 4 €.
-El nombre del participante 5 es: m
-El tiene 4 €.
-El nombre del participante 6 es: m
-El tiene 4 €.
-El nombre del participante 7 es: m
-El tiene 4 €.

@@ -20,24 +20,21 @@ typedef struct                  /** Componentes de una carta **/
 
 typedef struct                  /** Cosas del jugador **/
 {
-    e_carta carta[20];         /* Estructura anidada en otra */
+    e_carta carta_i[20];         /* Estructura anidada en otra */
+    e_carta carta_j[20];
     char nombre[100];
     int monedero;
 }jugador;
 
-typedef struct
-{
-    e_carta carta[20];
-    char nombre[100];
-}dealer;
 
 /// Programa
 int main()
 {
     system("cls");
     FILE *F_prueba;
-    dealer crupier = {.nombre = "Susana Picado"};
-    char carta[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', '\0'};                 /** Números Posibles **/
+    jugador crupier = {.nombre = "Susana Picado"};
+    int carta_jug[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
+    char carta_imp[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', '\0'};                 /** Números Posibles **/
     char palo[] = { 3, 4, 5, 6, '\0' };                                                                     /** Palos Posibles **/
     int n_c, i;
     char nc, pc;
@@ -80,22 +77,71 @@ int main()
     }
     for(i1=0; i1 < num_jug;i1++)
     {
-        for(i = 0; i < 2; i++)
+        for(i = 0; i < 20; i++)
             {
                 nc = rand()%13;
                 pc = rand()%4;
-                if(carta[nc] == carta[9])
+                if(carta_imp[nc] == carta_imp[9])
                 {
                     n_c = 10;
-                    participante[i1].carta[i].numero = n_c;
-                    participante[i1].carta[i].palo = palo[pc];
+                    participante[i1].carta_i[i].numero = n_c;
+                    participante[i1].carta_i[i].palo = palo[pc];
                 }
                 else
                 {
-                    participante[i1].carta[i].numero = carta[nc];
-                    participante[i1].carta[i].palo = palo[pc];
+                    participante[i1].carta_i[i].numero = carta_imp[nc];
+                    participante[i1].carta_i[i].palo = palo[pc];
                 }
             }
+    }
+    for(i = 0; i < 20; i++)
+    {
+        nc = rand()%13;
+        pc = rand()%4;
+        if(carta_imp[nc] == carta_imp[9])
+        {
+            n_c = 10;
+            crupier.carta_i[i].numero = n_c;
+            crupier.carta_i[i].palo = palo[pc];
+        }
+        else
+        {
+            crupier.carta_i[i].numero = carta_imp[nc];
+            crupier.carta_i[i].palo = palo[pc];
+        }
+    }
+    printf("Las cartas del crupier son:");
+    for(i = 0; i < 2; i++)
+    {
+        if(crupier.carta_i[i].numero == 10)
+        {
+            if((crupier.carta_i[i].palo == 3)||(crupier.carta_i[i].palo == 4))
+            {
+                printf(ANSI_COLOR_RED);
+                printf("%i%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf(ANSI_COLOR_RESET);
+            }
+            else
+            {
+                printf("%i%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf(ANSI_COLOR_RESET);
+            }
+        }
+        else
+        {
+            if((crupier.carta_i[i].palo == 3)||(crupier.carta_i[i].palo == 4))
+            {
+                printf(ANSI_COLOR_RED);
+                printf("%c%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf(ANSI_COLOR_RESET);
+            }
+            else
+            {
+                printf("%c%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf(ANSI_COLOR_RESET);
+            }
+        }
+        printf("\n");
     }
 
     for(i1 = 0; i1 < num_jug; i1++)
@@ -103,31 +149,31 @@ int main()
         printf("Las cartas de %s son:\t", participante[i1].nombre);
         for(i = 0; i < 2; i++)
         {
-            if(participante[i1].carta[i].numero == 10)
+            if(participante[i1].carta_i[i].numero == 10)
             {
-                if((participante[i1].carta[i].palo == 3)||(participante[i1].carta[i].palo == 4))
+                if((participante[i1].carta_i[i].palo == 3)||(participante[i1].carta_i[i].palo == 4))
                 {
                     printf(ANSI_COLOR_RED);
-                    printf("%i%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
+                    printf("%i%c ", participante[i1].carta_i[i].numero, participante[i1].carta_i[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
                 else
                 {
-                    printf("%i%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
+                    printf("%i%c ", participante[i1].carta_i[i].numero, participante[i1].carta_i[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
             }
             else
             {
-                if((participante[i1].carta[i].palo == 3)||(participante[i1].carta[i].palo == 4))
+                if((participante[i1].carta_i[i].palo == 3)||(participante[i1].carta_i[i].palo == 4))
                 {
                     printf(ANSI_COLOR_RED);
-                    printf("%c%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
+                    printf("%c%c ", participante[i1].carta_i[i].numero, participante[i1].carta_i[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
                 else
                 {
-                    printf("%c%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
+                    printf("%c%c ", participante[i1].carta_i[i].numero, participante[i1].carta_i[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
             }
