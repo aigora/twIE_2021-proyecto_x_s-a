@@ -14,7 +14,8 @@ void Despedida();
 ///Programa
 int main()
 {
-    int decision_1, decision_2, i, j;
+    FILE *reglas;
+    int decision_1, decision_2, i, j, x;
     Bienvenida();
     Continuar();
     do
@@ -41,9 +42,15 @@ int main()
                         case 3:
                             break;
                         case 4:
+                            reglas = fopen("Reglas_del_BlackJack.txt", "r");
+                            while (fscanf(reglas, "%c", &x) != EOF)
+                                printf("%c", x);
+                            Continuar();
+                            break;
+                        case 5:
                             j = 1;
                             continue;
-                        case 5:
+                        case 6:
                             printf("\nGracias por confiar en nosotros\n");
                             Continuar();
                             Despedida();
@@ -131,8 +138,9 @@ void Menu_BlackJack()
 	printf("1.Jugar\n");
     printf("2.Comprobar el dinero\n");
     printf("3.Ranking\n");
-	printf("4.Volver al Menú Principal\n");
-	printf("5.Salir del programa\n\n");
+    printf("4.Reglas del BlackJack\n");
+	printf("5.Volver al Menú Principal\n");
+	printf("6.Salir del programa\n\n");
 }
 
 void Menu_EscapeRoom()
@@ -148,7 +156,6 @@ void Despedida()
 {
 	printf("\n");
 	printf("Esperamos haya disfrutado de la experiencia\n");
-	system("pause");
-	system("cls");
+	Continuar();
 	printf("\n Hasta la próxima.\n");
 }

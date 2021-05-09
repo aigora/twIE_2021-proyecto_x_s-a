@@ -1,6 +1,14 @@
-El nombre del participante 1 es: Marco
-El tiene 1200 €.
-El nombre del participante 2 es: Pinto
-El tiene 624 €.
-El nombre del participante 3 es: Alex
-El tiene 465 €.
+El nombre del participante 1 es: m
+El tiene 4 €.
+El nombre del participante 2 es: m
+El tiene 4 €.
+El nombre del participante 3 es: m
+El tiene 4 €.
+El nombre del participante 4 es: m
+El tiene 4 €.
+El nombre del participante 5 es: m
+El tiene 4 €.
+El nombre del participante 6 es: m
+El tiene 4 €.
+El nombre del participante 7 es: m
+El tiene 4 €.

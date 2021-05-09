@@ -42,7 +42,6 @@ int main()
     int n_c, i;
     char nc, pc;
     int num_jug, i1;
-    int x, y;
     srand(time(NULL));
     F_prueba = fopen("Prueba_de_Ficheros.txt", "w");
     if (F_prueba == NULL)
@@ -68,7 +67,7 @@ int main()
     for(i1=0; i1 < num_jug;i1++)
     {
         printf("Introducid el nombre del participante %i:\n", i1+1);
-        scanf("%49s[^\n]", participante[i1].nombre); /**/
+        scanf("%49s[^\n]", participante[i1].nombre);
         fflush(stdin);
         do
         {
@@ -99,36 +98,36 @@ int main()
             }
     }
 
-    for(x = 0; x < num_jug; x++)
+    for(i1 = 0; i1 < num_jug; i1++)
     {
-        printf("Las cartas de %s son:\t", participante[x].nombre);
-        for(y = 0; y < 2; y++)
+        printf("Las cartas de %s son:\t", participante[i1].nombre);
+        for(i = 0; i < 2; i++)
         {
-            if(participante[x].carta[y].numero == 10)
+            if(participante[i1].carta[i].numero == 10)
             {
-                if((participante[x].carta[y].palo == 3)||(participante[x].carta[y].palo == 4))
+                if((participante[i1].carta[i].palo == 3)||(participante[i1].carta[i].palo == 4))
                 {
                     printf(ANSI_COLOR_RED);
-                    printf("%i%c ", participante[x].carta[y].numero, participante[x].carta[y].palo);
+                    printf("%i%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
                 else
                 {
-                    printf("%i%c ", participante[x].carta[y].numero, participante[x].carta[y].palo);
+                    printf("%i%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
             }
             else
             {
-                if((participante[x].carta[y].palo == 3)||(participante[x].carta[y].palo == 4))
+                if((participante[i1].carta[i].palo == 3)||(participante[i1].carta[i].palo == 4))
                 {
                     printf(ANSI_COLOR_RED);
-                    printf("%c%c ", participante[x].carta[y].numero, participante[x].carta[y].palo);
+                    printf("%c%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
                 else
                 {
-                    printf("%c%c ", participante[x].carta[y].numero, participante[x].carta[y].palo);
+                    printf("%c%c ", participante[i1].carta[i].numero, participante[i1].carta[i].palo);
                     printf(ANSI_COLOR_RESET);
                 }
             }
