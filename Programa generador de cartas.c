@@ -24,7 +24,10 @@ typedef struct                  /** Cosas del jugador **/
     e_carta carta_j[20];
     char nombre[100];
     int monedero;
-}jugador;
+    int suma_t;
+    int apuesta;
+}datos_jugador;
+
 
 
 /// Programa
@@ -32,13 +35,14 @@ int main()
 {
     system("cls");
     FILE *F_prueba;
-    jugador crupier = {.nombre = "Susana Picado"};
+    datos_jugador crupier = {.nombre = "Susana Picado"};
     int carta_jug[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
     char carta_imp[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', '\0'};                 /** Números Posibles **/
     char palo[] = { 3, 4, 5, 6, '\0' };                                                                     /** Palos Posibles **/
     int n_c, i;
     char nc, pc;
     int num_jug, i1;
+    int suma;
     srand(time(NULL));
     F_prueba = fopen("Prueba_de_Ficheros.txt", "w");
     if (F_prueba == NULL)
@@ -59,7 +63,7 @@ int main()
         scanf("%i",&num_jug);
     }while ((num_jug<1)||(num_jug>7));
 
-    jugador participante[num_jug];
+    datos_jugador participante[num_jug];
 
     for(i1=0; i1 < num_jug;i1++)
     {
@@ -75,6 +79,9 @@ int main()
         }while((participante[i1].monedero <=0));
         printf("\n");
     }
+
+    ///Implementar para que cada jugador elija su apuesta.
+
     for(i1=0; i1 < num_jug;i1++)
     {
         for(i = 0; i < 20; i++)
@@ -86,11 +93,13 @@ int main()
                     n_c = 10;
                     participante[i1].carta_i[i].numero = n_c;
                     participante[i1].carta_i[i].palo = palo[pc];
+                    participante[i1].carta_j[i].numero=n_c;
                 }
                 else
                 {
                     participante[i1].carta_i[i].numero = carta_imp[nc];
                     participante[i1].carta_i[i].palo = palo[pc];
+                    participante[i1].carta_j[i].numero=carta_jug[nc];
                 }
             }
     }
@@ -103,22 +112,26 @@ int main()
             n_c = 10;
             crupier.carta_i[i].numero = n_c;
             crupier.carta_i[i].palo = palo[pc];
+            crupier.carta_j[i].numero = 10;
         }
         else
         {
             crupier.carta_i[i].numero = carta_imp[nc];
             crupier.carta_i[i].palo = palo[pc];
+            crupier.carta_j[i].numero = carta_jug[nc];
         }
     }
+    system("cls");
+
     printf("Las cartas del crupier son:");
-    for(i = 0; i < 2; i++)
-    {
+
+ i=0;
         if(crupier.carta_i[i].numero == 10)
         {
             if((crupier.carta_i[i].palo == 3)||(crupier.carta_i[i].palo == 4))
             {
                 printf(ANSI_COLOR_RED);
-                printf("%i%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf("%i%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);    //Imprimir primera carta del crupier.
                 printf(ANSI_COLOR_RESET);
             }
             else
@@ -141,8 +154,9 @@ int main()
                 printf(ANSI_COLOR_RESET);
             }
         }
-        printf("\n");
-    }
+        printf("%c%c", 63, 63);
+        printf("\n\n");
+
 
     for(i1 = 0; i1 < num_jug; i1++)
     {
@@ -181,6 +195,28 @@ int main()
         }
         printf("\n");
     }
+
+
+
+    for(i1=0, suma=0; i1 < num_jug; i1++)
+    {
+
+
+        if (participante[i1].carta_j[0].numero == 1)
+           participante[i1].carta_j[0].numero = 11;
+        if (participante[i1].carta_j[1].numero == 1)
+           participante[i1].carta_j[1].numero = 11;
+        if((participante[i1].carta_j[0].numero == 11) && (participante[i1].carta_j[1].numero == 11))
+            participante[i1].carta_j[1].numero = 1;
+
+
+
+        participante[i1].suma_t = participante[i1].carta_j[0].numero + participante[i1].carta_j[1].numero;
+
+        printf("%i\n", participante[i1].suma_t);
+
+    }
+
 
     fclose(F_prueba);
     return 0;
