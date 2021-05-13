@@ -1,8 +1,6 @@
-El nombre del participante 1 es: eqw
-El tiene 3 €.
-El nombre del participante 2 es: e
-El tiene 3 €.
-El nombre del participante 3 es: e
-El tiene 3 €.
-El nombre del participante 4 es: e
-El tiene 3 €.
+El nombre del participante 1 es: m
+El tiene 4 €.
+El nombre del participante 2 es: ¤
+El tiene 45 €.
+El nombre del participante 3 es: h
+El tiene 4 €.

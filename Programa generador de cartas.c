@@ -43,6 +43,7 @@ int main()
     char nc, pc;
     int num_jug, i1;
     int suma;
+    char eleccion;
     srand(time(NULL));
     F_prueba = fopen("Prueba_de_Ficheros.txt", "w");
     if (F_prueba == NULL)
@@ -196,15 +197,13 @@ int main()
         printf("\n");
     }
 
-
-
     for(i1=0, suma=0; i1 < num_jug; i1++)
     {
 
 
         if (participante[i1].carta_j[0].numero == 1)
            participante[i1].carta_j[0].numero = 11;
-        if (participante[i1].carta_j[1].numero == 1)
+        if (participante[i1].carta_j[1].numero == 1)                                                                 ///Arreglo para el as al principio
            participante[i1].carta_j[1].numero = 11;
         if((participante[i1].carta_j[0].numero == 11) && (participante[i1].carta_j[1].numero == 11))
             participante[i1].carta_j[1].numero = 1;
@@ -217,9 +216,92 @@ int main()
 
     }
 
+    Borrar();
+
+
+
+
+    for (i1 = 0; i1 < num_jug; i1++)
+    {
+
+            printf("Las cartas del crupier son:");
+
+ i=0;
+        if(crupier.carta_i[i].numero == 10)
+        {
+            if((crupier.carta_i[i].palo == 3)||(crupier.carta_i[i].palo == 4))
+            {
+                printf(ANSI_COLOR_RED);
+                printf("%i%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);    //Imprimir primera carta del crupier.
+                printf(ANSI_COLOR_RESET);
+            }
+            else
+            {
+                printf("%i%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf(ANSI_COLOR_RESET);
+            }
+        }
+        else
+        {
+            if((crupier.carta_i[i].palo == 3)||(crupier.carta_i[i].palo == 4))
+            {
+                printf(ANSI_COLOR_RED);
+                printf("%c%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf(ANSI_COLOR_RESET);
+            }
+            else
+            {
+                printf("%c%c ", crupier.carta_i[i].numero, crupier.carta_i[i].palo);
+                printf(ANSI_COLOR_RESET);
+            }
+        }
+        printf("%c%c", 63, 63);
+        printf("\n\n");
+
+
+
+        printf("Turno de %s\n", participante[i1].nombre);
+
+        printf("Tus cartas son: %c%c %c%c --> %i\n",
+               participante[i1].carta_i[0].numero, participante[i1].carta_i[0].palo, participante[i1].carta_i[1].numero, participante[i1].carta_i[1].palo,
+                participante[i1].suma_t);
+
+        if (participante[i1].suma_t == 21)
+            printf("%cBlackjack!\n",173);
+        else
+        {
+            while ((participante[i1].suma_t < 21) && (eleccion != 2))
+            {
+                printf("%cQu%c quieres hacer?\n",
+                        168, 130);
+                printf("Pedir:1\tPlantarse:2\n");                                           ///Se imprime 2 veces
+                scanf("%c", &eleccion);
+                i=0;
+                switch (eleccion)
+                {
+                case '1':
+                    {
+                        participante[i1].suma_t += participante[i1].carta_j[i+2].numero;
+                        printf("%c%c\t", participante[i1].carta_i[i+2].numero, participante[i1].carta_i[i+2].palo);
+                        printf("La suma es %i\n", participante[i1].suma_t);
+                        i++;
+                        break;
+                    }
+                    case '2':
+                        break;
+                }                                                                           ///No funciona el 2
+            }
+
+
+        Borrar();
+    }
+
+}
+
 
     fclose(F_prueba);
     return 0;
+
 }
 
 void Borrar()
