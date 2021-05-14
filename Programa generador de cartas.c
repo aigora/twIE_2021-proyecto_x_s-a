@@ -127,6 +127,23 @@ int main()
     }
     system("cls");
 
+
+
+            for(i1 = 0; i1 < num_jug; i1++)
+    {
+        do
+        {
+            system ("cls");
+            printf("Tu monedero actual es %i.\n", participante[i1].monedero);
+            printf("%s, %ccu%cnto quieres apostar de tu monedero?\n",
+                    participante[i1].nombre, 168, 160);
+            scanf("%i", &participante[i1].apuesta);
+        }while (participante[i1].apuesta < 0 || participante[i1].apuesta > participante[i1].monedero);
+    }
+
+Continuar();
+
+
     printf("Las cartas del crupier son:");
     for(i = 0; i < 1; i++);
     {
@@ -197,7 +214,7 @@ int main()
                 imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
             }
         }
-        printf("\nLa suma es %i", participante[i1].suma_t);
+        printf("--> %i", participante[i1].suma_t);
 
         if (participante[i1].suma_t == 21)
         {
@@ -212,25 +229,30 @@ int main()
                     printf("\n%cQu%c quieres hacer?\n", 168, 130);
                     printf("Pedir:1\tPlantarse:2\n");
                     scanf("%i", &eleccion);
-                    i=0;
                     switch (eleccion)
                     {
                     case 1:
                         {
+
                             participante[i1].suma_t += participante[i1].carta[i+2].num_j;
+                            if (participante[i1].carta[i+2].num_j == 11 && participante[i1].suma_t > 21)
+                                participante[i1].suma_t -= 10;
                             printf("%c%c\t", participante[i1].carta[i+2].num_i, participante[i1].carta[i+2].palo);
                             printf("La suma es %i\n", participante[i1].suma_t);
                             i++;
                             break;
                         }
                     case 2:
-                        printf("Te has plantado con %i, se acabo tu turno.\n", participante[i1].suma_t);
+                        printf("Te has plantado con %i, se acab%c tu turno.\n",
+                                participante[i1].suma_t, 162);
                         break;
                     default:
                         printf("Por favor, introduzca una opción válida");
                         Continuar();
                         break;
                     }
+                    if (participante[i1].suma_t > 21)
+                        printf("Te has pasado, se acab%c tu turno.\n", 162);
                 }while ((participante[i1].suma_t < 21) && (eleccion != 2));
             }while((eleccion < 1)||(eleccion > 3));
 

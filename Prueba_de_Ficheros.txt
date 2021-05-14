@@ -1,6 +1,6 @@
-El nombre del participante 1 es: 1
-El tiene 1 €.
-El nombre del participante 2 es: 2
-El tiene 2 €.
-El nombre del participante 3 es: 3
+El nombre del participante 1 es: Marco
+El tiene 23 €.
+El nombre del participante 2 es: re
 El tiene 3 €.
+El nombre del participante 3 es: r
+El tiene 4 €.
