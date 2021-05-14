@@ -224,13 +224,13 @@ int main()
                             break;
                         }
                     case 2:
+                        printf("Te has plantado con %i, se acabo tu turno.\n", participante[i1].suma_t);
                         break;
                     default:
                         printf("Por favor, introduzca una opción válida");
                         Continuar();
                         break;
                     }
-
                 }while ((participante[i1].suma_t < 21) && (eleccion != 2));
             }while((eleccion < 1)||(eleccion > 3));
 
