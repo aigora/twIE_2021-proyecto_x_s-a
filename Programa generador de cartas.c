@@ -13,7 +13,14 @@ void imp_color_rojo_10(int num, char palo);
 void imp_color_rojo_n(char num, char palo);
 
 int suma_2cartas(int cart_1, int cart_2);
-
+int suma_3cartas(int cart_1, int cart_2, int cart_3);
+int suma_4cartas(int cart_1, int cart_2, int cart_3, int cart_4);
+int suma_5cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5);
+int suma_6cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6);
+int suma_7cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7);
+int suma_8cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7, int cart_8);
+int suma_9cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7, int cart_8, int cart_9);
+int suma_10cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7, int cart_8, int cart_9, int cart_10);
 /// Estructuras
 typedef struct                  /** Componentes de una carta **/
 {
@@ -44,7 +51,7 @@ int main()
     char palo[]      = { 3, 4, 5, 6, '\0' };                                                                    /** Palos Posibles **/
     char nc, pc;
     srand(time(NULL));
-    int n_c, i;
+    int n_c, i, c;
     int num_jug, i1;
     int suma, eleccion;
 
@@ -84,11 +91,9 @@ int main()
         printf("\n");
     }
 
-    ///Implementar para que cada jugador elija su apuesta.
-
     for(i1 = 0; i1 < num_jug; i1++)
     {
-        for(i = 0; i < 20; i++)
+        for(i = 0; i < 10; i++)
             {
                 nc = rand()%13;
                 pc = rand()%4;
@@ -107,22 +112,22 @@ int main()
                 }
             }
     }
-    for(i = 0; i < 20; i++)
+    for(c = 0; c < 10; c++)
     {
         nc = rand()%13;
         pc = rand()%4;
         if(carta_imp[nc] == carta_imp[9])
         {
             n_c = 10;
-            crupier.carta[i].num_i = n_c;
-            crupier.carta[i].num_j = carta_jug[nc];
-            crupier.carta[i].palo  = palo[pc];
+            crupier.carta[c].num_i = n_c;
+            crupier.carta[c].num_j = carta_jug[nc];
+            crupier.carta[c].palo  = palo[pc];
         }
         else
         {
-            crupier.carta[i].num_i = carta_imp[nc];
-            crupier.carta[i].num_j = carta_jug[nc];
-            crupier.carta[i].palo  = palo[pc];
+            crupier.carta[c].num_i = carta_imp[nc];
+            crupier.carta[c].num_j = carta_jug[nc];
+            crupier.carta[c].palo  = palo[pc];
         }
     }
     system("cls");
@@ -141,19 +146,19 @@ int main()
         }while (participante[i1].apuesta < 0 || participante[i1].apuesta > participante[i1].monedero);
     }
 
-Continuar();
+    Continuar();
 
 
     printf("Las cartas del crupier son:");
-    for(i = 0; i < 1; i++);
+    for(c = 0; i < 1; c++);
     {
-        if(crupier.carta[i].num_i == 10)
+        if(crupier.carta[c].num_i == 10)
         {
-            imp_color_rojo_10(crupier.carta[i].num_i, crupier.carta[i].palo);
+            imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
         }
         else
         {
-            imp_color_rojo_n(crupier.carta[i].num_i, crupier.carta[i].palo);
+            imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
         }
         printf("%c%c", 63, 63);
         printf("\n\n");
@@ -178,11 +183,9 @@ Continuar();
         printf("\n");
     }
 
-    for(i1=0, suma=0; i1 < num_jug; i1++)
+    for(i1=0; i1 < num_jug; i1++)
     {
-        if((participante[i1].carta[0].num_j == 11) && (participante[i1].carta[1].num_j == 11))
-            participante[i1].carta[1].num_j = 1;
-        participante[i1].suma_t = participante[i1].carta[0].num_j + participante[i1].carta[1].num_j;
+        participante[i1].suma_t = suma_2cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j);
         printf("%i\n", participante[i1].suma_t);
     }
     Continuar();
@@ -226,45 +229,70 @@ Continuar();
             {
                 do
                 {
-                    printf("\n%cQu%c quieres hacer?\n", 168, 130);
-                    printf("Pedir:1\tPlantarse:2\n");
-                    scanf("%i", &eleccion);
-                    switch (eleccion)
+                    participante[i1].suma_t = participante[i1].suma_t;
+                    if(participante[i1].suma_t < 21)
                     {
-                    case 1:
+                        printf("\n%cQu%c quieres hacer?\n", 168, 130);
+                        printf("Pedir:1\tPlantarse:2\n");
+                        scanf("%i", &eleccion);
+                        switch (eleccion)
                         {
-
-                            participante[i1].suma_t += participante[i1].carta[i+2].num_j;
-                            if (participante[i1].carta[i+2].num_j == 11 && participante[i1].suma_t > 21)
-                                participante[i1].suma_t -= 10;
-                            printf("%c%c\t", participante[i1].carta[i+2].num_i, participante[i1].carta[i+2].palo);
-                            printf("La suma es %i\n", participante[i1].suma_t);
+                        case 1:
+                            if(participante[i1].carta[i].num_i == 10)
+                            {
+                                imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                            }
+                            else
+                            {
+                                imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                            }
                             i++;
+                            switch(i-2)
+                            {
+                                case 1:
+                                    participante[i1].suma_t = suma_3cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j);
+                                   break;
+                                case 2:
+                                    participante[i1].suma_t = suma_4cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j);
+                                    break;
+                                case 3:
+                                    participante[i1].suma_t = suma_5cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j);
+                                    break;
+                                case 4:
+                                    participante[i1].suma_t = suma_6cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j);
+                                    break;
+                                case 5:
+                                    participante[i1].suma_t = suma_7cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j);
+                                    break;
+                                case 6:
+                                    participante[i1].suma_t = suma_8cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j);
+                                    break;
+                                case 7:
+                                    participante[i1].suma_t = suma_9cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j, participante[i1].carta[8].num_j);
+                                    break;
+                                case 8:
+                                    participante[i1].suma_t = suma_10cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j, participante[i1].carta[8].num_j, participante[i1].carta[9].num_j);
+                                    break;
+                            }
+                            printf("  -->   %i\n", participante[i1].suma_t);
+                            break;
+                        case 2:
+                            printf("Te has plantado con %i, se acab%c tu turno.\n", participante[i1].suma_t, 162);
+                            break;
+                        default:
+                            printf("Por favor, introduzca una opción válida...");
+                            Continuar();
                             break;
                         }
-                    case 2:
-                        printf("Te has plantado con %i, se acab%c tu turno.\n",
-                                participante[i1].suma_t, 162);
-                        break;
-                    default:
-                        printf("Por favor, introduzca una opción válida");
-                        Continuar();
-                        break;
                     }
-                    if (participante[i1].suma_t > 21)
-                        printf("Te has pasado, se acab%c tu turno.\n", 162);
-                }while ((participante[i1].suma_t < 21) && (eleccion != 2));
-            }while((eleccion < 1)||(eleccion > 3));
+                }while((eleccion < 1)||(eleccion > 3));
+            }while((participante[i1].suma_t < 21)&&(eleccion != 2));
 
         }
-
     Continuar();
     }
-
-
     fclose(F_prueba);
     return 0;
-
 }
 
 void Continuar()
@@ -287,6 +315,213 @@ int suma_2cartas(int cart_1, int cart_2)
         suma = 12;
         return suma;
     }
+}
+int suma_3cartas(int cart_1, int cart_2, int cart_3)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+    else if( suma > 21 )
+    {
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        suma = cart_1 + cart_2 + cart_3;
+        return suma;
+    }
+}
+int suma_4cartas(int cart_1, int cart_2, int cart_3, int cart_4)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3 + cart_4;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+    else if( suma > 21 )
+    {
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        if(cart_4 == 11)
+            cart_4 = 1;
+        suma = cart_1 + cart_2 + cart_3 + cart_4;
+        return suma;
+    }
+}
+int suma_5cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+    else if( suma > 21 )
+    {
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        if(cart_4 == 11)
+            cart_4 = 1;
+        if(cart_5 == 11)
+            cart_5 = 1;
+        suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5;
+        return suma;
+    }
+}
+int suma_6cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+    else if( suma > 21 )
+    {
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        if(cart_4 == 11)
+            cart_4 = 1;
+        if(cart_5 == 11)
+            cart_5 = 1;
+        if(cart_6 == 11)
+            cart_6 = 1;
+        suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6;
+        return suma;
+    }
+}
+int suma_7cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+    else if( suma > 21 )
+    {
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        if(cart_4 == 11)
+            cart_4 = 1;
+        if(cart_5 == 11)
+            cart_5 = 1;
+        if(cart_6 == 11)
+            cart_6 = 1;
+        if(cart_7 == 11)
+            cart_7 = 1;
+        suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7;
+        return suma;
+    }
+}
+int suma_8cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7, int cart_8)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7 + cart_8;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        if(cart_4 == 11)
+            cart_4 = 1;
+        if(cart_5 == 11)
+            cart_5 = 1;
+        if(cart_6 == 11)
+            cart_6 = 1;
+        if(cart_7 == 11)
+            cart_7 = 1;
+        if(cart_8 == 11)
+            cart_8 = 1;
+        suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7 + cart_8;
+        return suma;
+}
+int suma_9cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7, int cart_8, int cart_9)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7 + cart_8 + cart_9;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        if(cart_4 == 11)
+            cart_4 = 1;
+        if(cart_5 == 11)
+            cart_5 = 1;
+        if(cart_6 == 11)
+            cart_6 = 1;
+        if(cart_7 == 11)
+            cart_7 = 1;
+        if(cart_8 == 11)
+            cart_8 = 1;
+        if(cart_9 == 11)
+            cart_9 = 1;
+        suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7 + cart_8+ cart_9;
+        return suma;
+}
+int suma_10cartas(int cart_1, int cart_2, int cart_3, int cart_4, int cart_5, int cart_6, int cart_7, int cart_8, int cart_9, int cart_10)
+{
+    int suma;
+    suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7 + cart_8 + cart_9 + cart_10;
+    if(suma <= 21)
+    {
+        return suma;
+    }
+        if(cart_1 == 11)
+            cart_1 = 1;
+        if(cart_2 == 11)
+            cart_2 = 1;
+        if(cart_3 == 11)
+            cart_3 = 1;
+        if(cart_4 == 11)
+            cart_4 = 1;
+        if(cart_5 == 11)
+            cart_5 = 1;
+        if(cart_6 == 11)
+            cart_6 = 1;
+        if(cart_7 == 11)
+            cart_7 = 1;
+        if(cart_8 == 11)
+            cart_8 = 1;
+        if(cart_9 == 11)
+            cart_9 = 1;
+        if(cart_10 == 11)
+            cart_10 = 1;
+        suma = cart_1 + cart_2 + cart_3 + cart_4 + cart_5 + cart_6 + cart_7 + cart_8 + cart_9 + cart_10;
+        return suma;
 }
 
 void imp_color_rojo_10(int num, char palo)
@@ -319,4 +554,3 @@ void imp_color_rojo_n(char num, char palo)
         printf(ANSI_COLOR_RESET);
     }
 }
-
