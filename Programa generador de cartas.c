@@ -393,7 +393,7 @@ int main()
     for(i1 = 0, premio = 0; i1 < num_jug; i1++)
     {
         printf("La suma de la mano del %s es %i\n", participante[i1].nombre, participante[i1].suma_t);
-        printf("Apost%c: %i", 162, participante[i1].apuesta);
+        printf("Apost%c: %i\n", 162, participante[i1].apuesta);
         if(participante[i1].Pasar_21 == 1)
         {
             printf("En el monedero de %s hay %i\n", participante[i1].nombre, participante[i1].monedero);
