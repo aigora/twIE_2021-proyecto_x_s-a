@@ -9,9 +9,11 @@
 
 /// Funciones
 void Continuar();
+void Menu_Final();
+int Premio( _Bool BJ_p, _Bool BJ_c, int apuesta, int suma_p, int suma_c);
 void imp_color_rojo_10(int num, char palo);
 void imp_color_rojo_n(char num, char palo);
-int Premio( _Bool Mas_de_21, _Bool BJ, int apuesta, int suma_p, int suma_c);
+
 
 int suma_2cartas(int cart_1, int cart_2);
 int suma_3cartas(int cart_1, int cart_2, int cart_3);
@@ -55,7 +57,7 @@ int main()
     char palo[]      = { 3, 4, 5, 6, '\0' };                                                                    /** Palos Posibles **/
     char nc, pc;
     srand(time(NULL));
-    int n_c, i, c, aux;
+    int n_c, i, c, aux, Dec_BJ;
     int num_jug, i1;
     int suma, eleccion, premio;
 
@@ -93,249 +95,73 @@ int main()
             printf("Elija la cantidad inicial con la que %s quiere empezar a jugar (Cantidad entera): \n", participante[i1].nombre);
             scanf("%i", &participante[i1].monedero);
             fprintf(F_prueba, "El nombre del participante %i es: %s\n", i1+1, participante[i1].nombre);
-            fprintf(F_prueba, "El tiene %i €.\n", participante[i1].monedero);
+            fprintf(F_prueba, "El tiene %i euros.\n", participante[i1].monedero);
         }while((participante[i1].monedero <= 0));
         printf("\n");
     }
-
-    //Se generan las 10 primeras cartas de todos los jugadores
-    for(i1 = 0; i1 < num_jug; i1++)
+    do
     {
-        for(i = 0; i < 10; i++)
-            {
-                nc = rand()%13;
-                pc = rand()%4;
-                if(carta_imp[nc] == carta_imp[9])
+        //Se generan las 10 primeras cartas de todos los jugadores
+        for(i1 = 0; i1 < num_jug; i1++)
+        {
+            for(i = 0; i < 10; i++)
                 {
-                    n_c = 10;
-                    participante[i1].carta[i].num_i = n_c;
-                    participante[i1].carta[i].num_j = carta_jug[nc];
-                    participante[i1].carta[i].palo  = palo[pc];
+                    nc = rand()%13;
+                    pc = rand()%4;
+                    if(carta_imp[nc] == carta_imp[9])
+                    {
+                        n_c = 10;
+                        participante[i1].carta[i].num_i = n_c;
+                        participante[i1].carta[i].num_j = carta_jug[nc];
+                        participante[i1].carta[i].palo  = palo[pc];
+                    }
+                    else
+                    {
+                        participante[i1].carta[i].num_i = carta_imp[nc];
+                        participante[i1].carta[i].num_j = carta_jug[nc];
+                        participante[i1].carta[i].palo  = palo[pc];
+                    }
                 }
-                else
-                {
-                    participante[i1].carta[i].num_i = carta_imp[nc];
-                    participante[i1].carta[i].num_j = carta_jug[nc];
-                    participante[i1].carta[i].palo  = palo[pc];
-                }
-            }
-    }
-    //se generan las 10 primeras cartas del crupier
-    for(c = 0; c < 10; c++)
-    {
-        nc = rand()%13;
-        pc = rand()%4;
-        if(carta_imp[nc] == carta_imp[9])
-        {
-            n_c = 10;
-            crupier.carta[c].num_i = n_c;
-            crupier.carta[c].num_j = carta_jug[nc];
-            crupier.carta[c].palo  = palo[pc];
         }
-        else
+        //se generan las 10 primeras cartas del crupier
+        for(c = 0; c < 10; c++)
         {
-            crupier.carta[c].num_i = carta_imp[nc];
-            crupier.carta[c].num_j = carta_jug[nc];
-            crupier.carta[c].palo  = palo[pc];
-        }
-    }
-    system("cls");
-
-    //Se introduce la cantidad a apostar por los jugadores
-    for(i1 = 0; i1 < num_jug; i1++)
-    {
-        do
-        {
-            system ("cls");
-            printf("Tu monedero actual es %i.\n", participante[i1].monedero);
-            printf("%s, %ccu%cnto quieres apostar de tu monedero?\n", participante[i1].nombre, 168, 160);
-            scanf("%i", &participante[i1].apuesta);
-        }while (participante[i1].apuesta < 0 || participante[i1].apuesta > participante[i1].monedero);
-        participante[i1].monedero -= participante[i1].apuesta;
-    }
-
-    Continuar();
-
-    //Imprimimos solo una carta del crupier
-    printf("Las cartas del crupier son:");
-    for(c = 0; i < 1; c++);
-    {
-        if(crupier.carta[c].num_i == 10)
-        {
-            imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
-        }
-        else
-        {
-            imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
-        }
-        printf("%c%c", 63, 63);
-        printf("\n\n");
-    }
-
-    //Imprimimos las cartas de los jugadores
-    for(i1 = 0; i1 < num_jug; i1++)
-    {
-        printf("Las cartas de %s son:", participante[i1].nombre);
-        for(i = 0; i < 2; i++)
-        {
-            if(participante[i1].carta[i].num_i == 10)
+            nc = rand()%13;
+            pc = rand()%4;
+            if(carta_imp[nc] == carta_imp[9])
             {
-                imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                n_c = 10;
+                crupier.carta[c].num_i = n_c;
+                crupier.carta[c].num_j = carta_jug[nc];
+                crupier.carta[c].palo  = palo[pc];
             }
             else
             {
-                imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
-            }
-
-        }
-        participante[i1].suma_t = suma_2cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j);
-        printf("   -->   %i\n", participante[i1].suma_t);
-    }
-    Continuar();
-
-    //Se muestra en pantalla la carta del crupier, y las cartas del jugador, con su respectiva suma. También, se imprimen las cartas que pida el jugador, incluyendo la nueva suma de valores.
-    for (i1 = 0; i1 < num_jug; i1++)
-    {
-        /*Primero las cartas del crupier*/
-        printf("Las cartas del crupier son:");
-        i=0;
-        if(crupier.carta[i].num_i == 10)
-        {
-            imp_color_rojo_10(crupier.carta[i].num_i, crupier.carta[i].palo);
-        }
-        else
-        {
-            imp_color_rojo_n(crupier.carta[i].num_i, crupier.carta[i].palo);
-        }
-        printf("%c%c", 63, 63);
-        printf("\n\n");
-
-        /*Primero imprimimos las primeras 2 cartas y su suma.*/
-        printf("Es el turno de %s\n", participante[i1].nombre);
-        printf("Tus cartas son: ", participante[i1].nombre);
-        for(i = 0; i < 2; i++)
-        {
-            if(participante[i1].carta[i].num_i == 10)
-            {
-                imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
-            }
-            else
-            {
-                imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                crupier.carta[c].num_i = carta_imp[nc];
+                crupier.carta[c].num_j = carta_jug[nc];
+                crupier.carta[c].palo  = palo[pc];
             }
         }
-        printf("--> %i", participante[i1].suma_t);
+        system("cls");
 
-        /*Ahora comprobamos la suma de las dos primeras, y si son menores que 21, le damos la opción a que pida más o se plante*/
-        if (participante[i1].suma_t == 21)
+        //Se introduce la cantidad a apostar por los jugadores
+        for(i1 = 0; i1 < num_jug; i1++)
         {
-            printf("%cBlackjack!\n",173);
-            participante[i1].BJ = 1;/*Si obtiene 21 con las dos primeras cartas _Bool BJ (Black Jack), tendrá valor 1, que afirma ese hecho.*/
-        }
-        else
-        {
-            participante[i1].BJ = 0;/*Sino, recibirá el valor 0.*/
             do
             {
-                do
-                {
-                    if(participante[i1].suma_t < 21)
-                    {
-                        printf("\n%cQu%c quieres hacer?\n", 168, 130);
-                        printf("Pedir:1\tPlantarse:2\n");
-                        scanf("%i", &eleccion);
-                        switch (eleccion)
-                        {
-                        case 1:
-                            if(participante[i1].carta[i].num_i == 10)
-                            {
-                                imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
-                            }
-                            else
-                            {
-                                imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
-                            }
-                            i++;
-                            switch(i-2)
-                            {
-                                case 1:
-                                    participante[i1].suma_t = suma_3cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j);
-                                   break;
-                                case 2:
-                                    participante[i1].suma_t = suma_4cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j);
-                                    break;
-                                case 3:
-                                    participante[i1].suma_t = suma_5cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j);
-                                    break;
-                                case 4:
-                                    participante[i1].suma_t = suma_6cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j);
-                                    break;
-                                case 5:
-                                    participante[i1].suma_t = suma_7cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j);
-                                    break;
-                                case 6:
-                                    participante[i1].suma_t = suma_8cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j);
-                                    break;
-                                case 7:
-                                    participante[i1].suma_t = suma_9cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j, participante[i1].carta[8].num_j);
-                                    break;
-                                case 8:
-                                    participante[i1].suma_t = suma_10cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j, participante[i1].carta[8].num_j, participante[i1].carta[9].num_j);
-                                    break;
-                            }
-                            printf("  -->   %i\n", participante[i1].suma_t);
-                            break;
-                        case 2:
-                            printf("Te has plantado con %i, se acab%c tu turno.\n", participante[i1].suma_t, 162);
-                            break;
-                        default:
-                            printf("Por favor, introduzca una opción válida...");
-                            Continuar();
-                            break;
-                        }
-                    }
-                }while((eleccion < 1)||(eleccion > 3));
-            }while((participante[i1].suma_t < 21)&&(eleccion != 2));
+                system ("cls");
+                printf("Tu monedero actual es %i.\n", participante[i1].monedero);
+                printf("%s, %ccu%cnto quieres apostar de tu monedero?\n", participante[i1].nombre, 168, 160);
+                scanf("%i", &participante[i1].apuesta);
+            }while (participante[i1].apuesta < 0 || participante[i1].apuesta > participante[i1].monedero);
+            participante[i1].monedero -= participante[i1].apuesta;
         }
-    /*Si se pasa de 21 el jugador, le daremos al _Bool Pasar_de_21, valor 1, que afirma ese hecho. Sino, recibirá el valor 0.*/
-    if(participante[i1].suma_t > 21)
-    {
-        participante[i1].Pasar_21 = 1;
-    }
-    else
-    {
-        participante[i1].Pasar_21 = 0;
-    }
-    Continuar();
-    }
 
-    //Ahora viene el turno del crupier, el cual si saca menos de un 16, pedirá carta; pero, si saca más, no pedira más.
-    crupier.suma_t = crupier.carta[0].num_j + crupier.carta[1].num_j;
-    printf("Ahora es el turno del crupier.\n");
-    printf("Las cartas del crupier son: \n");
-    for(c = 0; c < 2; c++)
-    {
-        if(crupier.carta[c].num_i == 10)
-        {
-            imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
-        }
-        else
-        {
-            imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
-        }
-    }
-    printf("   -->   %i\n", crupier.suma_t);
-    if( crupier.suma_t == 21)
-    {
-        printf("¡El crupier tiene Black Jack!");
-        crupier.BJ = 1;/*Si obtiene 21 con las dos primeras cartas _Bool BJ (Black Jack), tendrá valor 1, que afirma ese hecho*/
-    }
-    else
-    participante[i1].BJ = 0;/*Sino, recibirá el valor 0.*/
+        Continuar();
 
-    if (crupier.suma_t < 17)
-    {
-        do
+        //Imprimimos solo una carta del crupier
+        printf("Las cartas del crupier son:");
+        for(c = 0; i < 1; c++);
         {
             if(crupier.carta[c].num_i == 10)
             {
@@ -345,69 +171,262 @@ int main()
             {
                 imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
             }
-            c++;
-            switch(c-2)
-            {
-                case 1:
-                    crupier.suma_t = suma_3cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j);
-                    break;
-                case 2:
-                    crupier.suma_t = suma_4cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j);
-                    break;
-                case 3:
-                    crupier.suma_t = suma_5cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j);
-                    break;
-                case 4:
-                    crupier.suma_t = suma_6cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j);
-                    break;
-                case 5:
-                    crupier.suma_t = suma_7cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j);
-                    break;
-                case 6:
-                    crupier.suma_t = suma_8cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j, crupier.carta[7].num_j);
-                    break;
-                case 7:
-                    crupier.suma_t = suma_9cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j, crupier.carta[7].num_j, crupier.carta[8].num_j);
-                    break;
-                case 8:
-                    crupier.suma_t = suma_10cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j, crupier.carta[7].num_j, crupier.carta[8].num_j, crupier.carta[9].num_j);
-                    break;
-            }
-        }while(crupier.suma_t < 17);
-            printf("   -->   %i\n", crupier.suma_t);
-    }
-    /*Si se pasa de 21 el jugador, le daremos al _Bool Pasar_de_21, valor 1, que afirma ese hecho. Sino, recibirá el valor 0.*/
-    if(crupier.suma_t > 21)
-    {
-        crupier.Pasar_21 = 1;
-    }
-    else
-    {
-        crupier.Pasar_21 = 0;
-    }
-    Continuar();
+            printf("%c%c", 63, 63);
+            printf("\n\n");
+        }
 
-    //Ahora viene la lista de ganadores, ESTO HAY QUE MEJORARLO LA VERDAD.
-    printf("Lista de ganadores:\n");
-    printf("La suma de la mano del crupier es %i\n", crupier.suma_t);
-    for(i1 = 0, premio = 0; i1 < num_jug; i1++)
-    {
-        printf("La suma de la mano del %s es %i\n", participante[i1].nombre, participante[i1].suma_t);
-        printf("Apost%c: %i\n", 162, participante[i1].apuesta);
-        if(participante[i1].Pasar_21 == 1)
+        //Imprimimos las cartas de los jugadores
+        for(i1 = 0; i1 < num_jug; i1++)
         {
-            printf("En el monedero de %s hay %i\n", participante[i1].nombre, participante[i1].monedero);
-            printf("perdi%c lo apostado\n\n", 162);
+            printf("Las cartas de %s son:", participante[i1].nombre);
+            for(i = 0; i < 2; i++)
+            {
+                if(participante[i1].carta[i].num_i == 10)
+                {
+                    imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                }
+                else
+                {
+                    imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                }
+
+            }
+            participante[i1].suma_t = suma_2cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j);
+            printf("   -->   %i\n", participante[i1].suma_t);
+        }
+        Continuar();
+
+        //Se muestra en pantalla la carta del crupier, y las cartas del jugador, con su respectiva suma. También, se imprimen las cartas que pida el jugador, incluyendo la nueva suma de valores.
+        for (i1 = 0; i1 < num_jug; i1++)
+        {
+            /*Primero las cartas del crupier*/
+            printf("Las cartas del crupier son:");
+            i=0;
+            if(crupier.carta[i].num_i == 10)
+            {
+                imp_color_rojo_10(crupier.carta[i].num_i, crupier.carta[i].palo);
+            }
+            else
+            {
+                imp_color_rojo_n(crupier.carta[i].num_i, crupier.carta[i].palo);
+            }
+            printf("%c%c", 63, 63);
+            printf("\n\n");
+
+            /*Primero imprimimos las primeras 2 cartas y su suma.*/
+            printf("Es el turno de %s\n", participante[i1].nombre);
+            printf("Tus cartas son: ", participante[i1].nombre);
+            for(i = 0; i < 2; i++)
+            {
+                if(participante[i1].carta[i].num_i == 10)
+                {
+                    imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                }
+                else
+                {
+                    imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                }
+            }
+            printf("--> %i", participante[i1].suma_t);
+
+            /*Ahora comprobamos la suma de las dos primeras, y si son menores que 21, le damos la opción a que pida más o se plante*/
+            if (participante[i1].suma_t == 21)
+            {
+                printf("%cBlackjack!\n",173);
+                participante[i1].BJ = 1;/*Si obtiene 21 con las dos primeras cartas _Bool BJ (Black Jack), tendrá valor 1, que afirma ese hecho.*/
+            }
+            else
+            {
+                participante[i1].BJ = 0;/*Sino, recibirá el valor 0.*/
+                do
+                {
+                    do
+                    {
+                        if(participante[i1].suma_t < 21)
+                        {
+                            printf("\n%cQu%c quieres hacer?\n", 168, 130);
+                            printf("Pedir:1\tPlantarse:2\n");
+                            scanf("%i", &eleccion);
+                            switch (eleccion)
+                            {
+                            case 1:
+                                if(participante[i1].carta[i].num_i == 10)
+                                {
+                                    imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                                }
+                                else
+                                {
+                                    imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
+                                }
+                                i++;
+                                switch(i-2)
+                                {
+                                    case 1:
+                                        participante[i1].suma_t = suma_3cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j);
+                                       break;
+                                    case 2:
+                                        participante[i1].suma_t = suma_4cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j);
+                                        break;
+                                    case 3:
+                                        participante[i1].suma_t = suma_5cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j);
+                                        break;
+                                    case 4:
+                                        participante[i1].suma_t = suma_6cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j);
+                                        break;
+                                    case 5:
+                                        participante[i1].suma_t = suma_7cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j);
+                                        break;
+                                    case 6:
+                                        participante[i1].suma_t = suma_8cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j);
+                                        break;
+                                    case 7:
+                                        participante[i1].suma_t = suma_9cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j, participante[i1].carta[8].num_j);
+                                        break;
+                                    case 8:
+                                        participante[i1].suma_t = suma_10cartas(participante[i1].carta[0].num_j, participante[i1].carta[1].num_j, participante[i1].carta[2].num_j, participante[i1].carta[3].num_j, participante[i1].carta[4].num_j, participante[i1].carta[5].num_j, participante[i1].carta[6].num_j, participante[i1].carta[7].num_j, participante[i1].carta[8].num_j, participante[i1].carta[9].num_j);
+                                        break;
+                                }
+                                printf("  -->   %i\n", participante[i1].suma_t);
+                                break;
+                            case 2:
+                                printf("Te has plantado con %i, se acab%c tu turno.\n", participante[i1].suma_t, 162);
+                                break;
+                            default:
+                                printf("Por favor, introduzca una opción válida...");
+                                Continuar();
+                                break;
+                            }
+                        }
+                    }while((eleccion < 1)||(eleccion > 3));
+                }while((participante[i1].suma_t < 21)&&(eleccion != 2));
+            }
+        /*Si se pasa de 21 el jugador, le daremos al _Bool Pasar_de_21, valor 1, que afirma ese hecho. Sino, recibirá el valor 0.*/
+        if(participante[i1].suma_t > 21)
+        {
+            participante[i1].Pasar_21 = 1;
+        }
+        if(participante[i1].suma_t <= 21)
+        {
+            participante[i1].Pasar_21 = 0;
+        }
+        Continuar();
+        }
+
+        //Ahora viene el turno del crupier, el cual si saca menos de un 16, pedirá carta; pero, si saca más, no pedira más.
+        crupier.suma_t = crupier.carta[0].num_j + crupier.carta[1].num_j;
+        printf("Ahora es el turno del crupier.\n");
+        printf("Las cartas del crupier son: \n");
+        for(c = 0; c < 2; c++)
+        {
+            if(crupier.carta[c].num_i == 10)
+            {
+                imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
+            }
+            else
+            {
+                imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
+            }
+        }
+        printf("   -->   %i\n", crupier.suma_t);
+        if( crupier.suma_t == 21)
+        {
+            printf("¡El crupier tiene Black Jack!");
+            crupier.BJ = 1;/*Si obtiene 21 con las dos primeras cartas _Bool BJ (Black Jack), tendrá valor 1, que afirma ese hecho*/
+        }
+        else
+        participante[i1].BJ = 0;/*Sino, recibirá el valor 0.*/
+
+        if (crupier.suma_t < 17)
+        {
+            do
+            {
+                if(crupier.carta[c].num_i == 10)
+                {
+                    imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
+                }
+                else
+                {
+                    imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
+                }
+                c++;
+                switch(c-2)
+                {
+                    case 1:
+                        crupier.suma_t = suma_3cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j);
+                        break;
+                    case 2:
+                        crupier.suma_t = suma_4cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j);
+                        break;
+                    case 3:
+                        crupier.suma_t = suma_5cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j);
+                        break;
+                    case 4:
+                        crupier.suma_t = suma_6cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j);
+                        break;
+                    case 5:
+                        crupier.suma_t = suma_7cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j);
+                        break;
+                    case 6:
+                        crupier.suma_t = suma_8cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j, crupier.carta[7].num_j);
+                        break;
+                    case 7:
+                        crupier.suma_t = suma_9cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j, crupier.carta[7].num_j, crupier.carta[8].num_j);
+                        break;
+                    case 8:
+                        crupier.suma_t = suma_10cartas(crupier.carta[0].num_j, crupier.carta[1].num_j, crupier.carta[2].num_j, crupier.carta[3].num_j, crupier.carta[4].num_j, crupier.carta[5].num_j, crupier.carta[6].num_j, crupier.carta[7].num_j, crupier.carta[8].num_j, crupier.carta[9].num_j);
+                        break;
+                }
+            }while(crupier.suma_t < 17);
+                printf("   -->   %i\n", crupier.suma_t);
+        }
+        /*Si se pasa de 21 el jugador, le daremos al _Bool Pasar_de_21, valor 1, que afirma ese hecho. Sino, recibirá el valor 0.*/
+        if(crupier.suma_t > 21)
+        {
+            crupier.Pasar_21 = 1;
         }
         else
         {
-            printf("En el monedero de %s hay %i\n", participante[i1].nombre, participante[i1].monedero);
-            premio = Premio(participante[i1].Pasar_21, participante[i1].BJ, participante[i1].apuesta, participante[i1].suma_t, crupier.suma_t);
-            printf("gan%c %i\n", 162, premio);
-            participante[i1].monedero += premio;
-            printf("Su monedero asciende a %i\n\n", participante[i1].monedero);
+            crupier.Pasar_21 = 0;
         }
-    }
+        Continuar();
+
+        //Ahora viene la lista de ganadores, ESTO HAY QUE MEJORARLO LA VERDAD.
+        printf("FASE DE RECOMPENSAS:\n");
+        printf("La suma de la mano del crupier es %i\n\n", crupier.suma_t);
+        for(i1 = 0, premio = 0; i1 < num_jug; i1++)
+        {
+            printf("La suma de la mano de %s es %i\n", participante[i1].nombre, participante[i1].suma_t);
+            printf("Apost%c: %i euros\n", 162, participante[i1].apuesta);
+            if(participante[i1].Pasar_21 == 1)
+            {
+                printf("En el monedero de %s hay %i euros\n", participante[i1].nombre, participante[i1].monedero);
+                printf("perdi%c lo apostado\n\n", 162);
+            }
+            else
+            {
+                premio = Premio( participante[i1].BJ, crupier.BJ , participante[i1].apuesta, participante[i1].suma_t, crupier.suma_t);
+                if( premio == 0)
+                {
+                    printf("En el monedero de %s hay %i euros\n", participante[i1].nombre, participante[i1].monedero);
+                    printf("perdi%c lo apostado\n\n", 162);
+                }
+                else
+                {
+                    printf("En el monedero de %s hay %i euros\n", participante[i1].nombre, participante[i1].monedero);
+                    printf("gan%c %i euros\n", 162, premio);
+                    participante[i1].monedero += premio;
+                    printf("Su monedero asciende a %i euros\n\n", participante[i1].monedero);
+                }
+            }
+        }
+        do
+        {
+            Continuar();
+            Menu_Final();
+            scanf("%i", &Dec_BJ);
+        }while((Dec_BJ != 1)&&(Dec_BJ != 2));
+
+    }while(Dec_BJ != 2);
     //Cierre del fichero de prueba.
     fclose(F_prueba);
     return 0;
@@ -420,6 +439,13 @@ void Continuar()
 {
     system("pause");
     system("cls");
+}
+
+void Menu_Final()
+{
+    printf("\n\n%cQuier%cn volver a jugar?\n", 163, 130);
+    printf("1. Si\n");
+    printf("2. No\n");
 }
 
 //Funciones para imprimir colores
@@ -454,38 +480,48 @@ void imp_color_rojo_n(char num, char palo)
     }
 }
 //Funcion de premios
-int Premio(_Bool Mas_de_21, _Bool BJ, int apuesta, int suma_p, int suma_c)
+int Premio( _Bool BJ_p, _Bool BJ_c, int apuesta, int suma_p, int suma_c)
 {
     int premio;
 
-    if(BJ == 1)
+    if(BJ_p == 1)
     {
-        if (suma_p > suma_c)
+        if(BJ_c == 1)
+            return apuesta;
+        else
         {
             premio = apuesta * 2,5;
             return premio;
         }
-        else if (suma_c == suma_p)
-        {
-            return apuesta;
-        }
-
     }
     else
     {
-        if(suma_p == suma_c)
+        if(BJ_c == 1)
+            return 0;
+        else
         {
-            return apuesta;
-        }
-        else if(suma_p < suma_c)
-            {
+            if((suma_p > 21)&&(suma_c > 21))
                 return 0;
-            }
-            else
+            if((suma_p > 21)&&(suma_c < 21))
+                return 0;
+            if((suma_p < 21)&&(suma_c > 21))
             {
                 premio = apuesta * 2;
                 return premio;
             }
+            if((suma_p < 21)&&(suma_c < 21))
+            {
+                if(suma_p < suma_c)
+                    return 0;
+                else
+                {
+                    premio = apuesta * 2;
+                    return premio;
+                }
+                if(suma_p == suma_p)
+                    return apuesta;
+            }
+        }
     }
 }
 
