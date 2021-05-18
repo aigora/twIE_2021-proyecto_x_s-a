@@ -1,0 +1,14 @@
+El nombre del participante 1 es: 1
+El tiene 1 €.
+El nombre del participante 2 es: 2
+El tiene 2 €.
+El nombre del participante 3 es: 3
+El tiene 3 €.
+El nombre del participante 4 es: 4
+El tiene 4 €.
+El nombre del participante 5 es: 5
+El tiene 5 €.
+El nombre del participante 6 es: 6
+El tiene 6 €.
+El nombre del participante 7 es: 7
+El tiene 7 €.
