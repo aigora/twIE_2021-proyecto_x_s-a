@@ -1,8 +1,0 @@
-El nombre del participante 1 es: 1
-El tiene 1 euros.
-El nombre del participante 2 es: 22
-El tiene 2 euros.
-El nombre del participante 3 es: 3
-El tiene 3 euros.
-El nombre del participante 4 es: 4
-El tiene 4 euros.
