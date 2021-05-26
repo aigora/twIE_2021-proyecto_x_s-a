@@ -2,81 +2,32 @@
      No existe un juego de casino más emocionante ni más f%160cil de entender que el blackjack. Desde su introducción en los casinos tradicionales durante el siglo XX, el juego no ha dejado de crecer en popularidad hasta convertirse en el que posiblemente sea el juego de casino favorito en todo el mundo. Pero antes de sentarte en las mesas y de dar lo mejor de ti para ganar a lo grande, asegúrate de que comprendes las normas que rigen el blackjack. A continuación encontrarás más consejos y recomendaciones útiles.
 
 ##Juegos de blackjack
-Las reglas del blackjack se pueden aprender en apenas unos pocos minutos. Sin embargo, dependiendo de la variante a la que juegues, las normas de la mesa y las opciones de apuestas pueden diferir. Hay varios tipos de juegos de blackjack, y ofrecemos distintas versiones en mesas de un jugador y de varios jugadores.
+Las reglas del blackjack se pueden aprender en apenas unos pocos minutos. Sin embargo, dependiendo de la variante a la que juegues, las normas de la mesa y las opciones de apuestas pueden diferir. Nuestro blacjack tendrá las siguientes reglas:
 
 ##Cómo jugar: reglas generales de juego
-En cada ronda de blackjack, los jugadores sentados en la mesa empiezan situando una apuesta en sus respectivas posiciones de apuesta, conocidas como "casillas". Cada mesa muestra de forma clara las apuestas mínima y máxima que pueden realizar los jugadores, y el tamaño de las apuestas se selecciona haciendo clic en el icono de las fichas que muestren el valor correcto de la apuesta deseada. Una vez colocadas las apuestas (o la apuesta) se repartirán dos cartas boca arriba frente a los jugadores, y la banca recibirá bien sea una carta (estilo clásico) o dos, una boca arriba y otra boca abajo (estilo americano), en función de la variante a la que estén jugando.
+En cada ronda de blackjack, los jugadores empiezan eligiendo una apuesta de su monedero. Una vez colocadas las apuestas (o la apuesta) se repartirán dos cartas a los jugadores, y el crupier recibirá una carta.
 
-El objetivo en cualquier mano de blackjack es derrotar a la banca. Para lograrlo, debes tener una mano que puntúe más que la mano de la banca, pero que no supere los 21 en su valor total. También puedes ganar con menos de 22, siempre que la banca supere los 21. Si el valor total de tu mano es de 22 o más, se dice que te has "pasado" y automáticamente perderás cualquier dinero apostado.
+El objetivo en cualquier mano de blackjack es derrotar al crupier. Para lograrlo, debes tener una mano que puntúe más que la mano del crupier, pero que no supere los 21 en su valor total. También puedes ganar con menos de 22, siempre que la banca supere los 21. Si el valor total de tu mano es de 22 o más, se dice que te has "pasado" y automáticamente perderás cualquier dinero apostado.
 
-Cuando llega tu turno, puedes pedir cartas para tu mano (o manos) a fin de aumentar su valor total. Una vez finalizada la petición de cartas, la banca completará su mano. Hay normas estrictas sobre cómo tiene que hacerlo, que dependen de la variante del blackjack a la que estés jugando. Asegúrate de que comprendes las reglas de cada variante; éste es un aspecto crucial a la hora de jugar al blackjack, y te permite tomar importantes decisiones estratégicas en cada mano.
+Cuando llega tu turno, puedes pedir cartas a fin de aumentar su valor total. Una vez finalizada la petición de cartas de todos los participantes, el crupier completará su mano. Con 16 o menos pide cartas y con 17 o más se planta.
 
-La mejor mano del blackjack es, como era de esperar, el "blackjack". La mejor mano del juego ofrece un premio mayor que cualquier otra combinación (hasta 3 a 2 para tu apuesta, dependiendo de la variante a la que estés jugando), y se compone de un as y de cualquier otra carta con valor diez, como jotas, damas, reyes o dieces. El blackjack ha de completarse en las dos primeras cartas que se repartan y es invencible. Sin embargo, puede empatar si la mano de la banca también es un blackjack.
+La mejor mano del blackjack es, como era de esperar, el "blackjack". Se compone de un as y de cualquier otra carta con valor diez, como jotas, damas, reyes o dieces. El blackjack ha de completarse en las dos primeras cartas que se repartan y es invencible. Sin embargo, puede empatar si la mano de la banca también es un blackjack.
 
-En el blackjack, dieces, jotas, damas y reyes tienen un valor de diez. Los ases pueden tener dos valores diferentes: uno u once (puedes elegir el que más te convenga). Por ejemplo, si combinas un as y un cuatro, tu mano puede valer cinco o 15. Cuando el as vale 11, el total recibe el nombre de "suave", así que, en el ejemplo anterior, el quince sería un "15 suave". Los jugadores pueden pedir una carta adicional o biendoblar en una mano suave, sin el riesgo a ser eliminados. Sin embargo, tener una mano suave no es garantía de que vayas a mejorar si pides carta.
+En el blackjack, dieces, jotas, damas y reyes tienen un valor de diez. Los ases pueden tener dos valores diferentes: uno u once, en función de lo beneficie más al participante.
 
-Una mano ganadora en blackjack suele otorgar premios en una proporción 1 a 1 (1:1), también conocida como "cobrar 1 a 1". En consecuencia, si apuestas 20 fichas y ganas la mano, lo habitual es que recibas 20 fichas de beneficio, además de tu apuesta original. Si recibes un blackjack en una variante que paga 3 a 2, obtendrás 30 fichas de beneficio junto con tu apuesta original, siempre que la banca no reciba también un blackjack.
+Una mano ganadora otorgará premios en una proporción 1 a 1 (1:1), también conocida como "cobrar 1 a 1". En consecuencia, si apuestas 20 fichas y ganas la mano, recibirás 20 fichas de beneficio, además de tu apuesta original.
 
-Cuando tu mano tiene el mismo valor que la de la banca, se produce un empate. En este caso, se te devolverá tu apuesta original, pero no obtendrás ningún dinero adicional. Si pierdes la mano, perderás también la apuesta realizada contra la banca. Existen excepciones para estas reglas generales, que aparecen a continuación. También podrás consultarlas en la página de reglas de cada variante del juego.
+Cuando tu mano tiene el mismo valor que la de la banca, se produce un empate. En este caso, se te devolverá tu apuesta original, pero no obtendrás ningún dinero adicional. Si pierdes la mano, perderás también la apuesta realizada contra el crupier.
 
-Normalmente, el pago se efectuará una vez la banca haya completado su mano. Es muy importante que leas las reglas de todas las variantes para buscar las diferencias específicas de cada una, ya que las normas sobre cómo juega y paga la banca son estrictas, y suelen diferir entre los distintos tipos de juego. La diferencia más común entre las distintas variantes consiste en si la banca tiene que pedir cartas ante un 17 suave, o no. En algunas variantes, la banca debe plantarse con un 17 suave, mientras que en otras, la banca debe pedir carta. En todos los juegos de blackjack la banca pedirá otra carta si tiene un total de 16 o inferior, ya sea fuerte o suave.
-
-##Cómo dividir, doblar o rendirse
-En el blackjack, tus acciones no se limitan a pedir cartas o simplemente quedarte con las que te reparten inicialmente. Bajo determinadas circunstancias, se te presentarán opciones adicionales. Estas opciones dependen de las dos cartas iniciales que hayas recibido, e incluyen:
-
-##Dividir
-En esencia, dividir convierte una mano en dos, lo que te da más oportunidades de ganar. Cuando divides una mano, puedes colocar una apuesta adicional en la recién formada segunda mano, de igual valor a la apuesta inicial. Puede suceder en las siguientes situaciones:
-
-Te reparten dos cartas de inicio de igual rango (diez-rey, seis-seis o similar).Ambas manos se juegan de forma independiente y pueden ganar, perder o empatar por separado.
-En algunas variantes del blackjack puedes dividir cartas iguales más de una vez.
-La opción de dividir también cuenta con determinadas restricciones cuando intervienen los ases. Cuando divides dos ases, casi todas las variantes del blackjack sólo permiten repartir una carta para cada una de las nuevas manos, lo que reduce tus posibilidades de pedir, dividir o doblar para mejorar tu mano.
-
-##Doblar
-La opción de doblar te permite duplicar tu apuesta inicial, pero sólo bajo determinadas circunstancias:
-
-Una vez repartidas las dos primeras cartas, puedes añadir una apuesta adicional (igual a la apuesta inicial) sobre tu apuesta inicial, a condición de recibir sólo una carta extra para completar tu jugada.
-Todos nuestros juegos de blackjack te permiten doblar en cualquiera de las dos primeras cartas.
-En determinadas variantes del juego, se permite doblar tras dividir. Sin embargo, es necesario tener en cuenta otros factores:
-
-Tras dividir una mano en dos (o más), puedes tener la opción de doblar, para lo que tendrás que añadir otra apuesta a la mesa
-Si decides doblar tras haber dividido, se aplicarán las normas habituales para la opción de doblar a partir de ese momento
-##Rendirse
-En algunos juegos de blackjack, rendirte te permite abandonar la mano y recuperar el 50 % de la apuesta inicial cuando crees probable que pierdas contra la banca, siempre que la variante a la que estés jugando ofrezca esta opción.
+El pago se efectuará una vez el crupier haya completado su mano.
 
 ##Opciones de juego
-Se te presentarán varias opciones entre las que tendrás que decidir durante cada ronda de blackjack. Las decisiones que tendrás que tomar dependerán de las cartas que se te repartan y de la variante a la que estés jugando. Estas son las opciones con las que tradicionalmente cuentas en el blackjack:
+Se te presentarán varias opciones entre las que tendrás que decidir durante cada ronda de blackjack. Podrás elegir entre plantarte o pedir carta. Las cartas se pueden pedir de una en una hasta que el valor de la mano sea igual o superior a 21.
 
-##Carta
-Puedes pedir cartas adicionales para mejorar tu(s) mano(s). Las cartas se pueden pedir de una en una hasta que el valor de la mano sea igual o superior a 21.
-
-##Plantarse
-Cuando el valor de una mano es igual o inferior a 21, puedes decidir plantarte y no arriesgarte a que el valor de dicha mano supere los 21.
-
-##Dividir
-En determinadas variantes, cuando tus primeras dos cartas tienen el mismo valor (ocho-ocho, jota-diez, etc.), puedes realizar apuestas adicionales (iguales a la apuesta inicial), y dar lugar a una segunda mano que también jugará contra la banca.
-
-##Doblar
-Puedes colocar una apuesta adicional, igual a la apuesta inicial, a cambio de recibir sólo una carta más para cada una de tus manos y plantarte automáticamente.
-
-##Rendirse
-En determinadas variantes del juego puedes renunciar a la mitad de tu apuesta y poner fin a la mano inmediatamente.
-
-##Seguro
-En ciertas variantes, cuando la primera carta de la banca es un as, puedes apostar la mitad de tu apuesta original y recibir a cambio 2 a 1 si la banca completa su blackjack. Si la banca tiene blackjack, te quedarás a pre en la mano.
 
 ##Cobrar 1 a 1
-Si te han repartido un blackjack, y la banca muestra un as, la opción cobrar 1 a 1 es un tipo especial de seguro disponible. Si decides cobrar 1 a 1, el pago será 1:1, independientemente de si la banca tiene blackjack o no. Si decides no cobrar 1 a 1, la mano se jugará de forma normal.
+Todas las manos ganadoras se pagan 1 a 1.
 
-##Protección de la interfaz de usuario
-Al jugar al blackjack es fundamental que puedas llevar a cabo las decisiones que elijas durante la mano. Existe un importante número de factores que pueden influir en tu juego, desde problemas con la conexión a Internet a errores a la hora de hacer clic. Pese a no poder prever cada una de las incidencias que se te presenten, a continuación encontrarás algunas de las protecciones integradas en el software para ayudar a los jugadores a que no tomen decisiones accidental o inconscientemente que se consideren fuera de los límites del juego normal.
 
-Si tratas de realizar una de las siguientes acciones, nuestro software te avisará con una alerta sobre la que tendrás que hacer doble clic si la acción indicada es la opción que realmente deseas realizar:
-
-Pedir con un 17 fuerte o superior
-Plantarte con 11 o menos
-Doblar con un 12 fuerte o superior
-Incluimos estas medidas para que tengas la seguridad de que no perderás tus apuestas debido a errores a la hora de hacer clic u otros contratiempos. De todas formas, aunque no lo recomendamos, puedes apagar estas alarmas. Puedes hacerlo cada vez que te aparezca una alarma de nuestro software.
-
-Si tienes alguna pregunta sobre los juegos de blackjack, ponte en contacto con el equipo de atención al cliente.
 
 
