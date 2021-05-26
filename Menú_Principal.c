@@ -933,8 +933,10 @@ void Bienvenida()
 
 void Continuar()
 {
-	system("Pause");
-    system("cls");
+	char enter;
+	printf("Pulse enter para continuar...\n");
+	scanf("%c", &enter);
+	printf("\033[2J");
 }
 
 void Menu_Opciones()
@@ -1004,7 +1006,7 @@ void Game_Over()
 }
 void Borrar()
 {
-    system("cls");
+    printf("\033[2J");
 }
 //Funciones Tool
 void Menu_Final()
