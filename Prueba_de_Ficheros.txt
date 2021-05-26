@@ -1,0 +1,2 @@
+El nombre del participante 1 es: asd
+El tiene 1234 euros.

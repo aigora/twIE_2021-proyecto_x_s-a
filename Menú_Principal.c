@@ -53,7 +53,7 @@ int main()
     int dec_0,  dec_1,  dec_2,  dec_3a,   dec_4a,   dec_5a,   dec_3b,   dec_4b;
     int a0, v0, a1, v1, a2, v2, a3a, v3a, a4a, v4a, a5a, v5a, a3b, v3b, a4b, v4b;
     //Varaiables del BlackJack
-    Continuar();
+
     FILE *F_prueba;
     datos_jugador crupier = {.nombre = "Susana Picado"};
     int carta_jug[]  = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
@@ -75,11 +75,11 @@ int main()
     }
     else
     {
-        printf("Fichero abierto correctamente");
+        printf("Fichero abierto correctamente.\n");
     }
     do
     {
-        Continuar();
+
         printf("HOLA, BIENVENIDO AL PROYECTO_X.\n");
         printf("Por favor, seguid las indicaciones en todo momento, y contestad coherentemente a las preguntas que se os hagan.\n");
         printf("Elija un n%cmero de jugadores de 1 a 7.\n", 163);
