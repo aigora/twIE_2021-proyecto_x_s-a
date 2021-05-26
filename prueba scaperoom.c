@@ -462,6 +462,6 @@ void Game_Over()
 }
 void Borrar()
 {
-    system("cls");
+    printf("\033[2J");
 }
 
