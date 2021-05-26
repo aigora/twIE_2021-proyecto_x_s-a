@@ -53,7 +53,7 @@ int main()
     int dec_0,  dec_1,  dec_2,  dec_3a,   dec_4a,   dec_5a,   dec_3b,   dec_4b;
     int a0, v0, a1, v1, a2, v2, a3a, v3a, a4a, v4a, a5a, v5a, a3b, v3b, a4b, v4b;
     //Varaiables del BlackJack
-    system("cls");
+
     FILE *F_prueba;
     datos_jugador crupier = {.nombre = "Susana Picado"};
     int carta_jug[]  = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
@@ -75,11 +75,11 @@ int main()
     }
     else
     {
-        printf("Fichero abierto correctamente");
+        printf("Fichero abierto correctamente.\n");
     }
     do
     {
-        system("cls");
+
         printf("HOLA, BIENVENIDO AL PROYECTO_X.\n");
         printf("Por favor, seguid las indicaciones en todo momento, y contestad coherentemente a las preguntas que se os hagan.\n");
         printf("Elija un n%cmero de jugadores de 1 a 7.\n", 163);
@@ -110,7 +110,7 @@ int main()
         Menu_Opciones();
         printf("Introduzca el número de la opción que desee:");
         scanf("%d", &decision_1);
-        system("cls");
+        Continuar();
         switch(decision_1)
         {
             case 1:
@@ -119,7 +119,7 @@ int main()
                     Menu_BlackJack();
                     printf("Introduzca el n%cmero de la opci%cn que desee:", 163, 162);
                     scanf("%d", &decision_2);
-                    system("cls");
+                    Continuar();
                     switch(decision_2)
                     {
                         case 1:
@@ -166,14 +166,14 @@ int main()
                                         crupier.carta[c].palo  = palo[pc];
                                     }
                                 }
-                                system("cls");
+                                Continuar();
 
                                 //Se introduce la cantidad a apostar por los jugadores
                                 for(i1 = 0; i1 < num_jug; i1++)
                                 {
                                     do
                                     {
-                                        system ("cls");
+                                        Continuar();
                                         printf("Tu monedero actual es %i.\n", participante[i1].monedero);
                                         printf("%s, %ccu%cnto quieres apostar de tu monedero?\n", participante[i1].nombre, 168, 160);
                                         scanf("%i", &participante[i1].apuesta);
@@ -235,7 +235,7 @@ int main()
                                     if(participante[i1].apuesta == 0)
                                     {
                                         printf("%s, no participa en esta ronda.\n", participante[i1].nombre);
-                                        system("cls");
+                                        Continuar();
                                     }
                                     else
                                     {
@@ -469,7 +469,7 @@ int main()
                             Continuar();
                             break;
                     }
-                system("cls");
+                Continuar();
                 }
                 break;
             case 2:
@@ -478,7 +478,7 @@ int main()
                     Menu_EscapeRoom();
                     printf("Introduzca el número de la opción que desee:");
                     scanf("%d", &decision_2);
-                    system("cls");
+                    Continuar();
                     switch(decision_2)
                     {
                         case 1:
@@ -509,7 +509,7 @@ int main()
                                         printf("cercana pero no ves nada que llame tu atención; por lo que decides centrarte en comprobar el estado de la nave.\n");
                                         Continuar();
                                         printf("Necesitas encontrar respuestas.");
-                                        system("pause");
+                                        Continuar();
                                         case 2:
                                         v0 = 1;
                                         for( a1 = 0, v1 = 0; a1 != 1; a1 = v1)
@@ -884,7 +884,7 @@ int main()
                                     }
                                     break;
                                 default:
-                                    system ("cls");
+                                    Continuar();
                                     printf("Ha decidido repetir.\n");
                                     break;
                                 }
@@ -915,8 +915,7 @@ int main()
                 break;
             default:
                 printf("Opci%cn incorrecta, vuelva a introducir una opci%cn.\n", 162, 162);
-                system ("pause");
-                system("cls");
+                Continuar();
                 break;
         }
     }while (1);
