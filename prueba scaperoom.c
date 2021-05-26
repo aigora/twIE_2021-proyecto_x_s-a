@@ -426,8 +426,10 @@ int main()
 
 void Continuar()
 {
-	system("pause");
-    system("cls");
+    char enter;
+	printf("Pulse enter para continuar...\n");
+	scanf("%c", &enter);
+	printf("\033[2J");
 }
 
 void Game_Over()
