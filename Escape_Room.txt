@@ -49,7 +49,7 @@
  un campo de minas. Tu objetivo sigue siendo el mismo, asi que ahora te dispones a buscar los chips localizadores. No
  sabes muy bien el donde estas, en uno de los pasillos encuentras un mapa del interior de la nave y te lo guardas.*
  DECISION 1: Buscar en la sala de mandos.
- DECISION 2: Buscar en la sala de navegaci%cn principal.
+ DECISION 2: Buscar en la sala de navegacion principal.
  Pulse cualquier otro numero para volver a leer.
 #53
 *Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podria ser util, puesto que dentro
@@ -57,7 +57,7 @@
  a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones a desmontarlo con 
  ayuda de las herramientas, y tras desmontar la pantalla del radar, ahi lo ves, el chip localizador, lo arrancas y
  lo analizas, por lo que se ve, esta en buen estado, as que la guardas en la mochila. De repente, mientras veias que
- mas cosas hab%ca en la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.*
+ mas cosas habian la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.*
 *Te sientes muy debil; por lo que la mejor opcion va a ser descansar un rato para recuperar las fuerzas. Como no hay
  sillones ni ningun lugar donde echarte, te sientas en el suelo apoyado contra la pared y te quedas dormido.*
 -Creo que lo mejor sera buscar en la sala de mandos, alli hay un pequeño radar que me puede ser util.
@@ -66,7 +66,7 @@
 *Rompes la pantalla protectora del panel y consigues arrancar el chip sin ningun problema*
 -Cada vez queda menos para que esta pesadilla acabe.
 *Sientes un fuerte dolor en la cabeza y empiezas a sangrar por la nariz*
--*****, que dolor... Espero que no me cause problemas. Creo que descansar%c un rato hasta recuperar fuerzas.
+-*****, que dolor... Espero que no me cause problemas. Creo que descansare un rato hasta recuperar fuerzas.
 *Te sientas en una pared del habitaculo y descansas durante unos cuantos minutos hasta que te vuelves a encontrar mejor*
 -Creo que tengo las suficientes fuerzas como para proseguir en mi busqueda. Lo siguiente era… Una antena. En la sala de
  comunicaciones tiene que haber algun tipo de antena parabolica.
@@ -90,96 +90,96 @@
  DECISION 2: Quedarte a explorar el planeta.
  Pulse cualquier otro numero para volver a leer.
 #91
-*Decides que lo mAs prudente es enviar la señal de socorro. Al cabo de un rato aparece un vehiculo aereo que te
- resulta familiar, pero estas confundido, ¿c%cmo han tardado tan poco en encontrarte? Los integrantes del equipo de 
- rescate te explican la situaci%cn, emprendiste un viaje solitario en la nave cuando esta sufri%c un fallo mec%cnico 
- provocando que te estrellases sin salir siquiera del planeta. El golpe te caus%c p%crdida de memoria y no recordabas
- nada posterior al lanzamiento. Eres llevado al hospital m%cs cercano donde te recuperar%cs del accidente*
+*Decides que lo mas prudente es enviar la señal de socorro. Al cabo de un rato aparece un vehiculo aereo que te
+ resulta familiar, pero estas confundido, ¿como han tardado tan poco en encontrarte? Los integrantes del equipo de 
+ rescate te explican la situacion, emprendiste un viaje solitario en la nave cuando esta sufrio un fallo mecanico 
+ provocando que te estrellases sin salir siquiera del planeta. El golpe te causo perdida de memoria y no recordabas
+ nada posterior al lanzamiento. Eres llevado al hospital mas cercano donde te recuperaras del accidente*
 #97
-*Decides darte una oportunidad en el planeta extraterrestre y quedarte all%c. Pasas las siguientes semanas recogiendo 
- frutas, aunque estas te resultan muy familiares. Despu%cs de casi un mes realizas contacto con otros humanos, est%cs 
+*Decides darte una oportunidad en el planeta extraterrestre y quedarte alli. Pasas las siguientes semanas recogiendo 
+ frutas, aunque estas te resultan muy familiares. Despues de casi un mes realizas contacto con otros humanos, estas 
  contrariado hasta que estos te explican que sigues en la Tierra. Inmediatamente te desmayas y te llevan al hospital 
- m%cs cercano. El accidente con la nave sucedi%c debido a un fallo mec%cnico y al estrellarte sufriste perdidas de
- memoria con las que no pod%cas recordar nada posterior al lanzamiento de la nave. Permanecer%cs en el hospital hasta 
- tu recuperaci%cn total*
+ mas cercano. El accidente con la nave sucedio debido a un fallo mecanico y al estrellarte sufriste perdidas de
+ memoria con las que no podias recordar nada posterior al lanzamiento de la nave. Permaneceras en el hospital hasta 
+ tu recuperacion total*
 #104
--Lo mejor ser%c ir por los conductos de ventilaci%cn superior.
-*Arrancas la rejilla de ventilaci%cn y te metes dentro del conducto gateando*
--Vale, ahora solo tengo que seguir as%c hasta llegaaaa… 
-*Pesas demasiado como para que la estructura de ventilaci%cn dañada aguante tu peso. El golpe es tan fuerte que te 
- rompes las piernas en la ca%cda y la pequeña conmoción producida por el accidente de la nave se agrava produciendo 
+-Lo mejor sera ir por los conductos de ventilacion superior.
+*Arrancas la rejilla de ventilacion y te metes dentro del conducto gateando*
+-Vale, ahora solo tengo que seguir asi hasta llegaaaa… 
+*Pesas demasiado como para que la estructura de ventilacion dañada aguante tu peso. El golpe es tan fuerte que te 
+ rompes las piernas en la caida y la pequeña conmoción producida por el accidente de la nave se agrava produciendo 
  tu muerte*
 #111
-*Entras en la sala de navegaci%cn principal, con la esperanza de encontrar algo de utilidad. Cuando ya est%cs llegando
- te das cuenta de que la sala est%c al lado del dep%csito de combustible, y que a medida que te acercas, el suelo est%c 
- cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber s%c dentro de 
- la sala principal hay algo %ctil te puede m%cs.
-*Una vez dentro de la sala principal, encuentras un GPS el cual dentro tiene un chip localizador, el GPS est%c averiado,
- asi que, si lo abres no afectar%cs en nada el funcionamiento de la nave, por lo que decides, extraer el chip.*
+*Entras en la sala de navegacion principal, con la esperanza de encontrar algo de utilidad. Cuando ya estas llegando
+ te das cuenta de que la sala esta al lado del dep%csito de combustible, y que a medida que te acercas, el suelo esta 
+ cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber si dentro de 
+ la sala principal hay algo util te puede mas.
+*Una vez dentro de la sala principal, encuentras un GPS el cual dentro tiene un chip localizador, el GPS esta averiado,
+ asi que, si lo abres no afectaras en nada el funcionamiento de la nave, por lo que decides, extraer el chip.*
 *Utilizas las herramientas, pero en el proceso de desarmado, encuentras una tapa, la cual no puedes abrir con las 
- herramientas, asi que decides hacer fuerza para romper la tapa. Terminas rompi%cndola y se ve un hueco y al fondo de 
- %cl, el chip localizador, tratas de usar las herramientas, pero no entran, son muy grandes para caber dentro del hueco
- asi que, metes tu mano y tiras con todas tus fuerzas del %cl, hasta que lo extraes, todo parece estar bien hasta que 
+ herramientas, asi que decides hacer fuerza para romper la tapa. Terminas rompiendola y se ve un hueco y al fondo de 
+ el, el chip localizador, tratas de usar las herramientas, pero no entran, son muy grandes para caber dentro del hueco
+ asi que, metes tu mano y tiras con todas tus fuerzas de el, hasta que lo extraes, todo parece estar bien hasta que 
  saltan unas chispas, que prenden el combustible bajo tus pies. Ardes por completo*
 #123
--Ser%c mejor que salga de la nave, no quiero acabar sepultado por este mont%cn de chatarra.
-*Decides salir de la nave con cuidado, crees que es lo m%cs seguro*
--Bien, creo que ser%c mejor investigar la zona, aunque no se d%cnde voy a conseguir el resto de los materiales que 
+-Sera mejor que salga de la nave, no quiero acabar sepultado por este monton de chatarra.
+*Decides salir de la nave con cuidado, crees que es lo mas seguro*
+-Bien, creo que sera mejor investigar la zona, aunque no se donde voy a conseguir el resto de los materiales que 
  necesito para montar el transmisor.
-*Te alejas un par de pasos y te sientas en el suelo a pensar qu%c hacer, recuerdas que la nave tiene un m%cdulo de 
+*Te alejas un par de pasos y te sientas en el suelo a pensar que hacer, recuerdas que la nave tiene un modulo de 
  almacenamiento*
--¡Claro! ¿C%cmo no se me hab%ca ocurrido antes? Es mi %cnica fuente de recursos ahora mismo, espero encontrar lo 
+-¡Claro! ¿Como no se me habia ocurrido antes? Es mi nica fuente de recursos ahora mismo, espero encontrar lo 
  necesario.
-*Comienzas a andar hacia el almac%cn y encuentras un arma en el suelo, la coges y la enganchas al traje 
+*Comienzas a andar hacia el almacen y encuentras un arma en el suelo, la coges y la enganchas al traje 
  espacial*	 
-*Sigues andando hasta entrar en el almac%cn*
--De acuerdo, ahora tengo que buscar el chip de localizaci%cn, la antena parab%clica y el micr%cfono.
- DECISI%cN 1: Buscar por la izquierda.
- DECISI%cN 2: Buscar por la derecha.
- Pulse cualquier otro n%cmero para volver a leer.
+*Sigues andando hasta entrar en el almacen*
+-De acuerdo, ahora tengo que buscar el chip de localizacion, la antena parabolica y el microfono.
+ DECISION 1: Buscar por la izquierda.
+ DECISION 2: Buscar por la derecha.
+ Pulse cualquier otro numero para volver a leer.
 #139
--Empezar%e por la izquierda, siendo zurdo eso tendr%ca que darme suerte.
-*Comienzas a buscar por la parte izquierda del almac%cn por alg%cn tipo de raz%cn supersticiosa*
--Aqu%c parece haber muchas cajas, espero tener suerte.
-*Est%cs un buen rato buscando hasta que encuentras la antena parab%clica, no es tan grande como esperabas, pero servir%c*
+-Empezare por la izquierda, siendo zurdo eso tendria que darme suerte.
+*Comienzas a buscar por la parte izquierda del almacen por algun tipo de razon supersticiosa*
+-Aqui parece haber muchas cajas, espero tener suerte.
+*Estas un buen rato buscando hasta que encuentras la antena parabolica, no es tan grande como esperabas, pero servira*
 -Una cosa menos, solo faltan dos.
 *Sigues buscando*
--Parece que aqu%c no hay nada m%cs.
+-Parece que aqui no hay nada mas.
 *Empiezas a buscar por la derecha*
-*Abres la primera caja y encuentras el micr%cfono*
+*Abres la primera caja y encuentras el microfono*
 -Parece que he vuelto a tener suerte.
-*Despu%cs de un rato buscando encuentras el chip y comienzas a salir del almac%cn*
--Ya tengo todo lo que buscaba y lo he conseguido bastante r%cpido, parece que he tenido suerte.
+*Despues de un rato buscando encuentras el chip y comienzas a salir del almacen*
+-Ya tengo todo lo que buscaba y lo he conseguido bastante rapido, parece que he tenido suerte.
 *Mientas buscabas se ha hecho de noche*
-DECISI%cN 1: Quedarte dentro de la nave.
-DECISI%cN 2: Salir de la nave y crear una hoguera.
-Pulse cualquier otro n%cmero para volver a leer.
+DECISION 1: Quedarte dentro de la nave.
+DECISION 2: Salir de la nave y crear una hoguera.
+Pulse cualquier otro numero para volver a leer.
 #156
--Me quedar%c aqu%c dentro, es m%cs seguro que salir.	
-*Te tumbas encima de un mont%cn de cajas y duermes hasta el d%ca siguiente*
-*Te despiertas y escuchas un ruido parecido al de un helic%cptero, sales y compruebas que es un veh%cculo a%creo que 
- acaba de aterrizar. Del interior de la nave sale una criatura. ¡Es un humano! ¿C%cmo es posible? Te sientas en el 
- suelo debido a la confusi%cn. Este te explica que pertenece al equipo de rescate de la Agencia Espacial Europea,
- despu%cs del lanzamiento de tu nave esta tuvo un fallo mec%cnico provocando que se estrellase contra el suelo. Este 
- accidente te ha provocado p%crdidas de memoria y no recuerdas nada posterior al lanzamiento. Eres llevado al hospital 
- m%cs cercano para que seas atendido*
+-Me quedare aqui dentro, es mas seguro que salir.	
+*Te tumbas encima de un monton de cajas y duermes hasta el dia siguiente*
+*Te despiertas y escuchas un ruido parecido al de un helicoptero, sales y compruebas que es un vehiculo aereo que 
+ acaba de aterrizar. Del interior de la nave sale una criatura. ¡Es un humano! ¿Como es posible? Te sientas en el 
+ suelo debido a la confusion. Este te explica que pertenece al equipo de rescate de la Agencia Espacial Europea,
+ despues del lanzamiento de tu nave esta tuvo un fallo mecanico provocando que se estrellase contra el suelo. Este 
+ accidente te ha provocado perdidas de memoria y no recuerdas nada posterior al lanzamiento. Eres llevado al hospital 
+ mas cercano para que seas atendido*
 #165
 -Necesito salir de esta nave, no me da seguridad, no tanta como salir.
-*Creas una hoguera y te duermes profundamente, al cabo de un rato parte del combustible procedente del dep%csito llega 
+*Creas una hoguera y te duermes profundamente, al cabo de un rato parte del combustible procedente del deposito llega 
  hasta ti. El fuego de la hoguera chisporrotea provocando un incendio al caer sobre el combustible. Mueres quemado*
 #169
-Empezar%c a buscar por la derecha.
-*Comienzas la b%csqueda de los materiales por la parte derecha del almac%cn*
--Parece que es mi d%ca de suerte, en la primera caja que abro encuentro el micr%cfono, esto me ahorrar%c tiempo.
+Empezare a buscar por la derecha.
+*Comienzas la busqueda de los materiales por la parte derecha del almacen*
+-Parece que es mi dia de suerte, en la primera caja que abro encuentro el microfono, esto me ahorrare tiempo.
 *Sigues buscando y encuentras el chip*
--¡Genial! Ahora solo me falta la antena parab%clica.
-*Detr%cs de unas cajas encuentras una gran antena, ya tienes todos los materiales y sigue siendo de d%ca*
+-¡Genial! Ahora solo me falta la antena parabolica.
+*Detras de unas cajas encuentras una gran antena, ya tienes todos los materiales y sigue siendo de dia*
 -Perfecto, ya solo me queda montar el radio transmisor.
-*Te diriges al exterior del almac%cn para montar el transmisor cuando a lo lejos ves una figura acercándose a ti,
- entras en p%cnico y disparas con tu arma*
--No s%c qu%c ser%ca eso, pero creo que me he salvado. Voy a ver que era.
-*Te acercas al cad%cver del ser al que acabas de disparar y es un humano. No sabes que hacer, tu cerebro colapsa y caes 
- al suelo. Despiertas dentro de un calabozo. Nunca llegaste a abandonar la Tierra, tu nave se estrell%c despu%cs de un 
- fallo mec%cnico y por culpa del golpe no recuerdas nada posterior al lanzamiento. Pasar%cs el resto de tus d%cas en la 
- c%crcel*
+*Te diriges al exterior del almacen para montar el transmisor cuando a lo lejos ves una figura acercándose a ti,
+ entras en panico y disparas con tu arma*
+-No se que seria eso, pero creo que me he salvado. Voy a ver que era.
+*Te acercas al cadaver del ser al que acabas de disparar y es un humano. No sabes que hacer, tu cerebro colapsa y caes 
+ al suelo. Despiertas dentro de un calabozo. Nunca llegaste a abandonar la Tierra, tu nave se estrella despues de un 
+ fallo mecanico y por culpa del golpe no recuerdas nada posterior al lanzamiento. Pasaras el resto de tus dias en la 
+ carcel*
 #184
