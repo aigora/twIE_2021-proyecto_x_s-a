@@ -14,6 +14,9 @@ typedef struct{
 int main(){
 
     FILE *F_EscRoom;
+    char cad_car[700];
+    fichero linea[200];
+    int p = 1;
 
     F_EscRoom = fopen("Escape_Room.txt", "r");
     if(F_EscRoom == NULL){
@@ -21,10 +24,6 @@ int main(){
         return 1;
     }
 
-    fichero linea[200];
-
-    char cad_car[700];
-    int p = 1;
     while(fgets(cad_car, 700, F_EscRoom) != NULL){
         printf("%s", cad_car);
         strcpy(linea[p].cont, cad_car);

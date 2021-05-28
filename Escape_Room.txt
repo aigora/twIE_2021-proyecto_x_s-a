@@ -4,7 +4,7 @@
  respuesta y decides ponerte en accion.*
 *Te levantas y te sacudes la tierra del cuerpo, por lo visto estas ileso, aunque solo te duele el brazo derecho
  un pitido molesto en el oido izquierdo.*
-*Una vez en pie, ves tu mochila cerca, pero al inspeccionarla te das cuenta de que esta vacia, te la pones a la espalda y tienes
+*Una vez en pie, ves tu mochila cerca, pero al inspeccionarla te das cuenta de que esta vacia, te la pones a la espalda
  y caminas un poco por tus alrededores, de pronto, ves a lo lejos la nave...*
  DECISION 1: Contemplar el paisaje.
  DECISION 2: Ir a mirar el estado de la nave.
