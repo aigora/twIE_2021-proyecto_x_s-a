@@ -15,7 +15,7 @@ int main(){
 
     FILE *F_EscRoom;
 
-    F_EscRoom = fopen("Guion_del_Esc_Room.txt", "r");
+    F_EscRoom = fopen("Escape_Room.txt", "r");
     if(F_EscRoom == NULL){
         printf("Se ha producido un error a la hora de abrir el archivo...\n");
         return 1;
@@ -34,6 +34,10 @@ int main(){
     fclose(F_EscRoom);
     printf("\nSe la le%cdo el archivo correctamente...\n", 161);
     return 0;
+
+    for(p = 0; p < 200; p++){
+        printf("%s", linea[p].cont);
+    }
 }
 
 

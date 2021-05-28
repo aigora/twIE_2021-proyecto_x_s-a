@@ -7,7 +7,7 @@ int main()
   // Contadores
   int iChar = 0, iWord = 0, iLine = 0;
   // Abrimos archivo en modo lectura
-  pf = fopen("Guion_del_Esc_Room.txt", "r");
+  pf = fopen("Escape_Room.txt", "r");
   if (pf == NULL) {
     printf("Error al abrir el archivo.\n");
     return -1;

@@ -430,6 +430,16 @@ int main()
                 }
                 break;
             case 2:
+                if((F_EscRoom = fopen("Escape_Room.txt", "r")) == NULL){
+                    printf("Se ha producido un error a la hora de abrir el archivo...\n");
+                    return 1;
+                }
+                while(fgets(cad_car, 700, F_EscRoom) != NULL){
+                    strcpy(linea[p].cont, cad_car);
+                    p++;
+                }
+                fclose(F_EscRoom);
+
                 for (i = 0, j = 0; i != 1; i = j){
                     Menu_EscapeRoom();
                     printf("Introduzca el número de la opción que desee:");
@@ -439,30 +449,19 @@ int main()
                         case 1:
                             for(a0 = 0, v0 = 0; a0 != 1; a0 = v0){
                                 Borrar();
-                                printf("*Despiertas tirado en el suelo y oyes a lo lejos una explosi%cn, te encuentras confuso y no sabes d%cnde est%cs, lo %cnico\n", 162, 162, 160, 163);
-                                printf("que recuerdas es haber estado en la nave con tu equipo, pero ahora a tu alrededor no ves a nadie.*\n");
-                                Continuar();
-                                printf("*El traje empieza a emitir ruidos, intentas contactar con alg%cn miembro de tu equipo, pero pasan varios segundos sin \n", 163);
-                                printf(" respuesta y decides ponerte en acci%cn.*\n", 162);
-                                Continuar();
-                                printf("*Te levantas y te sacudes la tierra del cuerpo, por lo visto estas ileso, aunque solo te duele el brazo derecho\n");
-                                printf(" un pitido molesto en el o%cdo izquierdo.*\n", 161);
-                                Continuar();
-                                printf("*Una vez en pie, ves tu mochila cerca, pero al inspeccionarla te das cuenta de que esta vac%ca, te la pones a la y tienes\n", 161);
-                                printf(" espalda y caminas un poco por tus alrededores, de pronto, ves a lo lejos la nave %cQu%c vas a hacer?* \n", 168, 130);
-                                printf("DECISI%cN 1: Contemplar el paisaje.\n", 162);
-                                printf("DECISI%cN 2: Ir a mirar el estado de la nave.\n", 162);
-                                printf("Pulse cualquier otro n%cmero para volver a leer.\n", 163);
+                                for(p = 1; p < 12; p++){
+                                    printf("%s", linea[p].cont);
+                                }
                                 scanf("%i", &dec_0);
                                 switch(dec_0)
                                 {
                                     case 1:
                                         v0 = 1;
                                         Borrar();
-                                        printf("Contemplas el paisaje el cual encuentras muy familiar, se parece demasiado a la tierra. Subes a lo alto de una colina\n");
-                                        printf("cercana pero no ves nada que llame tu atención; por lo que decides centrarte en comprobar el estado de la nave.\n");
-                                        Continuar();
-                                        printf("Necesitas encontrar respuestas...");
+                                        p = 0;
+                                        for(p = 13; p < 16; p++){
+                                            printf("%s", linea[p].cont);
+                                        }
                                         Continuar();
                                         case 2:
                                         v0 = 1;

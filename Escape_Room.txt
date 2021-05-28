@@ -1,0 +1,191 @@
+*Despiertas tirado en el suelo y oyes a lo lejos una explosion, te encuentras confuso y no sabes donde estas, lo unico
+ que recuerdas es haber estado en la nave con tu equipo, pero ahora a tu alrededor no ves a nadie.*
+*El traje empieza a emitir ruidos, intentas contactar con algun miembro de tu equipo, pero pasan varios segundos sin
+ respuesta y decides ponerte en accion.*
+*Te levantas y te sacudes la tierra del cuerpo, por lo visto estas ileso, aunque solo te duele el brazo derecho
+ un pitido molesto en el oido izquierdo.*
+*Una vez en pie, ves tu mochila cerca, pero al inspeccionarla te das cuenta de que esta vacia, te la pones a la y tienes
+ espalda y caminas un poco por tus alrededores, de pronto, ves a lo lejos la nave...*
+ DECISION 1: Contemplar el paisaje.
+ DECISION 2: Ir a mirar el estado de la nave.
+ Pulse cualquier otro numero para volver a leer...
+#12
+*Contemplas el paisaje el cual encuentras muy familiar, se parece demasiado a la tierra. Subes a lo alto de una colina
+ cercana pero no ves nada que llame tu atención; por lo que decides centrarte en comprobar el estado de la nave.*
+*Necesitas encontrar respuestas...*
+#16
+*Te diriges a la nave, y por fuera ves que la cosa pinta mal. Se ha roto el deposito de combustible, y hay algunos 
+ huecos en el casco de titanio, por lo que debes hallar los materiales necesarios para repararla si quieres poder
+ despegarla, placas metalicas de titanio. Pero tienes claro de que va a ser una tarea muy dura.*
+*Una vez analizada la situacion por fuera, te dispones a ver que componentes siguen siendo utiles dentro de la nave, al
+ parecer todo esta bien, pero te das cuenta de que el radio transmisor esta estropeado, por lo que tendras que
+ repararlo si quieres pedir ayuda.(Para repararlo debes encontrar cables, chips localizadores, una antena y un altavoz).*
+*Te adentras en el habitaculo de reabastecimiento de la nave en busca de materiales, para arreglar la nave. Ves una
+ caja de herramientas, unos cuantos cables en el suelo, por los que tienes claro que no circula corriente, y otros
+ en unas maquinas rotas de la nave, por los que puede que circule algo de corriente.*
+ DECISION 1: Coger cables del suelo.
+ DECISION 2: Coger cables de la maquina.
+ Pulse cualquier otro numero para volver a leer...
+#29
+*Decides agacharte a coger los cables del suelo y examinas su estado. Pero al inspeccionarlos te das cuenta de que no
+ te sirven. De repente, escuchas un chirrido metalico y antes de que puedas reaccionar una gran placa metalica cae
+ sobre ti matandote en el acto.*
+#33
+*Te acercas a las maquinas rotas, y tienes que cortar el cable, asi que buscas en la caja de herramientas y encuentras
+ unos alicates con los que consigues cortarlas. Los cables estan buenos, asi que te los guardas en la mochila.*
+*De repente, un estruendo te interrumpe, acaba de desprenderse del techo del habitaculo una gran placa metalica, justo
+ encima de donde estaban los cables que se encontraban en el suelo. La inspeccionas, pero es de aluminio y no te sirve 
+ para reparar el casco. Con ayuda de las herramientas y unos cuantos tornillos consigues volver a colocar la placa
+ metalica en su sitio.*
+*Como las herramientas fueron utiles, asi que, sacas las herramientas de su caja y te las guardas en la mochila. Ahora 
+ tienes un: alicate universal, un juego de destornilladores, y una llave inglesa.*
+*Inspeccionado en su totalidad la sala, encuentras galones de combustible en un armario, pero ahora mismo no los
+ necesitas, y como ves que no hay nada mas relevante alli. Sales del habitaculo...*
+#DECISIÓN 2
+ DECISION 1: Seguir inspeccionando la nave.
+ DECISION 2: Salir de la nave.
+ Pulse cualquier otro numero para volver a leer.
+#DECISIÓN 2a.1
+*Te adentras por los largos pasillos de la nave, teniendo mas cuidado de por donde vas, ahora que sabes que la nave es
+ un campo de minas. Tu objetivo sigue siendo el mismo, asi que ahora te dispones a buscar los chips localizadores. No
+ sabes muy bien el donde estas, en uno de los pasillos encuentras un mapa del interior de la nave y te lo guardas.*
+#DECISIÓN 3a
+ DECISION 1: Buscar en la sala de mandos.
+ DECISION 2: Buscar en la sala de navegaci%cn principal.
+ Pulse cualquier otro numero para volver a leer.
+#DECISIÓN 3a.1
+*Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podria ser util, puesto que dentro
+ seguro que tiene un chip localizador. Ni bien entras en la sala, el radar es lo primero que buscas. Al no encontrarlo
+ a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones a desmontarlo con 
+ ayuda de las herramientas, y tras desmontar la pantalla del radar, ahi lo ves, el chip localizador, lo arrancas y
+ lo analizas, por lo que se ve, esta en buen estado, as que la guardas en la mochila. De repente, mientras veias que
+ mas cosas hab%ca en la sala, te empieza a dar un fuerte dolor de cabeza, y te sangra la nariz.*
+*Te sientes muy debil; por lo que la mejor opcion va a ser descansar un rato para recuperar las fuerzas. Como no hay
+ sillones ni ningun lugar donde echarte, te sientas en el suelo apoyado contra la pared y te quedas dormido.*
+-Creo que lo mejor sera buscar en la sala de mandos, alli hay un pequeño radar que me puede ser util.
+*Te diriges al puesto de mandos por un pasillo seguro*
+-Bien, ahora solo tengo que arrancar el chip localizador del panel de control.
+*Rompes la pantalla protectora del panel y consigues arrancar el chip sin ningun problema*
+-Cada vez queda menos para que esta pesadilla acabe.
+*Sientes un fuerte dolor en la cabeza y empiezas a sangrar por la nariz*
+-*****, que dolor... Espero que no me cause problemas. Creo que descansar%c un rato hasta recuperar fuerzas.
+*Te sientas en una pared del habitaculo y descansas durante unos cuantos minutos hasta que te vuelves a encontrar mejor*
+-Creo que tengo las suficientes fuerzas como para proseguir en mi busqueda. Lo siguiente era… Una antena. En la sala de
+ comunicaciones tiene que haber algun tipo de antena parabolica.
+*Emprendes tu camino hacia la sala de comunicaciones, pero tienes un dilema, el pasillo es estrecho y hay riesgo de que 
+ el traje espacial se quede enganchado*
+#DECISIÓN 4a
+ DECISION 1: Intentas pasar.\n
+ DECISION 2: Buscas otro camino por el sistema de ventilacion.
+ Pulse cualquier otro numero para volver a leer.
+#DECISIÓN 4a.1
+-Si no me he muerto hasta el momento creo que podr%c pasar por esto.
+*Te agachas y gateas por el suelo hasta llegar al final del pasillo*
+-Buff… Eso ha estado cerca, por un momento cre%c que no pasar%ca, era m%cs estrecho de lo que esperaba.
+*Miras a tu alrededor y encuentras la antena y el micr%cfono que tambi%cn necesitabas*
+-Perfecto, ya tengo todo lo que quer%ca, ya puedo salir de este trozo de chatarra.
+*Sales de la nave por donde has venido*
+-Ahora solo necesito montar el transmisor.
+*Empiezas a montar el transmisor y lo construyes sin ning%cn problema, se nota que estudiaste en la UPM*
+("-Ahora solo tengo que enviar la señal de mi posici%cn...
+*En este momento tienes dudas, no sabes si enviar la señal de rescate o quedarte en el planeta misterioso*
+#DECISIÓN 5a
+ DECISI%cN 1: Enviar la señal de socorro.
+ DECISI%cN 2: Quedarte a explorar el planeta.
+ Pulse cualquier otro n%cmero para volver a leer.
+#DECISIÓN 5a.1
+*Decides que lo m%cs prudente es enviar la señal de socorro. Al cabo de un rato aparece un veh%cculo a%creo que te
+ resulta familiar, pero est%cs confundido, ¿c%cmo han tardado tan poco en encontrarte? Los integrantes del equipo de 
+ rescate te explican la situaci%cn, emprendiste un viaje solitario en la nave cuando esta sufri%c un fallo mec%cnico 
+ provocando que te estrellases sin salir siquiera del planeta. El golpe te caus%c p%crdida de memoria y no recordabas
+ nada posterior al lanzamiento. Eres llevado al hospital m%cs cercano donde te recuperar%cs del accidente*
+#DECISIÓN 5a.2
+*Decides darte una oportunidad en el planeta extraterrestre y quedarte all%c. Pasas las siguientes semanas recogiendo 
+ frutas, aunque estas te resultan muy familiares. Despu%cs de casi un mes realizas contacto con otros humanos, est%cs 
+ contrariado hasta que estos te explican que sigues en la Tierra. Inmediatamente te desmayas y te llevan al hospital 
+ m%cs cercano. El accidente con la nave sucedi%c debido a un fallo mec%cnico y al estrellarte sufriste perdidas de
+ memoria con las que no pod%cas recordar nada posterior al lanzamiento de la nave. Permanecer%cs en el hospital hasta 
+ tu recuperaci%cn total*
+#DECISIÓN 4a.2
+-Lo mejor ser%c ir por los conductos de ventilaci%cn superior.
+*Arrancas la rejilla de ventilaci%cn y te metes dentro del conducto gateando*
+-Vale, ahora solo tengo que seguir as%c hasta llegaaaa… 
+*Pesas demasiado como para que la estructura de ventilaci%cn dañada aguante tu peso. El golpe es tan fuerte que te 
+ rompes las piernas en la ca%cda y la pequeña conmoción producida por el accidente de la nave se agrava produciendo 
+ tu muerte*
+#DECISIÓN 3a.2
+*Entras en la sala de navegaci%cn principal, con la esperanza de encontrar algo de utilidad. Cuando ya est%cs llegando
+ te das cuenta de que la sala est%c al lado del dep%csito de combustible, y que a medida que te acercas, el suelo est%c 
+ cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber s%c dentro de 
+ la sala principal hay algo %ctil te puede m%cs.
+*Una vez dentro de la sala principal, encuentras un GPS el cual dentro tiene un chip localizador, el GPS est%c averiado,
+ asi que, si lo abres no afectar%cs en nada el funcionamiento de la nave, por lo que decides, extraer el chip.*
+*Utilizas las herramientas, pero en el proceso de desarmado, encuentras una tapa, la cual no puedes abrir con las 
+ herramientas, asi que decides hacer fuerza para romper la tapa. Terminas rompi%cndola y se ve un hueco y al fondo de 
+ %cl, el chip localizador, tratas de usar las herramientas, pero no entran, son muy grandes para caber dentro del hueco
+ asi que, metes tu mano y tiras con todas tus fuerzas del %cl, hasta que lo extraes, todo parece estar bien hasta que 
+ saltan unas chispas, que prenden el combustible bajo tus pies. Ardes por completo*
+#DECISIÓN 2b.2
+-Ser%c mejor que salga de la nave, no quiero acabar sepultado por este mont%cn de chatarra.
+*Decides salir de la nave con cuidado, crees que es lo m%cs seguro*
+-Bien, creo que ser%c mejor investigar la zona, aunque no se d%cnde voy a conseguir el resto de los materiales que 
+ necesito para montar el transmisor.
+*Te alejas un par de pasos y te sientas en el suelo a pensar qu%c hacer, recuerdas que la nave tiene un m%cdulo de 
+ almacenamiento*
+-¡Claro! ¿C%cmo no se me hab%ca ocurrido antes? Es mi %cnica fuente de recursos ahora mismo, espero encontrar lo 
+ necesario.
+*Comienzas a andar hacia el almac%cn y encuentras un arma en el suelo, la coges y la enganchas al traje 
+ espacial*	 
+*Sigues andando hasta entrar en el almac%cn*
+-De acuerdo, ahora tengo que buscar el chip de localizaci%cn, la antena parab%clica y el micr%cfono.
+#DECISIÓN 3b.2
+DECISI%cN 1: Buscar por la izquierda.
+DECISI%cN 2: Buscar por la derecha.
+Pulse cualquier otro n%cmero para volver a leer.
+
+-Empezar%e por la izquierda, siendo zurdo eso tendr%ca que darme suerte.
+*Comienzas a buscar por la parte izquierda del almac%cn por alg%cn tipo de raz%cn supersticiosa*
+-Aqu%c parece haber muchas cajas, espero tener suerte.
+*Est%cs un buen rato buscando hasta que encuentras la antena parab%clica, no es tan grande como esperabas, pero servir%c*
+-Una cosa menos, solo faltan dos.
+*Sigues buscando*
+-Parece que aqu%c no hay nada m%cs.
+*Empiezas a buscar por la derecha*
+*Abres la primera caja y encuentras el micr%cfono*
+-Parece que he vuelto a tener suerte.
+*Despu%cs de un rato buscando encuentras el chip y comienzas a salir del almac%cn*
+-Ya tengo todo lo que buscaba y lo he conseguido bastante r%cpido, parece que he tenido suerte.
+*Mientas buscabas se ha hecho de noche*
+
+DECISI%cN 1: Quedarte dentro de la nave.
+DECISI%cN 2: Salir de la nave y crear una hoguera.
+Pulse cualquier otro n%cmero para volver a leer.
+
+-Me quedar%c aqu%c dentro, es m%cs seguro que salir.	
+*Te tumbas encima de un mont%cn de cajas y duermes hasta el d%ca siguiente*
+*Te despiertas y escuchas un ruido parecido al de un helic%cptero, sales y compruebas que es un veh%cculo a%creo que 
+ acaba de aterrizar. Del interior de la nave sale una criatura. ¡Es un humano! ¿C%cmo es posible? Te sientas en el 
+ suelo debido a la confusi%cn. Este te explica que pertenece al equipo de rescate de la Agencia Espacial Europea,
+ despu%cs del lanzamiento de tu nave esta tuvo un fallo mec%cnico provocando que se estrellase contra el suelo. Este 
+ accidente te ha provocado p%crdidas de memoria y no recuerdas nada posterior al lanzamiento. Eres llevado al hospital 
+ m%cs cercano para que seas atendido*
+
+-Necesito salir de esta nave, no me da seguridad, no tanta como salir.
+*Creas una hoguera y te duermes profundamente, al cabo de un rato parte del combustible procedente del dep%csito llega 
+ hasta ti. El fuego de la hoguera chisporrotea provocando un incendio al caer sobre el combustible. Mueres quemado*
+
+Empezar%c a buscar por la derecha.
+*Comienzas la b%csqueda de los materiales por la parte derecha del almac%cn*
+-Parece que es mi d%ca de suerte, en la primera caja que abro encuentro el micr%cfono, esto me ahorrar%c tiempo.
+*Sigues buscando y encuentras el chip*
+-¡Genial! Ahora solo me falta la antena parab%clica.
+*Detr%cs de unas cajas encuentras una gran antena, ya tienes todos los materiales y sigue siendo de d%ca*
+-Perfecto, ya solo me queda montar el radio transmisor.
+*Te diriges al exterior del almac%cn para montar el transmisor cuando a lo lejos ves una figura acercándose a ti,
+ entras en p%cnico y disparas con tu arma*
+-No s%c qu%c ser%ca eso, pero creo que me he salvado. Voy a ver que era.
+*Te acercas al cad%cver del ser al que acabas de disparar y es un humano. No sabes que hacer, tu cerebro colapsa y caes 
+ al suelo. Despiertas dentro de un calabozo. Nunca llegaste a abandonar la Tierra, tu nave se estrell%c despu%cs de un 
+ fallo mec%cnico y por culpa del golpe no recuerdas nada posterior al lanzamiento. Pasar%cs el resto de tus d%cas en la 
+ c%crcel*
+
