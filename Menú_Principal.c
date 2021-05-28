@@ -141,7 +141,6 @@ int main()
                     Menu_BlackJack();
                     printf("Introduzca el n%cmero de la opci%cn que desee:", 163, 162);
                     scanf("%d", &decision_2);
-                    Continuar();
                     switch(decision_2){
                         case 1:
                             do{
@@ -180,12 +179,11 @@ int main()
                                         crupier.carta[c].palo  = palo[pc];
                                     }
                                 }
-                                Continuar();
 
                                 //Se introduce la cantidad a apostar por los jugadores
                                 for(i1 = 0; i1 < num_jug; i1++){
                                     do{
-                                        Continuar();
+                                            Continuar();
                                         printf("Tu monedero actual es %i.\n", participante[i1].monedero);
                                         printf("%s, %ccu%cnto quieres apostar de tu monedero?\n", participante[i1].nombre, 168, 160);
                                         scanf("%i", &participante[i1].apuesta);
@@ -451,18 +449,16 @@ int main()
                             for(a0 = 0, v0 = 0; a0 != 1; a0 = v0){
                                 Borrar();
                                 Imprimir_lineas(0, 11);
+                                Borrar();
                                 scanf("%i", &dec_0);
                                 switch(dec_0){
                                     case 1:
                                         v0 = 1;
                                         Borrar();
                                         Imprimir_lineas(12, 15);
-                                        printf("\nPulsa enter para continuar...\n");
-                                        getchar();
                                     case 2:
                                         v0 = 1;
                                         for( a1 = 0, v1 = 0; a1 != 1; a1 = v1){
-                                        Borrar();
                                         Imprimir_lineas(16, 28);
                                         scanf("%i",&dec_1);
                                         switch (dec_1){
@@ -470,8 +466,6 @@ int main()
                                                 v1=1;
                                                 Borrar();
                                                 Imprimir_lineas(29, 32);
-                                                printf("\nPulsa enter para continuar...\n");
-                                                getchar();
                                                 Game_Over();
                                                 break;
 
@@ -545,7 +539,7 @@ int main()
                                                                     break;
                                                                 case 2:
                                                                     v3a=1;
-                                                                    Imprimir_lineas(111, 122);
+                                                                    Imprimir_lineas(111, 123);
                                                                     printf("\nPulsa enter para continuar...\n");
                                                                     getchar();
                                                                     Game_Over();
@@ -563,7 +557,7 @@ int main()
                                                             v2=1;
                                                             Borrar();
                                                             for(a3b = 0, v3b = 0; a3b != 1; a3b = v3b){
-                                                                Imprimir_lineas(123, 138);
+                                                                Imprimir_lineas(124, 138);
                                                                 printf("\nPulsa enter para continuar...\n");
                                                                 getchar();
                                                                 scanf("%i", &dec_3b);
