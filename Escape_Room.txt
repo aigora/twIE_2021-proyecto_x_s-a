@@ -72,26 +72,26 @@
  comunicaciones tiene que haber algun tipo de antena parabolica.
 *Emprendes tu camino hacia la sala de comunicaciones, pero tienes un dilema, el pasillo es estrecho y hay riesgo de que 
  el traje espacial se quede enganchado*
- DECISION 1: Intentas pasar.\n
+ DECISION 1: Intentas pasar.
  DECISION 2: Buscas otro camino por el sistema de ventilacion.
  Pulse cualquier otro numero para volver a leer.
 #77
--Si no me he muerto hasta el momento creo que podr%c pasar por esto.
+-Si no me he muerto hasta el momento creo que podra pasar por esto.
 *Te agachas y gateas por el suelo hasta llegar al final del pasillo*
--Buff… Eso ha estado cerca, por un momento cre%c que no pasar%ca, era m%cs estrecho de lo que esperaba.
-*Miras a tu alrededor y encuentras la antena y el micr%cfono que tambi%cn necesitabas*
--Perfecto, ya tengo todo lo que quer%ca, ya puedo salir de este trozo de chatarra.
+-Buff… Eso ha estado cerca, por un momento crei que no pasaria, era mas estrecho de lo que esperaba.
+*Miras a tu alrededor y encuentras la antena y el microfono que tambien necesitabas*
+-Perfecto, ya tengo todo lo que queria, ya puedo salir de este trozo de chatarra.
 *Sales de la nave por donde has venido*
 -Ahora solo necesito montar el transmisor.
-*Empiezas a montar el transmisor y lo construyes sin ning%cn problema, se nota que estudiaste en la UPM*
--Ahora solo tengo que enviar la señal de mi posici%cn...
+*Empiezas a montar el transmisor y lo construyes sin ningun problema, se nota que estudiaste en la UPM*
+-Ahora solo tengo que enviar la señal de mi posicion...
 *En este momento tienes dudas, no sabes si enviar la señal de rescate o quedarte en el planeta misterioso*
- DECISI%cN 1: Enviar la señal de socorro.
- DECISI%cN 2: Quedarte a explorar el planeta.
- Pulse cualquier otro n%cmero para volver a leer.
+ DECISION 1: Enviar la señal de socorro.
+ DECISION 2: Quedarte a explorar el planeta.
+ Pulse cualquier otro numero para volver a leer.
 #91
-*Decides que lo m%cs prudente es enviar la señal de socorro. Al cabo de un rato aparece un veh%cculo a%creo que te
- resulta familiar, pero est%cs confundido, ¿c%cmo han tardado tan poco en encontrarte? Los integrantes del equipo de 
+*Decides que lo mAs prudente es enviar la señal de socorro. Al cabo de un rato aparece un vehiculo aereo que te
+ resulta familiar, pero estas confundido, ¿c%cmo han tardado tan poco en encontrarte? Los integrantes del equipo de 
  rescate te explican la situaci%cn, emprendiste un viaje solitario en la nave cuando esta sufri%c un fallo mec%cnico 
  provocando que te estrellases sin salir siquiera del planeta. El golpe te caus%c p%crdida de memoria y no recordabas
  nada posterior al lanzamiento. Eres llevado al hospital m%cs cercano donde te recuperar%cs del accidente*
@@ -137,7 +137,7 @@
  DECISI%cN 1: Buscar por la izquierda.
  DECISI%cN 2: Buscar por la derecha.
  Pulse cualquier otro n%cmero para volver a leer.
-#138
+#139
 -Empezar%e por la izquierda, siendo zurdo eso tendr%ca que darme suerte.
 *Comienzas a buscar por la parte izquierda del almac%cn por alg%cn tipo de raz%cn supersticiosa*
 -Aqu%c parece haber muchas cajas, espero tener suerte.
@@ -154,7 +154,7 @@
 DECISI%cN 1: Quedarte dentro de la nave.
 DECISI%cN 2: Salir de la nave y crear una hoguera.
 Pulse cualquier otro n%cmero para volver a leer.
-#155
+#156
 -Me quedar%c aqu%c dentro, es m%cs seguro que salir.	
 *Te tumbas encima de un mont%cn de cajas y duermes hasta el d%ca siguiente*
 *Te despiertas y escuchas un ruido parecido al de un helic%cptero, sales y compruebas que es un veh%cculo a%creo que 
@@ -163,11 +163,11 @@ Pulse cualquier otro n%cmero para volver a leer.
  despu%cs del lanzamiento de tu nave esta tuvo un fallo mec%cnico provocando que se estrellase contra el suelo. Este 
  accidente te ha provocado p%crdidas de memoria y no recuerdas nada posterior al lanzamiento. Eres llevado al hospital 
  m%cs cercano para que seas atendido*
-#164
+#165
 -Necesito salir de esta nave, no me da seguridad, no tanta como salir.
 *Creas una hoguera y te duermes profundamente, al cabo de un rato parte del combustible procedente del dep%csito llega 
  hasta ti. El fuego de la hoguera chisporrotea provocando un incendio al caer sobre el combustible. Mueres quemado*
-#168
+#169
 Empezar%c a buscar por la derecha.
 *Comienzas la b%csqueda de los materiales por la parte derecha del almac%cn*
 -Parece que es mi d%ca de suerte, en la primera caja que abro encuentro el micr%cfono, esto me ahorrar%c tiempo.
@@ -182,4 +182,4 @@ Empezar%c a buscar por la derecha.
  al suelo. Despiertas dentro de un calabozo. Nunca llegaste a abandonar la Tierra, tu nave se estrell%c despu%cs de un 
  fallo mec%cnico y por culpa del golpe no recuerdas nada posterior al lanzamiento. Pasar%cs el resto de tus d%cas en la 
  c%crcel*
-#183
+#184

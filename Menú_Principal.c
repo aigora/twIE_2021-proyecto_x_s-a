@@ -473,14 +473,14 @@ int main()
                                                 v1 = 1;
                                                 Borrar();
                                                 for(a2 = 0, v2 = 0; a2 != 1; a2 = v2){
-                                                    Imprimir_lineas(33, 45);
+                                                    Imprimir_lineas(33, 46);
                                                     scanf("%i",&dec_2);
                                                     switch (dec_2){
                                                         case 1:
                                                             v2=1;
                                                             Borrar();
                                                             for(a3a = 0, v3a = 0; a3a != 1; a3a = v3a){
-                                                                Imprimir_lineas(46, 52);
+                                                                Imprimir_lineas(47, 53);
                                                                 printf("\nPulsa enter para continuar...\n");
                                                                 getchar();
                                                                 scanf("%i", &dec_3a);
@@ -489,20 +489,20 @@ int main()
                                                                     v3a=1;
                                                                     Borrar();
                                                                     for(a4a = 0, v4a = 0; a4a != 1; a4a = v4a){
-                                                                        Imprimir_lineas(53, 76);
+                                                                        Imprimir_lineas(54, 77);
                                                                         scanf("%i", &dec_4a);
                                                                         switch (dec_4a){
                                                                             case 1:
                                                                             v4a=1;
                                                                             Borrar();
                                                                             for(a5a = 0, v5a = 0; a5a != 1; a5a = v5a){
-                                                                                Imprimir_lineas(77, 90);
+                                                                                Imprimir_lineas(78, 91);
                                                                                 scanf("%i", &dec_5a);
                                                                                 switch (dec_5a){
                                                                                     case 1:
                                                                                         v5a=1;
                                                                                         Borrar();
-                                                                                        Imprimir_lineas(91, 96);
+                                                                                        Imprimir_lineas(92, 97);
                                                                                         printf("\nPulsa enter para continuar...\n");
                                                                                         getchar();
                                                                                         printf("HAS GANADO\n");
@@ -510,7 +510,7 @@ int main()
                                                                                     case 2:
                                                                                         v5a=1;
                                                                                         Borrar();
-                                                                                        Imprimir_lineas(97, 103);
+                                                                                        Imprimir_lineas(98, 104);
                                                                                         printf("\nPulsa enter para continuar...\n");
                                                                                         getchar();
                                                                                         printf("HAS GANADO\n");
@@ -525,7 +525,7 @@ int main()
                                                                         case 2:
                                                                             v4a=1;
                                                                             Borrar();
-                                                                            Imprimir_lineas(104, 110);
+                                                                            Imprimir_lineas(105, 111);
                                                                             printf("\nPulsa enter para continuar...\n");
                                                                             getchar();
                                                                             Game_Over();
@@ -539,7 +539,7 @@ int main()
                                                                     break;
                                                                 case 2:
                                                                     v3a=1;
-                                                                    Imprimir_lineas(111, 123);
+                                                                    Imprimir_lineas(112, 123);
                                                                     printf("\nPulsa enter para continuar...\n");
                                                                     getchar();
                                                                     Game_Over();
@@ -557,7 +557,7 @@ int main()
                                                             v2=1;
                                                             Borrar();
                                                             for(a3b = 0, v3b = 0; a3b != 1; a3b = v3b){
-                                                                Imprimir_lineas(124, 138);
+                                                                Imprimir_lineas(124, 139);
                                                                 printf("\nPulsa enter para continuar...\n");
                                                                 getchar();
                                                                 scanf("%i", &dec_3b);
@@ -566,7 +566,7 @@ int main()
                                                                         v3b=1;
                                                                         Borrar();
                                                                         for (a4b = 0, v4b = 0; a4b != 1; a4b = v4b){
-                                                                            Imprimir_lineas(139, 155);
+                                                                            Imprimir_lineas(140, 156);
                                                                             printf("\nPulsa enter para continuar...\n");
                                                                             getchar();
                                                                             scanf("%i", &dec_4b);
@@ -574,7 +574,7 @@ int main()
                                                                                 case 1:
                                                                                     v4b=1;
                                                                                     Borrar();
-                                                                                    Imprimir_lineas(156, 164);
+                                                                                    Imprimir_lineas(157, 165);
                                                                                     printf("\nPulsa enter para continuar...\n");
                                                                                     getchar();
                                                                                     printf("HAS GANADO\n");
@@ -583,7 +583,7 @@ int main()
                                                                                 case 2:
                                                                                     v4b=1;
                                                                                     Borrar();
-                                                                                    Imprimir_lineas(165, 168);
+                                                                                    Imprimir_lineas(166, 169);
                                                                                     printf("\nPulsa enter para continuar...\n");
                                                                                     getchar();
                                                                                     Game_Over();
@@ -600,7 +600,7 @@ int main()
                                                                     case 2:
                                                                         v3b=1;
                                                                         Borrar();
-                                                                        Imprimir_lineas(169, 183);
+                                                                        Imprimir_lineas(170, 184);
                                                                         printf("\nPulsa enter para continuar...\n");
                                                                         getchar();
                                                                         Game_Over();
