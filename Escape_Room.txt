@@ -44,14 +44,14 @@
  DECISION 1: Seguir inspeccionando la nave.
  DECISION 2: Salir de la nave.
  Pulse cualquier otro numero para volver a leer.
-#45
+#46
 *Te adentras por los largos pasillos de la nave, teniendo mas cuidado de por donde vas, ahora que sabes que la nave es
  un campo de minas. Tu objetivo sigue siendo el mismo, asi que ahora te dispones a buscar los chips localizadores. No
  sabes muy bien el donde estas, en uno de los pasillos encuentras un mapa del interior de la nave y te lo guardas.*
  DECISION 1: Buscar en la sala de mandos.
  DECISION 2: Buscar en la sala de navegaci%cn principal.
  Pulse cualquier otro numero para volver a leer.
-#52
+#53
 *Te diriges a la sala de mandos. De camino recuerdas que hay un radar que te podria ser util, puesto que dentro
  seguro que tiene un chip localizador. Ni bien entras en la sala, el radar es lo primero que buscas. Al no encontrarlo
  a la vista empiezas a buscar por los cajones hasta que lo encuentras. Ya en tu mano, te dispones a desmontarlo con 
@@ -75,7 +75,7 @@
  DECISION 1: Intentas pasar.\n
  DECISION 2: Buscas otro camino por el sistema de ventilacion.
  Pulse cualquier otro numero para volver a leer.
-#76
+#77
 -Si no me he muerto hasta el momento creo que podr%c pasar por esto.
 *Te agachas y gateas por el suelo hasta llegar al final del pasillo*
 -Buff… Eso ha estado cerca, por un momento cre%c que no pasar%ca, era m%cs estrecho de lo que esperaba.
@@ -89,27 +89,27 @@
  DECISI%cN 1: Enviar la señal de socorro.
  DECISI%cN 2: Quedarte a explorar el planeta.
  Pulse cualquier otro n%cmero para volver a leer.
-#90
+#91
 *Decides que lo m%cs prudente es enviar la señal de socorro. Al cabo de un rato aparece un veh%cculo a%creo que te
  resulta familiar, pero est%cs confundido, ¿c%cmo han tardado tan poco en encontrarte? Los integrantes del equipo de 
  rescate te explican la situaci%cn, emprendiste un viaje solitario en la nave cuando esta sufri%c un fallo mec%cnico 
  provocando que te estrellases sin salir siquiera del planeta. El golpe te caus%c p%crdida de memoria y no recordabas
  nada posterior al lanzamiento. Eres llevado al hospital m%cs cercano donde te recuperar%cs del accidente*
-#96
+#97
 *Decides darte una oportunidad en el planeta extraterrestre y quedarte all%c. Pasas las siguientes semanas recogiendo 
  frutas, aunque estas te resultan muy familiares. Despu%cs de casi un mes realizas contacto con otros humanos, est%cs 
  contrariado hasta que estos te explican que sigues en la Tierra. Inmediatamente te desmayas y te llevan al hospital 
  m%cs cercano. El accidente con la nave sucedi%c debido a un fallo mec%cnico y al estrellarte sufriste perdidas de
  memoria con las que no pod%cas recordar nada posterior al lanzamiento de la nave. Permanecer%cs en el hospital hasta 
  tu recuperaci%cn total*
-#103
+#104
 -Lo mejor ser%c ir por los conductos de ventilaci%cn superior.
 *Arrancas la rejilla de ventilaci%cn y te metes dentro del conducto gateando*
 -Vale, ahora solo tengo que seguir as%c hasta llegaaaa… 
 *Pesas demasiado como para que la estructura de ventilaci%cn dañada aguante tu peso. El golpe es tan fuerte que te 
  rompes las piernas en la ca%cda y la pequeña conmoción producida por el accidente de la nave se agrava produciendo 
  tu muerte*
-#110
+#111
 *Entras en la sala de navegaci%cn principal, con la esperanza de encontrar algo de utilidad. Cuando ya est%cs llegando
  te das cuenta de que la sala est%c al lado del dep%csito de combustible, y que a medida que te acercas, el suelo est%c 
  cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber s%c dentro de 
@@ -121,7 +121,7 @@
  %cl, el chip localizador, tratas de usar las herramientas, pero no entran, son muy grandes para caber dentro del hueco
  asi que, metes tu mano y tiras con todas tus fuerzas del %cl, hasta que lo extraes, todo parece estar bien hasta que 
  saltan unas chispas, que prenden el combustible bajo tus pies. Ardes por completo*
-#122
+#123
 -Ser%c mejor que salga de la nave, no quiero acabar sepultado por este mont%cn de chatarra.
 *Decides salir de la nave con cuidado, crees que es lo m%cs seguro*
 -Bien, creo que ser%c mejor investigar la zona, aunque no se d%cnde voy a conseguir el resto de los materiales que 
