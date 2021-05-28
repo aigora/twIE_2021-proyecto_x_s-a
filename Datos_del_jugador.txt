@@ -1,2 +1,2 @@
-El nombre del participante 1 es: e
-El tiene 3 euros.
+El nombre del participante 1 es: 2
+El tiene 2 euros.

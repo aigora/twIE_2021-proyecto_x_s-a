@@ -65,8 +65,18 @@ int main()
     //Variables del Escape Room
     FILE *F_EscRoom;
     int p;
+    char enter;
     fichero linea[200];
     char cad_car[700];
+    if((F_EscRoom = fopen("Escape_Room.txt", "r")) == NULL){
+        printf("Se ha producido un error a la hora de abrir el archivo...\n");
+        return 1;
+    }
+    while(fgets(cad_car, 700, F_EscRoom) != NULL){
+        strcpy(linea[p].cont, cad_car);
+    p++;
+    }
+    fclose(F_EscRoom);
     int dec_0,  dec_1,  dec_2,  dec_3a,   dec_4a,   dec_5a,   dec_3b,   dec_4b;
     int a0, v0, a1, v1, a2, v2, a3a, v3a, a4a, v4a, a5a, v5a, a3b, v3b, a4b, v4b;
 
@@ -430,16 +440,6 @@ int main()
                 }
                 break;
             case 2:
-                if((F_EscRoom = fopen("Escape_Room.txt", "r")) == NULL){
-                    printf("Se ha producido un error a la hora de abrir el archivo...\n");
-                    return 1;
-                }
-                while(fgets(cad_car, 700, F_EscRoom) != NULL){
-                    strcpy(linea[p].cont, cad_car);
-                    p++;
-                }
-                fclose(F_EscRoom);
-
                 for (i = 0, j = 0; i != 1; i = j){
                     Menu_EscapeRoom();
                     printf("Introduzca el número de la opción que desee:");
@@ -449,7 +449,7 @@ int main()
                         case 1:
                             for(a0 = 0, v0 = 0; a0 != 1; a0 = v0){
                                 Borrar();
-                                for(p = 1; p < 12; p++){
+                                for(p = 0; p < 11; p++){
                                     printf("%s", linea[p].cont);
                                 }
                                 scanf("%i", &dec_0);
@@ -459,29 +459,24 @@ int main()
                                         v0 = 1;
                                         Borrar();
                                         p = 0;
-                                        for(p = 13; p < 16; p++){
+                                        for(p = 12; p < 15; p++){
                                             printf("%s", linea[p].cont);
                                         }
-                                        Continuar();
-                                        case 2:
+                                        printf("\nPulsa enter para continuar...\n");
+                                        getchar();
+  getchar();
+                                    case 2:
                                         v0 = 1;
                                         for( a1 = 0, v1 = 0; a1 != 1; a1 = v1)
                                         {
                                         Borrar();
-                                        printf("*Te diriges a la nave, y por fuera ves que la cosa pinta mal. Se ha roto el dep%csito de combustible, y hay algunos \n", 162);
-                                        printf(" huecos en el casco de titanio, por lo que debes hallar los materiales necesarios para repararla si quieres poder\n");
-                                        printf(" despegarla, placas met%clicas de titanio. Pero tienes claro de que va a ser una tarea muy dura.*\n", 160);
-                                        Continuar();
-                                        printf("*Una vez analizada la situaci%cn por fuera, te dispones a ver que componentes siguen siendo %ctiles dentro de la nave, al\n", 162, 163);
-                                        printf(" parecer todo esta bien, pero te das cuenta de que el radio transmisor est%c estropeado, por lo que tendr%cs que\n", 160, 160);
-                                        printf(" repararlo si quieres pedir ayuda.(Para repararlo debes encontrar cables, chips localizadores, una antena y un altavoz).*\n", 160);
-                                        Continuar();
-                                        printf("*Te adentras en el habit%cculo de reabastecimiento de la nave en busca de materiales, para arreglar la nave. Ves una\n");
-                                        printf(" caja de herramientas, unos cuantos cables en el suelo, por los que tienes claro que no circula corriente, y otros\n");
-                                        printf(" en unas m%cquinas rotas de la nave, por los que puede que circule algo de corriente. %cQu%c vas a hacer?.*\n", 160, 168, 130);
-                                        printf("DECISI%cN 1: Coger cables del suelo.\n", 162);
-                                        printf("DECISI%cN 2: Coger cables de la m%cquina.\n", 162, 160);
-                                        printf("Pulse cualquier otro n%cmero para volver a leer.\n", 163);
+                                        p = 0;
+                                        for(p = 16; p < 28; p++){
+                                            printf("%s", linea[p].cont);
+                                        }
+                                        printf("\nPulsa enter para continuar...\n");
+                                        getchar();
+  getchar();
                                         scanf("%i",&dec_1);
                                         switch (dec_1)
                                         {
@@ -856,7 +851,7 @@ int main()
                             Continuar();
                             break;
                     }
-                    system("cls");
+                    Continuar();
                 }
                 break;
             case 3:
@@ -878,7 +873,6 @@ int main()
 void Bienvenida()
 {
 	printf("%cPREPARADO PARA LA DIVERSI%cN?\n", 168, 224);
-	system("Pause");
 	printf("%c%cBIENVENIDO AL SAL%cN DE JUEGOS!!\n\n", 173, 173, 224);
 	Continuar();
 }
@@ -916,7 +910,7 @@ void Menu_EscapeRoom()
 	printf("\n");
 	printf("MEN%c DEL ESCAPEROOM:\n", 233);
 	printf("1.Comenzar la partida\n");
-	printf("5.Volver al Men%c Principal\n", 163);
+	printf("2.Volver al Men%c Principal\n", 163);
 	printf("3.Salir del programa\n\n");
 }
 
