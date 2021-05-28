@@ -2,39 +2,46 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+
 
 /// Definimos variables
 #define ANSI_COLOR_RED     "\x1b[31m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
 ///Presentación de las funciones
+
+//Funciones Tool
 void Bienvenida();
 void Continuar();
 void Borrar();
+
+//Funciones Menú Principal
 void Menu_Opciones();
 void Menu_BlackJack();
 void Menu_EscapeRoom();
 void Despedida();
+
+//Funciones de Escape Room
 void Game_Over();
 
 //Funciones del Black Jack
 void Menu_Final();
-int Premio( _Bool BJ_p, _Bool BJ_c, int apuesta, int suma_p, int suma_c);
 void imp_color_rojo_10(int num, char palo);
 void imp_color_rojo_n(char num, char palo);
-
+int Premio( _Bool BJ_p, _Bool BJ_c, int apuesta, int suma_p, int suma_c);
 int suma_cartas(int i, int cartas[]);
 
 /// Estructuras
-typedef struct                  /** Componentes de una carta **/
-{
+
+//Estrucutras del Menú Principal
+typedef struct{                  /** Componentes de una carta **/
     char num_i;
     int num_j;
     char palo;
 }e_carta;
 
-typedef struct                  /** Cosas del jugador **/
-{
+typedef struct{                  /** Cosas del jugador **/
     e_carta carta[20];         /* Estructura anidada en otra */
     char nombre[100];
     int monedero;
@@ -44,41 +51,49 @@ typedef struct                  /** Cosas del jugador **/
     _Bool Pasar_21;
 }datos_jugador;
 
+//Estructuras del Escape Room
+typedef struct{
+    char cont[700];
+}fichero;
+
 ///Programa
 int main()
 {
-    FILE *reglas;
+    //Variables del Menú Principal
     int decision_1, decision_2, y, j, x;
+
     //Variables del Escape Room
+    FILE *F_EscRoom;
+    int p;
+    fichero linea[200];
+    char cad_car[700];
     int dec_0,  dec_1,  dec_2,  dec_3a,   dec_4a,   dec_5a,   dec_3b,   dec_4b;
     int a0, v0, a1, v1, a2, v2, a3a, v3a, a4a, v4a, a5a, v5a, a3b, v3b, a4b, v4b;
-    //Varaiables del BlackJack
 
-    FILE *F_prueba;
+    //Varaiables del BlackJack
+    FILE *reglas;
+    FILE *Datos_j;
     datos_jugador crupier = {.nombre = "Susana Picado"};
     int carta_jug[]  = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
     char carta_imp[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'J', 'Q', 'K', '\0'};                 /** Números Posibles **/
     char palo[]      = { 3, 4, 5, 6, '\0' };                                                                    /** Palos Posibles **/
-    int cartas[21];
     char nc, pc;
+    char x1, x2;
+    char aux_c[5];
+    int m, n;
     srand(time(NULL));
+    int cartas[21];
     int n_c, i, c, aux, Dec_BJ;
     int num_jug, i1;
     int suma, eleccion, premio;
+
     //Menú Principal
     Bienvenida();
-    F_prueba = fopen("Prueba_de_Ficheros.txt", "w");
-    if (F_prueba == NULL)
-    {
+    if ((Datos_j = fopen("Datos_del_jugador.txt", "w")) == NULL){
         printf("Error al abrir el fichero.\n");
         return -1;
     }
-    else
-    {
-        printf("Fichero abierto correctamente.\n");
-    }
-    do
-    {
+    do{
 
         printf("HOLA, BIENVENIDO AL PROYECTO_X.\n");
         printf("Por favor, seguid las indicaciones en todo momento, y contestad coherentemente a las preguntas que se os hagan.\n");
@@ -90,77 +105,65 @@ int main()
     datos_jugador participante[num_jug];
 
     //se guardan en la memoria los nombres y dinero de los jugadores
-    for(i1 = 0; i1 < num_jug; i1++)
-    {
+    for(i1 = 0; i1 < num_jug; i1++){
         printf("Introducid el nombre del participante %i:\n", i1+1);
         scanf("%49s[^\n]", participante[i1].nombre);
         fflush(stdin);
-        do
-        {
+        do{
             printf("Elija la cantidad inicial con la que %s quiere empezar a jugar (Cantidad entera): \n", participante[i1].nombre);
             scanf("%i", &participante[i1].monedero);
-            fprintf(F_prueba, "El nombre del participante %i es: %s\n", i1+1, participante[i1].nombre);
-            fprintf(F_prueba, "El tiene %i euros.\n", participante[i1].monedero);
+            fprintf(Datos_j, "El nombre del participante %i es: %s\n", i1+1, participante[i1].nombre);
+            fprintf(Datos_j, "El tiene %i euros.\n", participante[i1].monedero);
         }while((participante[i1].monedero <= 0));
+        fclose(Datos_j);
         printf("\n");
     }
     Continuar();
-    do
-    {
+    do{
         Menu_Opciones();
-        printf("Introduzca el número de la opción que desee:");
+        printf("Introduzca el n%cmero de la opci%cn que desee:", 163, 162);
         scanf("%d", &decision_1);
         Continuar();
-        switch(decision_1)
-        {
+        switch(decision_1){
             case 1:
-                for(y = 0, j = 0; y != 1; y = j)
-                {
+                for(y = 0, j = 0; y != 1; y = j){
                     Menu_BlackJack();
                     printf("Introduzca el n%cmero de la opci%cn que desee:", 163, 162);
                     scanf("%d", &decision_2);
                     Continuar();
-                    switch(decision_2)
-                    {
+                    switch(decision_2){
                         case 1:
-                            do
-                            {
+                            do{
                                 //Se generan las 10 primeras cartas de todos los jugadores
-                                for(i1 = 0; i1 < num_jug; i1++)
-                                {
-                                    for(i = 0; i < 10; i++)
-                                        {
-                                            nc = rand()%13;
-                                            pc = rand()%4;
-                                            if(carta_imp[nc] == carta_imp[9])
-                                            {
-                                                n_c = 10;
-                                                participante[i1].carta[i].num_i = n_c;
-                                                participante[i1].carta[i].num_j = carta_jug[nc];
-                                                participante[i1].carta[i].palo  = palo[pc];
-                                            }
-                                            else
-                                            {
-                                                participante[i1].carta[i].num_i = carta_imp[nc];
-                                                participante[i1].carta[i].num_j = carta_jug[nc];
-                                                participante[i1].carta[i].palo  = palo[pc];
-                                            }
+                                for(i1 = 0; i1 < num_jug; i1++){
+                                    for(i = 0; i < 10; i++){
+                                        nc = rand()%13;
+                                        pc = rand()%4;
+                                        if(carta_imp[nc] == carta_imp[9]){
+                                            n_c = 10;
+                                            participante[i1].carta[i].num_i = n_c;
+                                            participante[i1].carta[i].num_j = carta_jug[nc];
+                                            participante[i1].carta[i].palo  = palo[pc];
                                         }
+                                        else{
+                                            participante[i1].carta[i].num_i = carta_imp[nc];
+                                            participante[i1].carta[i].num_j = carta_jug[nc];
+                                            participante[i1].carta[i].palo  = palo[pc];
+                                        }
+                                    }
                                 }
+
                                 //se generan las 10 primeras cartas del crupier
-                                for(c = 0; c < 10; c++)
-                                {
+                                for(c = 0; c < 10; c++){
                                     nc = rand()%13;
                                     pc = rand()%4;
-                                    if(carta_imp[nc] == carta_imp[9])
-                                    {
+                                    if(carta_imp[nc] == carta_imp[9]){
                                         n_c = 10;
                                         crupier.carta[c].num_i = n_c;
                                         crupier.carta[c].num_j = carta_jug[nc];
                                         crupier.carta[c].palo  = palo[pc];
                                     }
-                                    else
-                                    {
+                                    else{
                                         crupier.carta[c].num_i = carta_imp[nc];
                                         crupier.carta[c].num_j = carta_jug[nc];
                                         crupier.carta[c].palo  = palo[pc];
@@ -169,10 +172,8 @@ int main()
                                 Continuar();
 
                                 //Se introduce la cantidad a apostar por los jugadores
-                                for(i1 = 0; i1 < num_jug; i1++)
-                                {
-                                    do
-                                    {
+                                for(i1 = 0; i1 < num_jug; i1++){
+                                    do{
                                         Continuar();
                                         printf("Tu monedero actual es %i.\n", participante[i1].monedero);
                                         printf("%s, %ccu%cnto quieres apostar de tu monedero?\n", participante[i1].nombre, 168, 160);
@@ -180,19 +181,15 @@ int main()
                                     }while (participante[i1].apuesta < 0 || participante[i1].apuesta > participante[i1].monedero);
                                     participante[i1].monedero -= participante[i1].apuesta;
                                 }
-
                                 Continuar();
 
                                 //Imprimimos solo una carta del crupier
                                 printf("Las cartas del crupier son:");
-                                for(c = 0; i < 1; c++);
-                                {
-                                    if(crupier.carta[c].num_i == 10)
-                                    {
+                                for(c = 0; c < 1; c++){
+                                    if(crupier.carta[c].num_i == 10){
                                         imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
                                     }
-                                    else
-                                    {
+                                    else{
                                         imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
                                     }
                                     printf("%c%c", 63, 63);
@@ -200,23 +197,17 @@ int main()
                                 }
 
                                 //Imprimimos las cartas de los jugadores
-                                for(i1 = 0; i1 < num_jug; i1++)
-                                {
-                                    if(participante[i1].apuesta == 0)
-                                    {
+                                for(i1 = 0; i1 < num_jug; i1++){
+                                    if(participante[i1].apuesta == 0){
                                         printf("%s, no participa en esta ronda.\n", participante[i1].nombre);
                                     }
-                                    else
-                                    {
+                                    else{
                                         printf("Las cartas de %s son:", participante[i1].nombre);
-                                        for(i = 0; i < 2; i++)
-                                        {
-                                            if(participante[i1].carta[i].num_i == 10)
-                                            {
+                                        for(i = 0; i < 2; i++){
+                                            if(participante[i1].carta[i].num_i == 10){
                                                 imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
                                             }
-                                            else
-                                            {
+                                            else{
                                                 imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
                                             }
                                             cartas[i] = participante[i1].carta[i].num_j;
@@ -225,29 +216,23 @@ int main()
                                         printf("   -->   %i\n", participante[i1].suma_t);
                                     }
                                     printf("\n");
-
                                 }
                                 Continuar();
 
                                 //Se muestra en pantalla la carta del crupier, y las cartas del jugador, con su respectiva suma. También, se imprimen las cartas que pida el jugador, incluyendo la nueva suma de valores.
-                                for (i1 = 0; i1 < num_jug; i1++)
-                                {
-                                    if(participante[i1].apuesta == 0)
-                                    {
+                                for (i1 = 0; i1 < num_jug; i1++){
+                                    if(participante[i1].apuesta == 0){
                                         printf("%s, no participa en esta ronda.\n", participante[i1].nombre);
                                         Continuar();
                                     }
-                                    else
-                                    {
+                                    else{
                                         /*Primero las cartas del crupier*/
                                         printf("Las cartas del crupier son:");
                                         i=0;
-                                        if(crupier.carta[i].num_i == 10)
-                                        {
+                                        if(crupier.carta[i].num_i == 10){
                                             imp_color_rojo_10(crupier.carta[i].num_i, crupier.carta[i].palo);
                                         }
-                                        else
-                                        {
+                                        else{
                                             imp_color_rojo_n(crupier.carta[i].num_i, crupier.carta[i].palo);
                                         }
                                         printf("%c%c", 63, 63);
@@ -256,14 +241,11 @@ int main()
                                         /*Primero imprimimos las primeras 2 cartas y su suma.*/
                                         printf("Es el turno de %s\n", participante[i1].nombre);
                                         printf("Tus cartas son: ", participante[i1].nombre);
-                                        for(i = 0; i < 2; i++)
-                                        {
-                                            if(participante[i1].carta[i].num_i == 10)
-                                            {
+                                        for(i = 0; i < 2; i++){
+                                            if(participante[i1].carta[i].num_i == 10){
                                                 imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
                                             }
-                                            else
-                                            {
+                                            else{
                                                 imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
                                             }
                                             cartas[i] = participante[i1].carta[i].num_j;
@@ -273,34 +255,25 @@ int main()
                                         aux = 3;
 
                                         /*Ahora comprobamos la suma de las dos primeras, y si son menores que 21, le damos la opción a que pida más o se plante*/
-                                        if (participante[i1].suma_t == 21)
-                                        {
+                                        if (participante[i1].suma_t == 21){
                                             printf("%cBlackjack!\n",173);
                                             participante[i1].BJ = 1;/*Si obtiene 21 con las dos primeras cartas _Bool BJ (Black Jack), tendrá valor 1, que afirma ese hecho.*/
                                         }
-                                        else
-                                        {
+                                        else{
                                             participante[i1].BJ = 0;/*Sino, recibirá el valor 0.*/
-                                            do
-                                            {
-                                                do
-                                                {
-                                                    if(participante[i1].suma_t < 21)
-                                                    {
+                                            do{
+                                                do{
+                                                    if(participante[i1].suma_t < 21){
                                                         printf("\n%cQu%c quieres hacer?\n", 168, 130);
                                                         printf("Pedir:1 \t Plantarse:2\n");
                                                         scanf("%i", &eleccion);
-                                                        switch (eleccion)
-                                                        {
+                                                        switch (eleccion){
                                                         case 1:
-                                                            for(i = 0; i < aux ; i++)
-                                                            {
-                                                                if(participante[i1].carta[i].num_i == 10)
-                                                                {
+                                                            for(i = 0; i < aux ; i++){
+                                                                if(participante[i1].carta[i].num_i == 10){
                                                                     imp_color_rojo_10(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
                                                                 }
-                                                                else
-                                                                {
+                                                                else{
                                                                     imp_color_rojo_n(participante[i1].carta[i].num_i, participante[i1].carta[i].palo);
                                                                 }
                                                                 cartas[i] = participante[i1].carta[i].num_j;
@@ -321,57 +294,46 @@ int main()
                                                 }while((eleccion < 1)||(eleccion > 3));
                                             }while((participante[i1].suma_t < 21)&&(eleccion != 2));
                                         }
+
                                     /*Si se pasa de 21 el jugador, le daremos al _Bool Pasar_de_21, valor 1, que afirma ese hecho. Sino, recibirá el valor 0.*/
-                                    if(participante[i1].suma_t > 21)
-                                    {
+                                    if(participante[i1].suma_t > 21){
                                         participante[i1].Pasar_21 = 1;
                                     }
-                                    if(participante[i1].suma_t <= 21)
-                                    {
+                                    if(participante[i1].suma_t <= 21){
                                         participante[i1].Pasar_21 = 0;
                                     }
                                     Continuar();
                                     }
-
                                 }
 
                                 //Ahora viene el turno del crupier, el cual si saca menos de un 16, pedirá carta; pero, si saca más, no pedira más.
                                 printf("Ahora es el turno del crupier.\n");
                                 printf("Las cartas del crupier son: \n");
-                                for(c = 0; c < 2; c++)
-                                {
-                                    if(crupier.carta[c].num_i == 10)
-                                    {
+                                for(c = 0; c < 2; c++){
+                                    if(crupier.carta[c].num_i == 10){
                                         imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
                                     }
-                                    else
-                                    {
+                                    else{
                                         imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
                                     }
                                 }
                                 crupier.suma_t = crupier.carta[0].num_j + crupier.carta[1].num_j;
                                 printf("   -->   %i\n", crupier.suma_t);
-                                if( crupier.suma_t == 21)
-                                {
+                                if( crupier.suma_t == 21){
                                     printf("¡El crupier tiene Black Jack!");
                                     crupier.BJ = 1;/*Si obtiene 21 con las dos primeras cartas _Bool BJ (Black Jack), tendrá valor 1, que afirma ese hecho*/
                                 }
-                                else
+                                else{
                                     crupier.BJ = 0;/*Sino, recibirá el valor 0.*/
-
-                                if (crupier.suma_t < 17)
-                                {
+                                }
+                                if(crupier.suma_t < 17){
                                     aux = 3;
-                                    do
-                                    {
-                                        for(c = 0; c < aux; c++)
-                                        {
-                                            if(crupier.carta[c].num_i == 10)
-                                            {
+                                    do{
+                                        for(c = 0; c < aux; c++){
+                                            if(crupier.carta[c].num_i == 10){
                                             imp_color_rojo_10(crupier.carta[c].num_i, crupier.carta[c].palo);
                                             }
-                                            else
-                                            {
+                                            else{
                                             imp_color_rojo_n(crupier.carta[c].num_i, crupier.carta[c].palo);
                                             }
                                             cartas[c] = crupier.carta[c].num_j;
@@ -382,83 +344,78 @@ int main()
                                     }while(crupier.suma_t < 17);
                                 }
                                 /*Si se pasa de 21 el crupier, le daremos al _Bool Pasar_de_21, valor 1, que afirma ese hecho. Sino, recibirá el valor 0.*/
-                                if(crupier.suma_t > 21)
-                                {
+                                if(crupier.suma_t > 21){
                                     crupier.Pasar_21 = 1;
                                 }
-                                else
-                                {
+                                else{
                                     crupier.Pasar_21 = 0;
                                 }
                                 Continuar();
 
                                 //Ahora viene la lista de ganadores, ESTO HAY QUE MEJORARLO LA VERDAD.
+                                Datos_j = fopen("Datos_del_jugador.txt", "w");
                                 printf("FASE DE RECOMPENSAS:\n");
                                 printf("La suma de la mano del crupier es %i\n\n", crupier.suma_t);
-                                for(i1 = 0, premio = 0; i1 < num_jug; i1++)
-                                {
-                                    if(participante[i1].apuesta == 0)
-                                    {
+                                for(i1 = 0, premio = 0; i1 < num_jug; i1++){
+                                    if(participante[i1].apuesta == 0){
                                         printf("%s, no participa en esta ronda.\n\n", participante[i1].nombre);
+                                        fprintf(Datos_j, "El nombre del participante %i es: %s\n", i1+1, participante[i1].nombre);
+                                        fprintf(Datos_j, "El tiene %i euros.\n", participante[i1].monedero);
                                     }
-                                    else
-                                    {
+                                    else{
+                                        fprintf(Datos_j, "El nombre del participante %i es: %s\n", i1+1, participante[i1].nombre);
                                         printf("La suma de la mano de %s es %i\n", participante[i1].nombre, participante[i1].suma_t);
                                         printf("Apost%c: %i euros\n", 162, participante[i1].apuesta);
-                                        if(participante[i1].Pasar_21 == 1)
-                                        {
+                                        if(participante[i1].Pasar_21 == 1){
                                             printf("En el monedero de %s hay %i euros\n", participante[i1].nombre, participante[i1].monedero);
                                             printf("perdi%c lo apostado\n\n", 162);
+                                            fprintf(Datos_j, "El tiene %i euros.\n", participante[i1].monedero);
                                         }
-                                        else
-                                        {
+                                        else{
                                             premio = Premio( participante[i1].BJ, crupier.BJ , participante[i1].apuesta, participante[i1].suma_t, crupier.suma_t);
-                                            if( premio == 0)
-                                            {
+                                            if( premio == 0){
                                                 printf("En el monedero de %s hay %i euros\n", participante[i1].nombre, participante[i1].monedero);
                                                 printf("perdi%c lo apostado\n\n", 162);
+                                                fprintf(Datos_j, "El tiene %i euros.\n", participante[i1].monedero);
                                             }
-                                            else
-                                            {
+                                            else{
                                                 printf("En el monedero de %s hay %i euros\n", participante[i1].nombre, participante[i1].monedero);
                                                 printf("gan%c %i euros\n", 162, premio);
                                                 participante[i1].monedero += premio;
                                                 printf("Su monedero asciende a %i euros\n\n", participante[i1].monedero);
+                                                fprintf(Datos_j, "El tiene %i euros.\n", participante[i1].monedero);
                                             }
                                         }
                                     }
                                 }
-                                do
-                                {
+                                fclose(Datos_j);
+                                do{
                                     Continuar();
                                     Menu_Final();
                                     scanf("%i", &Dec_BJ);
                                 }while((Dec_BJ != 1)&&(Dec_BJ != 2));
-
                             }while(Dec_BJ != 2);
-                            //Cierre del fichero de prueba.
-                            fclose(F_prueba);
-                            return 0;
                             break;
                         case 2:
-                            F_prueba = fopen("Prueba_de_Ficheros.txt", "r");
-                            while (fscanf(reglas, "%c", &x) != EOF)
-                                printf("%c", x);
+                            Datos_j = fopen("Datos_del_jugador.txt", "r");
+                            while (fscanf(Datos_j, "%c", &x1) != EOF){
+                                printf("%c", x1);
+                            }
+                            fclose(Datos_j);
                             Continuar();
-                            fclose(F_prueba);
                             break;
                         case 3:
-                            break;
-                        case 4:
                             reglas = fopen("Reglas_del_BlackJack.txt", "r");
-                            while (fscanf(reglas, "%c", &x) != EOF)
-                                printf("%c", x);
+                            while (fscanf(reglas, "%c", &x2) != EOF){
+                                printf("%c", x2);
+                            }
+                            fclose(reglas);
                             Continuar();
                             break;
-                        case 5:
+                        case 4:
                             j = 1;
                             continue;
-                        case 6:
+                        case 5:
                             printf("\nGracias por confiar en nosotros\n");
                             Continuar();
                             Despedida();
@@ -473,17 +430,14 @@ int main()
                 }
                 break;
             case 2:
-                for (i = 0, j = 0; i != 1; i = j)
-                {
+                for (i = 0, j = 0; i != 1; i = j){
                     Menu_EscapeRoom();
                     printf("Introduzca el número de la opción que desee:");
                     scanf("%d", &decision_2);
                     Continuar();
-                    switch(decision_2)
-                    {
+                    switch(decision_2){
                         case 1:
-                            for(a0 = 0, v0 = 0; a0 != 1; a0 = v0)
-                            {
+                            for(a0 = 0, v0 = 0; a0 != 1; a0 = v0){
                                 Borrar();
                                 printf("*Despiertas tirado en el suelo y oyes a lo lejos una explosi%cn, te encuentras confuso y no sabes d%cnde est%cs, lo %cnico\n", 162, 162, 160, 163);
                                 printf("que recuerdas es haber estado en la nave con tu equipo, pero ahora a tu alrededor no ves a nadie.*\n");
@@ -508,7 +462,7 @@ int main()
                                         printf("Contemplas el paisaje el cual encuentras muy familiar, se parece demasiado a la tierra. Subes a lo alto de una colina\n");
                                         printf("cercana pero no ves nada que llame tu atención; por lo que decides centrarte en comprobar el estado de la nave.\n");
                                         Continuar();
-                                        printf("Necesitas encontrar respuestas.");
+                                        printf("Necesitas encontrar respuestas...");
                                         Continuar();
                                         case 2:
                                         v0 = 1;
@@ -703,7 +657,6 @@ int main()
                                                                     break;
                                                                 case 2:
                                                                     v3a=1;
-                                                                    system ("cls");
                                                                     printf("*Entras en la sala de navegaci%cn principal, con la esperanza de encontrar algo de utilidad. Cuando ya est%cs llegando \n", 162, 160);
                                                                     printf(" te das cuenta de que la sala est%c al lado del dep%csito de combustible, y que a medida que te acercas, el suelo est%c \n", 160, 162, 160);
                                                                     printf(" cubierto de una fina capa de combustible. No te parece buena idea seguir, pero la curiosidad de saber s%c dentro de \n", 161);
@@ -733,7 +686,7 @@ int main()
                                                             v2=1;
                                                             Borrar();
                                                             for(a3b = 0, v3b = 0; a3b != 1; a3b = v3b)
-                                                            {
+                                                            {///
                                                                 printf("-Ser%c mejor que salga de la nave, no quiero acabar sepultado por este mont%cn de chatarra.\n", 160, 162);
                                                                 Continuar();
                                                                 printf("*Decides salir de la nave con cuidado, crees que es lo m%cs seguro*\n", 160);
@@ -770,7 +723,7 @@ int main()
                                                                             Continuar();
                                                                             printf("-Aqu%c parece haber muchas cajas, espero tener suerte.\n", 161);
                                                                             Continuar();
-                                                                            printf(" *Est%cs un buen rato buscando hasta que encuentras la antena parab%clica, no es tan grande como esperabas, pero servir%c*\n",160, 162, 160);
+                                                                            printf("*Est%cs un buen rato buscando hasta que encuentras la antena parab%clica, no es tan grande como esperabas, pero servir%c*\n",160, 162, 160);
                                                                             Continuar();
                                                                             printf("-Una cosa menos, solo faltan dos.\n");
                                                                             Continuar();
@@ -917,6 +870,7 @@ int main()
                 printf("Opci%cn incorrecta, vuelva a introducir una opci%cn.\n", 162, 162);
                 Continuar();
                 break;
+
         }
     }while (1);
 }
@@ -952,10 +906,9 @@ void Menu_BlackJack()
 	printf("MEN%c DEL BLACKJACK:\n", 233);
 	printf("1.Jugar\n");
     printf("2.Comprobar el dinero\n");
-    printf("3.Ranking\n");
-    printf("4.Reglas del BlackJack\n");
-	printf("5.Volver al Men%c Principal\n", 163);
-	printf("6.Salir del programa\n\n");
+    printf("3.Reglas del BlackJack\n");
+	printf("4.Volver al Men%c Principal\n", 163);
+	printf("5.Salir del programa\n\n");
 }
 
 
@@ -1121,3 +1074,4 @@ int suma_cartas(int n_cartas, int cartas[])
         return suma;
     }
 }
+
